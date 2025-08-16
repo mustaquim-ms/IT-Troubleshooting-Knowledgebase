@@ -1,0 +1,191 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+    line-height: 1.6;
+    transition: background 0.5s, color 0.5s;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(20, 20, 20, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #00f5ff;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-title {
+    font-size: 3rem;
+    animation: slideIn 1.5s ease forwards;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    animation: fadeUp 2.5s ease forwards;
+}
+
+.cta-btn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    background: #00f5ff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    background: #00c3cc;
+}
+
+/* Section Styles */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.section.alt {
+    background: #181818;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    transition: transform 0.4s ease, background 0.4s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(0, 245, 255, 0.1);
+}
+
+/* Footer */
+footer {
+    padding: 1.5rem;
+    text-align: center;
+    background: #111;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Light Theme */
+body.light {
+    background: #f9f9f9;
+    color: #111;
+}
+
+body.light .navbar {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+body.light .cta-btn {
+    background: #0077ff;
+    color: #fff;
+}
