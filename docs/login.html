@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - IT KB</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+
+<body>
+    <!-- Loader + Transition Overlay -->
+    <div id="page-loader">
+        <div class="loader-circle"></div>
+    </div>
+    <div id="transition-overlay"></div>
+
+    <div class="auth-form">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button id="login-btn">Login</button>
+        <p>Don't have an account? <a href="signup.html" class="transition-link">Sign Up</a></p>
+        <p><a href="index.html" class="transition-link">⬅ Back to Home</a></p>
+    </div>
+</body>
+
+</html>

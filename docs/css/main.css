@@ -189,3 +189,129 @@ body.light .cta-btn {
     background: #0077ff;
     color: #fff;
 }
+
+/* Buttons */
+.btn {
+    padding: 0.6rem 1.2rem;
+    margin-left: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+.btn.primary {
+    background: #00f5ff;
+    color: #000;
+}
+
+.btn.primary:hover {
+    background: #00c3cc;
+}
+
+/* Contributors */
+.contributors {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contributor {
+    text-align: center;
+}
+
+.contributor img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    border: 2px solid #00f5ff;
+}
+
+/* Chat */
+#chat-box {
+    height: 250px;
+    width: 80%;
+    margin: 1rem auto;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 1rem;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#chat-input {
+    padding: 0.6rem;
+    width: 70%;
+    border: none;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+}
+
+#send-btn {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #00f5ff;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Hide sections initially for GSAP */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Loader Overlay */
+#page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.loader-circle {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #00f5ff;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Page Transition Overlay */
+#transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00f5ff;
+    z-index: 1500;
+    transform: scaleX(0);
+    transform-origin: left;
+}
