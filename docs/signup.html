@@ -4,28 +4,39 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up - IT KB</title>
+    <title>Sign Up | IT Troubleshooting KnowledgeBase</title>
     <link rel="stylesheet" href="css/main.css" />
-    <script defer src="js/auth.js"></script>
-    <script defer src="js/animations.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="css/animations.css" />
 </head>
 
 <body>
-    <!-- Loader + Transition Overlay -->
-    <div id="page-loader">
-        <div class="loader-circle"></div>
-    </div>
-    <div id="transition-overlay"></div>
+    <nav class="navbar">
+        <div class="logo">KnowledBase</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
 
-    <div class="auth-form">
-        <h2>Create Account</h2>
-        <input type="text" id="signup-username" placeholder="Username" />
-        <input type="password" id="signup-password" placeholder="Password" />
-        <button id="signup-btn">Sign Up</button>
-        <p>Already have an account? <a href="login.html" class="transition-link">Login</a></p>
-        <p><a href="index.html" class="transition-link">⬅ Back to Home</a></p>
-    </div>
+    <header class="hero small-hero">
+        <h1 class="hero-title">Sign Up</h1>
+        <p class="hero-paragraph">Join the IT Troubleshooting KnowledgeBase community.</p>
+    </header>
+
+    <section class="form-section">
+        <form class="auth-form">
+            <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit">Create Account</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 ITKB Project | All Rights Reserved</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
 </body>
 
 </html>

@@ -1,62 +1,37 @@
-// Theme Toggle
-const themeToggle = document.getElementById("theme-toggle");
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light");
-    themeToggle.textContent =
-        document.body.classList.contains("light") ? "☀️" : "🌙";
-});
-
-// Smooth Scroll
+// Smooth scroll for in-page links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-        });
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - 60,
+                behavior: "smooth"
+            });
+        }
     });
 });
 
-// Animate On Load
-window.addEventListener("load", () => {
-    document.querySelector(".hero-title").style.opacity = "1";
-});
-
-// Contributions Graph using Chart.js
-const ctx = document.getElementById("contribChart").getContext("2d");
-new Chart(ctx, {
-    type: "line",
-    data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-        datasets: [{
-            label: "Contributions",
-            data: [3, 7, 12, 18, 25, 32],
-            borderColor: "#00f5ff",
-            fill: false,
-            tension: 0.3
-        }]
-    },
-    options: { responsive: true }
-});
-
-// Mock Chat
-const chatBox = document.getElementById("chat-box");
-const chatInput = document.getElementById("chat-input");
-const sendBtn = document.getElementById("send-btn");
-
-sendBtn.addEventListener("click", () => {
-    const msg = chatInput.value.trim();
-    if (msg) {
-        const p = document.createElement("p");
-        p.textContent = "You: " + msg;
-        chatBox.appendChild(p);
-        chatInput.value = "";
-
-        // Mock bot response
-        setTimeout(() => {
-            const reply = document.createElement("p");
-            reply.textContent = "Bot: Thanks for your message!";
-            chatBox.appendChild(reply);
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }, 800);
+// Contribution graph demo
+document.addEventListener("DOMContentLoaded", () => {
+    const ctx = document.getElementById("contribGraph");
+    if (ctx) {
+        new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                datasets: [{
+                    label: "Contributions",
+                    data: [5, 12, 9, 15, 20, 10],
+                    backgroundColor: "#00d9ff"
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
     }
 });
