@@ -2,211 +2,269 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IT Troubleshooting KnowledgeBase</title>
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/animations.css" />
-
-    <!-- External Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnowledgeBase</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Navbar -->
+
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="logo">KnowledgeBase</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#knowledge">Knowledgebase</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#community">Community</a></li>
-            <li><a href="#about">About</a></li>
+        <div class="logo">
+            <img src="assets/logo_main.png" alt="KnowledgeBase Logo" id="main-logo">
+            <img src="assets/logo_scrl.png" alt="Scroll Logo" id="scroll-logo">
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">LearnBase</a></li>
+            <li><a href="#">AI Tools</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Resources</a></li>
             <li><a href="login.html">Login</a></li>
             <li><a href="signup.html">Sign Up</a></li>
         </ul>
+        <div class="social-icons" id="social-icons">
+            <img src="./assets/facebook.webp" alt="Facebook">
+            <img src="./assets/youtube.webp" alt="YouTube">
+            <img src="./assets/linkedin.webp" alt="LinkedIn">
+            <img src="./assets/twitter.webp" alt="Twitter">
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero" id="home">
-        <h1 class="hero-title">Welcome to IT Troubleshooting KnowledgeBase</h1>
-        <h2 class="hero-subtitle"><span id="typed-text"></span></h2>
-        <p class="hero-paragraph">
-            Explore a publicly documented hub of IT solutions. Our KnowledgeBase helps you solve common
-            IT issues faster, collaborate with others, and contribute to a growing technical resource.
+    <!-- HERO -->
+    <section class="hero animate-fade-in">
+        <h1 class="hero-title"><span id="typed-text"></span><span class="cursor">_</span></h1>
+        <p class="hero-subtitle">A powerful hub of IT resources, troubleshooting guides, and hands-on tutorials.</p>
+        <p class="hero-text">
+            Whether you’re solving IT issues, learning programming, or exploring cybersecurity – KnowledgeBase connects
+            experts and beginners in one collaborative platform. Dive into structured learning paths, community-driven
+            guides, and share your expertise with the world.
         </p>
-    </header>
+        <a href="signup.html" class="btn">Join KnowledgeBase</a>
+    </section>
 
-    <!-- Knowledgebase Section -->
-    <section class="section" id="knowledge">
-        <h2>Knowledgebase</h2>
-        <p>Dive into step-by-step troubleshooting guides written by IT professionals and contributors worldwide.</p>
+<!-- AI TOOLS -->
+<section class="section animate-slide-up">
+    <h2>AI Tools</h2>
+    <p>Explore powerful AI-driven tools that will transform the way you work and learn.</p>
+    <div class="cards">
+        <a href="#" class="card">
+            <i class="fas fa-robot"></i>
+            <h3>ChatGPT</h3>
+            <p>AI assistant for learning, coding, and problem-solving.</p>
+        </a>
+        <a href="#" class="card">
+            <i class="fas fa-language"></i>
+            <h3>DeepL</h3>
+            <p>AI-powered translations with unmatched accuracy.</p>
+        </a>
+        <a href="#" class="card">
+            <i class="fas fa-paint-brush"></i>
+            <h3>MidJourney</h3>
+            <p>Generate breathtaking AI images in seconds.</p>
+        </a>
+        <a href="#" class="card">
+            <i class="fas fa-video"></i>
+            <h3>RunwayML</h3>
+            <p>Video editing and AI visual generation simplified.</p>
+        </a>
+        <a href="#" class="card">
+            <i class="fas fa-search"></i>
+            <h3>Perplexity</h3>
+            <p>AI-powered search engine for deeper knowledge.</p>
+        </a>
+        <a href="#" class="card">
+            <i class="fas fa-music"></i>
+            <h3>Suno AI</h3>
+            <p>Create AI-generated music and soundtracks.</p>
+        </a>
+        <div class="card">
+            <i class="fas fa-cut"></i>
+            <h3>Background Remover</h3>
+            <p>Remove image backgrounds with AI precision.</p>
+        </div>
+        
+        <div class="card">
+            <i class="fas fa-microphone-alt"></i>
+            <h3>Voice Tools</h3>
+            <p>Enhance, clone, or transform voices with AI.</p>
+        </div>
+        
+        <div class="card">
+            <i class="fas fa-code"></i>
+            <h3>Coding Assistant</h3>
+            <p>Get AI-powered coding help and bug fixes.</p>
+        </div>
+        
+        <div class="card">
+            <i class="fas fa-music"></i>
+            <h3>Music AI</h3>
+            <p>Compose and remix music with artificial intelligence.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- ABOUT -->
+    <section class="section animate-slide-up">
+        <h2>About KnowledgeBase</h2>
+        <p>
+            KnowledgeBase is a one-stop platform for IT enthusiasts, programmers, sysadmins, and learners. From beginner
+            guides
+            to advanced resources, we provide structured learning, community troubleshooting, and hands-on coding
+            practice.
+        </p>
         <div class="cards">
             <div class="card">
-                <h3>🖥️ Windows Issues</h3>
-                <p>Fix blue screen errors, driver issues, update failures, and performance slowdowns.</p>
-                <button class="read-more">Read More</button>
-                <div class="card-full">
-                    <p>Detailed guides on BSOD fixes, Windows Update troubleshooting, and registry repair tips.</p>
-                </div>
+                <i class="fas fa-bolt"></i>
+                <h3>Fast Solutions</h3>
+                <p>Get real-world IT fixes shared by community experts, available instantly.</p>
             </div>
             <div class="card">
-                <h3>🍎 MacOS Fixes</h3>
-                <p>Resolve startup errors, optimize performance, and troubleshoot common Mac glitches.</p>
-                <button class="read-more">Read More</button>
-                <div class="card-full">
-                    <p>Startup key combinations, PRAM/NVRAM resets, and MacOS recovery utilities.</p>
-                </div>
+                <i class="fas fa-users"></i>
+                <h3>Collaboration</h3>
+                <p>Connect, contribute, and build with like-minded IT professionals.</p>
             </div>
             <div class="card">
-                <h3>🐧 Linux Guides</h3>
-                <p>Learn server administration, package management, and open-source troubleshooting.</p>
-                <button class="read-more">Read More</button>
-                <div class="card-full">
-                    <p>Systemd troubleshooting, firewall rules, and performance monitoring with top/htop.</p>
-                </div>
+                <i class="fas fa-code-branch"></i>
+                <h3>Contribute</h3>
+                <p>Submit your code snippets, troubleshooting scripts, and earn recognition.</p>
             </div>
             <div class="card">
-                <h3>🌐 Networking</h3>
-                <p>Understand DNS, DHCP, Wi-Fi troubleshooting, and enterprise-level networking solutions.</p>
-                <button class="read-more">Read More</button>
-                <div class="card-full">
-                    <p>DNS resolution issues, traceroute analysis, and firewall misconfiguration fixes.</p>
-                </div>
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Learning Paths</h3>
+                <p>Follow guided paths for mastering IT skills step by step.</p>
             </div>
         </div>
     </section>
 
-    <!-- Resources Section -->
-    <section class="section" id="resources">
-        <h2>Resources Hub</h2>
-        <p>Essential downloads, guides, and tools for IT professionals and learners.</p>
+    <!-- IT CATEGORIES -->
+    <section class="section animate-fade-in">
+        <h2>Explore IT Topics</h2>
         <div class="cards">
             <div class="card">
-                <h3>📘 Cheat Sheets</h3>
-                <p>Linux, Networking, and PowerShell quick reference sheets.</p>
-                <button class="read-more">Read More</button>
-                <div class="card-full">
-                    <p>Comprehensive command examples with explanations for faster problem solving.</p>
-                </div>
+                <i class="fas fa-laptop-code"></i>
+                <h3>Programming</h3>
+                <p>Master programming with guides, tips, and community scripts.</p>
             </div>
             <div class="card">
-                <h3>🔧 Tools</h3>
-                <p>Packet capture, forensic, and recovery utilities.</p>
-                <button class="read-more">Read More</button>
-                <div class="card-full">
-                    <p>Includes Wireshark, FTK Imager, recovery boot disks, and diagnostic scripts.</p>
-                </div>
+                <i class="fas fa-network-wired"></i>
+                <h3>Networking</h3>
+                <p>Step-by-step tutorials on fixing and optimizing network systems.</p>
             </div>
             <div class="card">
-                <h3>⬇️ Downloads</h3>
-                <p>OS Images, boot ISOs, and recovery media for all platforms.</p>
-                <button class="read-more">Read More</button>
-                <div class="card-full">
-                    <p>Trusted mirrors for Windows, Linux, and MacOS recovery builds.</p>
-                </div>
+                <i class="fas fa-shield-alt"></i>
+                <h3>Cybersecurity</h3>
+                <p>Learn the fundamentals of securing your systems and data.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-server"></i>
+                <h3>Systems</h3>
+                <p>Administration, troubleshooting servers, and managing cloud infra.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-database"></i>
+                <h3>Databases</h3>
+                <p>Understand SQL, NoSQL, and enterprise database systems.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud Computing</h3>
+                <p>Explore AWS, Azure, and cloud-native development.</p>
             </div>
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section class="section" id="blog">
-        <h2>Community Blog</h2>
-        <p>Read featured writeups and tutorials shared by IT enthusiasts across the world.</p>
+    <!-- RESOURCES -->
+    <section class="section animate-slide-up">
+        <h2>Community Resources</h2>
         <div class="cards">
             <div class="card">
-                <h3>📝 Top 10 Windows Fixes</h3>
-                <p>Explore quick fixes for common Windows headaches.</p>
-                <button class="read-more">Read More</button>
-                <div class="card-full">
-                    <p>Step-by-step on resetting drivers, using DISM/SFC tools, and registry recovery.</p>
-                </div>
+                <i class="fas fa-terminal"></i>
+                <h3>Scripts & Tools</h3>
+                <p>Explore a growing library of community-contributed IT scripts.</p>
             </div>
             <div class="card">
-                <h3>📝 Securing Linux Servers</h3>
-                <p>Best practices for managing firewalls and SSH access.</p>
-                <button class="read-more">Read More</button>
-                <div class="card-full">
-                    <p>How to harden Linux servers with iptables, fail2ban, and SSH key auth.</p>
-                </div>
+                <i class="fas fa-book-open"></i>
+                <h3>Knowledge Base</h3>
+                <p>Access structured guides covering IT basics to advanced fixes.</p>
             </div>
             <div class="card">
-                <h3>📝 Troubleshooting WiFi</h3>
-                <p>Learn how to analyze signals and improve connectivity.</p>
-                <button class="read-more">Read More</button>
-                <div class="card-full">
-                    <p>Tips on adjusting router channels, analyzing packet loss, and boosting coverage.</p>
-                </div>
+                <i class="fas fa-comments"></i>
+                <h3>Discussions</h3>
+                <p>Collaborate with others in solving real-world IT problems.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-video"></i>
+                <h3>Video Tutorials</h3>
+                <p>Learn through visual explanations and walkthroughs.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-question-circle"></i>
+                <h3>Q&A Forum</h3>
+                <p>Ask and answer IT-related questions with the community.</p>
             </div>
         </div>
     </section>
 
-    <!-- Community Section -->
-    <section class="section" id="community">
-        <h2>Community Spotlight</h2>
-        <p>Meet the amazing people contributing to KnowledgeBase.</p>
-        <div class="cards">
-            <div class="card">
-                <h3>👩‍💻 Alex Johnson</h3>
-                <p>Windows Troubleshooting Expert</p>
-            </div>
-            <div class="card">
-                <h3>👨‍💻 Priya Singh</h3>
-                <p>Linux Security Specialist</p>
-            </div>
-            <div class="card">
-                <h3>👨‍💻 John Doe</h3>
-                <p>Networking Wizard</p>
-            </div>
-            <div class="card">
-                <h3>👩‍💻 Maria Lopez</h3>
-                <p>MacOS Performance Guru</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contributions Graph -->
-    <section class="section">
-        <h2>Community Contributions</h2>
-        <p>Track how the IT community is helping one another grow.</p>
-        <canvas id="contribGraph" width="600" height="300"></canvas>
-        <p><strong>🔥 250+ Contributions</strong> from <strong>50+ Active Contributors</strong></p>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="section">
-        <h2>Stay Updated</h2>
-        <p>Subscribe to get weekly tips, guides, and resource updates straight to your inbox.</p>
-        <form class="newsletter">
-            <input type="email" placeholder="Your Email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-        <p>💡 Join 2,000+ IT professionals who receive our newsletter every week.</p>
-    </section>
-
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-        <div class="footer-links">
-            <a href="#knowledge">Knowledgebase</a> |
-            <a href="#resources">Resources</a> |
-            <a href="#blog">Blog</a> |
-            <a href="#community">Community</a>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="assets/logo_scrl.png" alt="KnowledgeBase Logo" class="footer-logo">
+                <p>The ultimate IT knowledge-sharing community. Learn, fix, and grow with us.</p>
+                <div class="footer-social">
+                    <img src="./assets/facebook.webp" alt="Facebook">
+                    <img src="./assets/youtube.webp" alt="YouTube">
+                    <img src="./assets/linkedin.webp" alt="LinkedIn">
+                    <img src="./assets/twitter.webp" alt="Twitter">
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Scripts</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">LearnBase</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Subscribe</h4>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <p>Subscribe to get IT tutorials, fixes, and resources delivered weekly.</p>
+            </div>
         </div>
-        <p>© 2025 KnowledgeBase Project | Community Powered</p>
-        <div class="socials">
-            <a href="#">🌐 Website</a> | <a href="#">🐦 Twitter</a> | <a href="#">💼 LinkedIn</a> | <a href="#">📂
-                GitHub</a>
+        <div class="footer-bottom">
+            <p>© 2025 KnowledgeBase. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 
 </html>

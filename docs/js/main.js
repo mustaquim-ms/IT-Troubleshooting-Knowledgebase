@@ -1,37 +1,146 @@
-// Smooth scroll for in-page links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 60,
-                behavior: "smooth"
-            });
-        }
-    });
+// Navbar shrink effect
+window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 60) {
+        navbar.classList.add("shrink");
+    } else {
+        navbar.classList.remove("shrink");
+    }
 });
 
-// Contribution graph demo
-document.addEventListener("DOMContentLoaded", () => {
-    const ctx = document.getElementById("contribGraph");
-    if (ctx) {
-        new Chart(ctx, {
-            type: "bar",
-            data: {
-                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-                datasets: [{
-                    label: "Contributions",
-                    data: [5, 12, 9, 15, 20, 10],
-                    backgroundColor: "#00d9ff"
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: { display: false }
-                }
-            }
+// NAVBAR SCROLL LOGIC
+window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+// HAMBURGER MENU
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.getElementById("nav-links");
+const navItems = navLinks.querySelectorAll("li");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+
+    if (navLinks.classList.contains("active")) {
+        navItems.forEach((item, index) => {
+            item.style.animation = `slideFadeIn 0.4s ease forwards ${index * 0.1 + 0.2}s`;
+        });
+    } else {
+        navItems.forEach((item) => {
+            item.style.animation = "none";
         });
     }
 });
+
+
+
+// HERO TYPED ANIMATION (Multiple Texts)
+const typedText = document.getElementById("typed-text");
+const texts = [
+    "KnowledgeBase: Empowering IT Learners",
+    "Solve IT. Share Knowledge. Build Together.",
+    "Learn, Code, and Collaborate Smarter.",
+    "Your Go-To IT & AI Knowledge Hub",
+    "Discover Tools. Fix Issues. Grow Faster."
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100;   // typing speed
+let deletingSpeed = 50;  // deleting speed
+let delayBetween = 1500; // pause before switching text
+
+function typeEffect() {
+    const currentText = texts[textIndex];
+
+    if (!isDeleting && charIndex < currentText.length) {
+        // Typing characters
+        typedText.textContent += currentText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, typingSpeed);
+    }
+    else if (isDeleting && charIndex > 0) {
+        // Deleting characters
+        typedText.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(typeEffect, deletingSpeed);
+    }
+    else {
+        if (!isDeleting && charIndex === currentText.length) {
+            // Pause before deleting
+            isDeleting = true;
+            setTimeout(typeEffect, delayBetween);
+        }
+        else if (isDeleting && charIndex === 0) {
+            // Move to next text
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(typeEffect, typingSpeed);
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", typeEffect);
+
+
+// Subscription form handler
+document.querySelector(".subscribe-form")?.addEventListener("submit", e => {
+    e.preventDefault();
+    alert("Thanks for subscribing! 🚀");
+});
+
+// Smooth scroll
+document.querySelectorAll("a[href^='#']").forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+
+// ===============================
+// Scroll-triggered animations
+// ===============================
+const animatedSections = document.querySelectorAll(".section, .hero");
+
+function handleScrollAnimations() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    animatedSections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if (sectionTop < triggerBottom) {
+            section.classList.add("visible");
+        }
+    });
+}
+
+window.addEventListener("scroll", handleScrollAnimations);
+handleScrollAnimations();
+
+// ===============================
+// Apply wobble effect on nav & footer links dynamically
+// ===============================
+function addHoverWobble(selector) {
+    document.querySelectorAll(selector).forEach(el => {
+        el.addEventListener("mouseenter", () => {
+            el.classList.add("hovering");
+        });
+        el.addEventListener("animationend", () => {
+            el.classList.remove("hovering");
+        });
+    });
+}
+
+addHoverWobble(".nav-links li a");
+addHoverWobble(".footer-col ul li a");
+addHoverWobble(".footer-social a");
+addHoverWobble(".navbar-social a");
