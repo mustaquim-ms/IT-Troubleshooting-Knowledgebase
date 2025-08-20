@@ -3,5 +3,9 @@
   "imageSize": 100,
   "commit": false,
   "contributorsPerLine": 6,
-  "contributors": []
+  "contributors": [],
+  "projectName": "knowledgebase",
+  "projectOwner": "mustaquim-ms",
+  "repoType": "github",
+  "repoHost": "https://github.com"
 }
