@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | KnowledgeBase</title>
+    <link rel="stylesheet" href="./css/main.css"> <!-- your existing global styles -->
+    <link rel="stylesheet" href="./css/about.css"> <!-- new styles just for About page -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="login.html" class="btn-login">Login</a>
+            <a href="signup.html" class="btn-signup">Signup</a>
+        </div>
+    
+        <!-- Center Logo -->
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="assets/logo_scrl.png" alt="KnowledgeBase Logo" class="logo">
+            </a>
+        </div>
+    
+        <!-- Right side nav links -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About</a></li>
+            <li><a href="learnbase.html">LearnBase</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    
+        <!-- Social icons (hidden by default, shown on scroll) -->
+        <div class="social-icons">
+            <a href="#"><img src="assets/facebook.webp" alt="Facebook"></a>
+            <a href="#"><img src="assets/youtube.webp" alt="YouTube"></a>
+            <a href="#"><img src="assets/linkedin.webp" alt="LinkedIn"></a>
+            <a href="#"><img src="assets/twitter.webp" alt="Twitter"></a>
+        </div>
+    </nav>
+
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="about-hero">
+            <h1 data-animate="fade-in">About Us</h1>
+            <p data-animate="fade-in-delay">
+                Empowering learners with cutting-edge IT resources, tools, and mentorship.
+            </p>
+        </section>
+
+        <!-- MISSION -->
+        <section class="mission" data-animate="slide-up">
+            <div class="mission-text">
+                <h2>Our Mission</h2>
+                <p>
+                    KnowledgeBase exists to help IT learners grow through real-world projects,
+                    community-driven learning, and access to the latest technology resources.
+                </p>
+            </div>
+            <div class="mission-img">
+                <img src="assets/mission.webp" alt="Our Mission">
+            </div>
+        </section>
+
+        <!-- TEAM SLIDER -->
+        <section class="team" data-animate="fade-in">
+            <h2>Meet Our Team</h2>
+            <div class="swiper team-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/team1.webp" alt="Team Member">
+                        <h3>Jane Doe</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/team2.webp" alt="Team Member">
+                        <h3>John Smith</h3>
+                        <p>Lead Developer</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/team3.webp" alt="Team Member">
+                        <h3>Mary Johnson</h3>
+                        <p>UI/UX Designer</p>
+                    </div>
+                </div>
+                <!-- navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!-- VIDEO -->
+        <section class="video-section" data-animate="slide-up">
+            <h2>Our Story</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- VALUES -->
+        <section class="values" data-animate="fade-in">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Innovation</h3>
+                    <p>Pioneering modern learning methods with creativity.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Collaboration</h3>
+                    <p>We grow together by sharing and learning as one.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Integrity</h3>
+                    <p>Committed to transparency, honesty, and trust.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="assets/logo_scrl.png" alt="KnowledgeBase Logo" class="footer-logo">
+                <p>The ultimate IT knowledge-sharing community. Learn, fix, and grow with us.</p>
+                <div class="footer-social">
+                    <img src="./assets/facebook.webp" alt="Facebook">
+                    <img src="./assets/youtube.webp" alt="YouTube">
+                    <img src="./assets/linkedin.webp" alt="LinkedIn">
+                    <img src="./assets/twitter.webp" alt="Twitter">
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Scripts</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">LearnBase</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Subscribe</h4>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <p>Subscribe to get IT tutorials, fixes, and resources delivered weekly.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 KnowledgeBase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/about.js"></script>
+</body>
+
+</html>

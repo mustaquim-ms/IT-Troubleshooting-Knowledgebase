@@ -18,27 +18,6 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// HAMBURGER MENU
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.getElementById("nav-links");
-const navItems = navLinks.querySelectorAll("li");
-
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
-
-    if (navLinks.classList.contains("active")) {
-        navItems.forEach((item, index) => {
-            item.style.animation = `slideFadeIn 0.4s ease forwards ${index * 0.1 + 0.2}s`;
-        });
-    } else {
-        navItems.forEach((item) => {
-            item.style.animation = "none";
-        });
-    }
-});
-
-
 
 // HERO TYPED ANIMATION (Multiple Texts)
 const typedText = document.getElementById("typed-text");
