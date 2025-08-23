@@ -353,3 +353,7 @@ body {
         transform: rotate(4deg);
     }
 }
+
+* {
+    text-decoration: none;
+}

@@ -7,6 +7,9 @@
     <title>About Us | KnowledgeBase</title>
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -24,10 +27,11 @@
             <nav class="nav-links">
                 <ul>
                     <li><a href="learn.html">LearnBase</a></li>
-                    <li><a href="security.html">Security</a></li>
+                    <li><a href="ai_tools.html">AI Tools</a></li>
                     <li><a href="blogs.html">Blogs</a></li>
                     <li><a href="tips.html">Tips & Hacks</a></li>
                     <li><a href="resources.html">Resources</a></li>
+                    <li><a href="security.html">Security</a></li>
                 </ul>
                 <ul class="sub-links">
                     <li><a href="about_us.html" class="active">About</a></li>
@@ -54,7 +58,7 @@
                 </div>
     
                 <button class="icon-btn" title="Language"><i class="fas fa-globe"></i></button>
-                <a href="login.html" class="nav-login"><i class="fas fa-user"></i> Log In</a>
+                <a href="auth.html" class="nav-login"><i class="fas fa-user"></i> Log In</a>
                 <a href="downloads.html" class="nav-cta">Free Resources</a>
             </div>
         </div>
@@ -76,10 +80,12 @@
         <div class="about-container">
             <div class="about-text">
                 <h2>About KnowledgeBase</h2>
-                <p>Founded in 2025, KnowledgeBase helps IT learners and professionals explore, learn, and build with
-                    cutting-edge technology.
-                    From curated tutorials to AI-driven tools, we aim to make learning modern, interactive, and
-                    accessible.</p>
+                <p>Founded in 2025, KnowledgeBase is a modern learning platform designed to empower IT learners and professionals to
+                explore, learn, and innovate with cutting-edge technology. We provide carefully curated tutorials, AI-powered tools, and
+                hands-on resources that make complex concepts easier to grasp and apply in real-world scenarios. Our mission is to make
+                tech education more accessible, engaging, and future-ready—whether you’re a beginner taking your first steps into IT or
+                a professional looking to sharpen your skills. At KnowledgeBase, we believe learning should be interactive, practical,
+                and always aligned with the rapidly evolving world of technology.</p>
             </div>
             <div class="about-img">
                 <img src="assets/images/team1.webp" alt="Team Image">
@@ -98,19 +104,73 @@
         </div>
     </section>
 
-    <!-- 🔹 FEATURE HIGHLIGHT -->
-    <section class="feature">
-        <div class="feature-container">
-            <div class="feature-img">
-                <img src="assets/images/mission.webp" alt="AI Innovation">
+    <!-- 🔹 FEATURE CARDS -->
+    <section class="features">
+        <div class="section-header">
+            <h2>Why Choose Us</h2>
+            <p>Empowering you with AI-driven tools, insights, and innovation for a smarter future.</p>
+        </div>
+    
+        <div class="features-container">
+    
+            <!-- Card 1 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon"><i class="bx bx-brain"></i></div>
+                <h3>AI That Thinks With You</h3>
+                <p>Leverage smart automation to simplify complex tasks and supercharge your productivity.</p>
+                <a href="resources.html" class="btn">Explore</a>
             </div>
-            <div class="feature-text">
-                <h2>The Knowledge You Need, Better Than Ever</h2>
-                <p>Our AI-powered tools help learners grow faster by combining resources, automation, and
-                    community-driven insights.
-                    Stay ahead in an ever-changing digital world.</p>
+    
+            <!-- Card 2 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon">
+                    <i class="bx bx-line-chart"></i>
+                </div>
+                <h3>Insights That Matter</h3>
+                <p>Get actionable insights tailored to your needs and stay one step ahead in the digital race.</p>
                 <a href="resources.html" class="btn">Learn More</a>
             </div>
+    
+            <!-- Card 3 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon">
+                    <i class="bx bx-rocket"></i>
+                </div>
+                <h3>Faster Growth</h3>
+                <p>Accelerate your learning and projects with tools built for speed, accuracy, and impact.</p>
+                <a href="resources.html" class="btn">Start Now</a>
+            </div>
+    
+            <!-- Card 4 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon">
+                    <i class="bx bx-network-chart"></i>
+                </div>
+                <h3>Community Powered</h3>
+                <p>Connect with learners worldwide and tap into shared wisdom, ideas, and breakthroughs.</p>
+                <a href="resources.html" class="btn">Join Us</a>
+            </div>
+    
+            <!-- Card 5 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <h3>Secure & Reliable</h3>
+                <p>Your data, your privacy. Built with enterprise-grade security and peace of mind.</p>
+                <a href="resources.html" class="btn">Discover</a>
+            </div>
+    
+            <!-- Card 6 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon">
+                    <i class="bx bx-bulb"></i>
+                </div>
+                <h3>Innovation First</h3>
+                <p>Stay future-ready with constant updates, innovations, and cutting-edge AI solutions.</p>
+                <a href="resources.html" class="btn">See More</a>
+            </div>
+    
         </div>
     </section>
 
@@ -118,56 +178,113 @@
     <section class="explore">
         <h2>Explore KnowledgeBase</h2>
         <div class="explore-cards">
-            <div class="card"><i class="fas fa-newspaper"></i>
+            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-newspaper"></i>
                 <h3>Blog</h3>
                 <p>Read IT tutorials and guides.</p>
+                <a href="resources.html" class="btn">Learn More</a>
             </div>
-            <div class="card"><i class="fas fa-graduation-cap"></i>
+            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-graduation-cap"></i>
                 <h3>LearnBase</h3>
                 <p>Master skills with curated learning paths.</p>
+                <a href="resources.html" class="btn">Learn More</a>
             </div>
-            <div class="card"><i class="fas fa-tools"></i>
+            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-tools"></i>
                 <h3>AI Tools</h3>
                 <p>Explore smart tools that save time.</p>
+                <a href="resources.html" class="btn">Learn More</a>
             </div>
-            <div class="card"><i class="fas fa-users"></i>
+            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-users"></i>
                 <h3>Community</h3>
                 <p>Connect with IT learners worldwide.</p>
+                <a href="resources.html" class="btn">Learn More</a>
             </div>
         </div>
     </section>
 
     <!-- 🔹 CAREERS / JOIN US -->
-    <section class="career">
+    <section class="career" id="career">
+        <div class="career-header" data-aos="fade-up">
+            <h2>Grow Your Career with KnowledgeBase</h2>
+            <p>We are scaling globally — join us to build smarter digital experiences and shape the future of learning.</p>
+        </div>
+    
         <div class="career-container">
-            <div class="career-text">
-                <h2>Grow your career with KnowledgeBase</h2>
-                <p>We are growing worldwide — join us to build smarter digital experiences.</p>
+            <div class="career-text" data-aos="fade-right">
+                <h3>Why Work With Us?</h3>
+                <p>
+                    At KnowledgeBase, we empower our people just as much as we empower our users.
+                    From day one, you’ll be part of a culture that values **innovation, collaboration, and growth**.
+                </p>
                 <a href="signup.html" class="btn btn-primary">Join Us</a>
             </div>
-            <div class="career-img">
+            <div class="career-img" data-aos="fade-left">
                 <img src="assets/images/team2.webp" alt="Career">
             </div>
         </div>
+    
+        <!-- 🔹 STATS SECTION -->
+        <div class="career-stats">
+            <div class="stat" data-aos="zoom-in" data-aos-delay="100">
+                <h3>50+</h3>
+                <p>Global Team Members</p>
+            </div>
+            <div class="stat" data-aos="zoom-in" data-aos-delay="200">
+                <h3>10+</h3>
+                <p>Countries Represented</p>
+            </div>
+            <div class="stat" data-aos="zoom-in" data-aos-delay="300">
+                <h3>500K+</h3>
+                <p>Users Worldwide</p>
+            </div>
+            <div class="stat" data-aos="zoom-in" data-aos-delay="400">
+                <h3>24/7</h3>
+                <p>Innovation Mindset</p>
+            </div>
+        </div>
+    
+        <!-- 🔹 PERKS GRID -->
+        <div class="career-perks">
+            <div class="perk-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="bx bx-home-heart"></i>
+                <h4>Remote-First</h4>
+                <p>Work from anywhere while staying connected with global teams.</p>
+            </div>
+            <div class="perk-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="bx bx-time-five"></i>
+                <h4>Work-Life Balance</h4>
+                <p>We value productivity, not hours. Flexible schedules for everyone.</p>
+            </div>
+            <div class="perk-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="bx bx-rocket"></i>
+                <h4>Growth Opportunities</h4>
+                <p>Access to learning, mentorship, and global career paths.</p>
+            </div>
+            <div class="perk-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="bx bx-bulb"></i>
+                <h4>Innovation Culture</h4>
+                <p>Be part of a team that thrives on curiosity and creative problem-solving.</p>
+            </div>
+        </div>
     </section>
+
 
     <!-- 🔹 CORE VALUES -->
     <section class="values">
         <h2>The Heart of KnowledgeBase</h2>
         <div class="value-cards">
-            <div class="card"><i class="fas fa-shield-alt"></i>
+            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-shield-alt"></i>
                 <h3>Knowledge Protects</h3>
                 <p>We prioritize transparency, privacy, and trust.</p>
             </div>
-            <div class="card"><i class="fas fa-globe"></i>
+            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-globe"></i>
                 <h3>Global Impact</h3>
                 <p>Connecting learners and experts worldwide.</p>
             </div>
-            <div class="card"><i class="fas fa-rocket"></i>
+            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-rocket"></i>
                 <h3>Innovation First</h3>
                 <p>Always building with the latest AI and IT advancements.</p>
             </div>
-            <div class="card"><i class="fas fa-handshake"></i>
+            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-handshake"></i>
                 <h3>Community Driven</h3>
                 <p>Collaborative learning and growth for everyone.</p>
             </div>
@@ -273,6 +390,35 @@
         <script src="js/animations.js"></script>
         <script src="js/main.js"></script>
         <script src="js/auth.js"></script>
+
+        <script>
+            AOS.init({
+                duration: 1000,   // animation speed in ms
+                once: true,       // animation happens only once
+                easing: 'ease-in-out'
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("show");
+                            observer.unobserve(entry.target); // animate once
+                        }
+                    });
+                }, { threshold: 0.2 });
+
+                // Target all elements that fade in
+                const cards = document.querySelectorAll(
+                    ".feature-card, .explore .card, .perk-card, .value-cards .card"
+                );
+
+                cards.forEach(card => observer.observe(card));
+            });
+        </script>
+
 
 </body>
 
