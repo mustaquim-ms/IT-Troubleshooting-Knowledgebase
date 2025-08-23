@@ -12,30 +12,55 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="assets/logo_main.png" alt="KnowledgeBase Logo" id="main-logo">
-            <img src="assets/logo_scrl.png" alt="Scroll Logo" id="scroll-logo">
-        </div>
+    <!-- 🔹 HEADER / NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-container">
     
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="learnbase.html">LearnBase</a></li>
-            <li><a href="ai_tools.html">AI Tools</a></li>
-            <li><a href="about_us.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-        </ul>
-        <div class="social-icons" id="social-icons">
-            <a href="#"><img src="assets/facebook.webp" alt="Facebook"></a>
-            <a href="#"><img src="assets/youtube.webp" alt="YouTube"></a>
-            <a href="#"><img src="assets/linkedin.webp" alt="LinkedIn"></a>
-            <a href="#"><img src="assets/twitter.webp" alt="Twitter"></a>
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="assets/logo_scrl.png" alt="KnowledgeBase Logo">
+            </a>
+    
+            <!-- Menu -->
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="learn.html">LearnBase</a></li>
+                    <li><a href="security.html">Security</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="tips.html">Tips & Hacks</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+                <ul class="sub-links">
+                    <li><a href="about_us.html" class="active">About</a></li>
+                    <li><a href="acquisitions.html">Acquisitions</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="leadership.html">Leadership</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="ventures.html">Ventures</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Right Side Actions -->
+            <div class="nav-actions">
+                <button class="icon-btn" title="Search"><i class="fas fa-search"></i></button>
+    
+                <div class="dropdown">
+                    <button class="icon-btn">Support ▾</button>
+                    <div class="dropdown-content">
+                        <a href="support.html">Help Center</a>
+                        <a href="community.html">Community</a>
+                        <a href="docs.html">Documentation</a>
+                    </div>
+                </div>
+    
+                <button class="icon-btn" title="Language"><i class="fas fa-globe"></i></button>
+                <a href="login.html" class="nav-login"><i class="fas fa-user"></i> Log In</a>
+                <a href="downloads.html" class="nav-cta">Free Resources</a>
+            </div>
         </div>
-    </nav>
+    </header>
+
 
     <!-- HERO -->
     <section class="hero animate-fade-in">
@@ -213,46 +238,90 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-grid">
+    <!-- 🔹 FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+    
+            <!-- Company -->
             <div class="footer-col">
-                <img src="assets/logo_scrl.png" alt="KnowledgeBase Logo" class="footer-logo">
-                <p>The ultimate IT knowledge-sharing community. Learn, fix, and grow with us.</p>
-                <div class="footer-social">
-                    <img src="./assets/facebook.webp" alt="Facebook">
-                    <img src="./assets/youtube.webp" alt="YouTube">
-                    <img src="./assets/linkedin.webp" alt="LinkedIn">
-                    <img src="./assets/twitter.webp" alt="Twitter">
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Explore</h4>
+                <h4>Company</h4>
                 <ul>
-                    <li><a href="#">Videos</a></li>
-                    <li><a href="#">Tutorials</a></li>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Scripts</a></li>
+                    <li><a href="about.html">About KnowledgeBase</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="#">How We Compare</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="newsroom.html">Newsroom</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="policies.html">Policy Positions</a></li>
+                    <li><a href="#">KnowledgeBase Protects</a></li>
+                    <li><a href="#">Knowledge Ventures</a></li>
+                    <li><a href="#">Research (SURGe)</a></li>
+                    <li><a href="resources.html">Why KnowledgeBase?</a></li>
                 </ul>
             </div>
+    
+            <!-- Products -->
             <div class="footer-col">
-                <h4>Quick Links</h4>
+                <h4>Products</h4>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">LearnBase</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="ai_tools.html">AI Tools</a></li>
+                    <li><a href="learnbase.html">LearnBase</a></li>
+                    <li><a href="#">Free Trials & Downloads</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="products.html">View All Products</a></li>
                 </ul>
             </div>
+    
+            <!-- KnowledgeBase Sites -->
             <div class="footer-col">
-                <h4>Subscribe</h4>
-                <form class="subscribe-form">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                </form>
-                <p>Subscribe to get IT tutorials, fixes, and resources delivered weekly.</p>
+                <h4>KnowledgeBase Sites</h4>
+                <ul>
+                    <li><a href="conf.html">.conf</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="investors.html">Investor Relations</a></li>
+                    <li><a href="training.html">Training & Certification</a></li>
+                    <li><a href="store.html">KB Store</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="resources.html">View All Resources</a></li>
+                </ul>
             </div>
+    
+            <!-- Learn -->
+            <div class="footer-col">
+                <h4>Learn</h4>
+                <ul>
+                    <li><a href="#">What Is SIEM?</a></li>
+                    <li><a href="#">Universal Forwarder</a></li>
+                    <li><a href="#">OpenTelemetry: An Introduction</a></li>
+                    <li><a href="#">Metrics For The SOC</a></li>
+                    <li><a href="#">What Is Observability?</a></li>
+                    <li><a href="#">IT & Systems Monitoring</a></li>
+                    <li><a href="#">Reliability Metrics</a></li>
+                    <li><a href="#">LLMs vs SLMs</a></li>
+                    <li><a href="#">Tech Spending 2025</a></li>
+                    <li><a href="articles.html">View All Articles</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact -->
+            <div class="footer-col">
+                <h4>Contact KnowledgeBase</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="community.html">Community</a></li>
+                </ul>
+    
+                <h4>User Reviews</h4>
+                <ul>
+                    <li><a href="#">Gartner Peer Insights™</a></li>
+                    <li><a href="#">PeerSpot</a></li>
+                    <li><a href="#">TrustRadius</a></li>
+                </ul>
+            </div>
+    
         </div>
+    
         <div class="footer-bottom">
             <p>© 2025 KnowledgeBase. All rights reserved.</p>
         </div>

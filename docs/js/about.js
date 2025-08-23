@@ -1,35 +1,47 @@
-// Scroll Animation
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+// Scroll reveal effect
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".reveal").forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight - 100) {
+            el.classList.add("active");
         }
     });
-}, { threshold: 0.2 });
-
-document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el));
-
-// Team Slider
-const swiper = new Swiper('.team-slider', {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 30,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-    }
 });
 
-// Navbar Scroll Transparent Effect + Social Icons
-window.addEventListener("scroll", () => {
-    const nav = document.querySelector(".navbar");
-    if (window.scrollY > 80) {
-        nav.classList.add("scrolled");
-    } else {
-        nav.classList.remove("scrolled");
+// Typed text effect
+const words = [
+    "AI-powered tools 🚀",
+    "expert tutorials 📘",
+    "real-world projects 💻",
+    "a supportive community 🌍",
+    "future-driven knowledge 🔮"
+];
+let i = 0, j = 0, currentWord = "", isDeleting = false;
+const typedText = document.getElementById("typed-text");
+
+function typeEffect() {
+    if (!typedText) return;
+
+    if (i < words.length) {
+        if (!isDeleting && j <= words[i].length) {
+            currentWord = words[i].substring(0, j++);
+            typedText.textContent = currentWord;
+        } else if (isDeleting && j >= 0) {
+            currentWord = words[i].substring(0, j--);
+            typedText.textContent = currentWord;
+        }
+
+        if (j === words[i].length + 1) {
+            isDeleting = true;
+            setTimeout(typeEffect, 1000);
+            return;
+        } else if (isDeleting && j === 0) {
+            isDeleting = false;
+            i = (i + 1) % words.length;
+        }
+        setTimeout(typeEffect, isDeleting ? 60 : 100);
     }
-});
+}
+
+typeEffect();
