@@ -93,6 +93,7 @@
         </div>
     </section>
 
+    
     <!-- 🔹 TRUSTED BY -->
     <section class="trusted">
         <h3>Trusted by Learners & Innovators Worldwide</h3>
@@ -174,29 +175,36 @@
         </div>
     </section>
 
-    <!-- 🔹 EXPLORE CARDS -->
     <section class="explore">
-        <h2>Explore KnowledgeBase</h2>
+        <div class="section-header">
+            <h2>Explore KnowledgeBase</h2>
+            <p>Dive into curated resources and powerful tools designed to fuel your learning journey.</p>
+        </div>
+    
         <div class="explore-cards">
-            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-newspaper"></i>
-                <h3>Blog</h3>
-                <p>Read IT tutorials and guides.</p>
-                <a href="resources.html" class="btn">Learn More</a>
+            <div class="card">
+                <i class="fas fa-book-open"></i>
+                <h3>Rich Resources</h3>
+                <p>Access a library of AI-curated articles, guides, and insights.</p>
+                <a href="#" class="btn">Explore</a>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-graduation-cap"></i>
-                <h3>LearnBase</h3>
-                <p>Master skills with curated learning paths.</p>
-                <a href="resources.html" class="btn">Learn More</a>
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>Community Wisdom</h3>
+                <p>Learn from peers and experts sharing real-world knowledge.</p>
+                <a href="#" class="btn">Join</a>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-tools"></i>
-                <h3>AI Tools</h3>
-                <p>Explore smart tools that save time.</p>
-                <a href="resources.html" class="btn">Learn More</a>
+            <div class="card">
+                <i class="fas fa-brain"></i>
+                <h3>Smart Learning</h3>
+                <p>AI recommendations tailor your journey for faster growth.</p>
+                <a href="#" class="btn">Start</a>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-users"></i>
-                <h3>Community</h3>
-                <p>Connect with IT learners worldwide.</p>
-                <a href="resources.html" class="btn">Learn More</a>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Track Growth</h3>
+                <p>Visualize progress and celebrate milestones along the way.</p>
+                <a href="#" class="btn">Track</a>
             </div>
         </div>
     </section>
@@ -266,7 +274,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- 🔹 CORE VALUES -->
     <section class="values">
@@ -419,6 +426,25 @@
             });
         </script>
 
+        <script>
+            // Fade-in on scroll
+            const fadeElems = document.querySelectorAll('.feature-card, .explore .card, .perk-card, .value-cards .card');
+
+            function checkFade() {
+                const triggerBottom = window.innerHeight * 0.85;
+
+                fadeElems.forEach(el => {
+                    const boxTop = el.getBoundingClientRect().top;
+
+                    if (boxTop < triggerBottom) {
+                        el.classList.add('show');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkFade);
+            window.addEventListener('load', checkFade);
+        </script>
 
 </body>
 
