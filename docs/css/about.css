@@ -621,19 +621,26 @@ a {
     flex-wrap: wrap;
 }
 
+.stat {
+    text-align: center;
+}
+
 .stat h3 {
-    font-size: 2rem;
-    color: #3a7ca5;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #3a7ca5; /* Matches your accent */
+    margin-bottom: 0.5rem;
     transition: color 0.3s ease;
 }
 
 .stat p {
     font-size: 1rem;
-    color: #555;
+    color: #1b1b1b;
 }
 
+/* Hover effect (optional) */
 .stat:hover h3 {
-    color: #4ea685;
+    color: #1d3557;
 }
 
 /* Career Perks */
@@ -644,43 +651,45 @@ a {
 }
 
 .perk-card {
-    background: #ffffff;
+    background: #161b22;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 20px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    color: #fff;
 }
 
 .perk-card i {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #3a7ca5;
     margin-bottom: 1rem;
-    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    transition: transform 0.4s ease, color 0.3s ease;
 }
 
 .perk-card h4 {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 0.8rem;
-    color: #222;
-    transition: color 0.3s ease;
+    color: #fff;
 }
 
 .perk-card p {
-    color: #555;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
 }
 
 .perk-card:hover {
-    background: #3a7ca5;
+    transform: translateY(-8px);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 12px 30px;
+    background: linear-gradient(135deg, #1d3557, #3a7ca5);
     color: #fff;
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .perk-card:hover i {
-    color: #fff;
+    color: #4ea685;
     transform: translateY(-5px);
 }
 
