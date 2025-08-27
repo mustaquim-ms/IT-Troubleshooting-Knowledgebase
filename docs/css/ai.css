@@ -155,39 +155,54 @@ body.loaded {
     display: block;
 }
 
-/* 🔹 Hero Section */
-.ai-hero {
-  position: relative;
-  padding: 6rem 2rem;
-  text-align: center;
-  background: linear-gradient(135deg, #1d1d1d, #232f3e);
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 8rem 2rem 6rem;
+    margin-top: 70px;
+    color: #00bfa6;
 }
-.ai-hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #fff;
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
-.ai-hero h1 span {
-  color: #00bfa6;
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
 }
-.ai-hero p {
-  font-size: 1.2rem;
-  color: #ddd;
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
+
+.hero-paragraph {
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
 }
-.hero-btn {
-  background: #00bfa6;
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: transform 0.3s, box-shadow 0.3s;
+
+.hero-text {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    color: #f5f5f5;
+    animation: fadeInUp 1s ease forwards;
 }
-.hero-btn:hover {
-  background: #00997a;
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px #00bfa6;
+
+.btn {
+    background: #fff;
+    color: #1b1b1b;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #00bfa6;
+    transform: translateY(-3px);
 }
 
 /* 🔹 Section Headers (center align like other sections) */
@@ -212,7 +227,7 @@ body.loaded {
 .tools-grid,
 .extended-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
