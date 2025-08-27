@@ -9,17 +9,20 @@
 
     <style>
         :root {
-            --primary-color: #FEE715;
-            --secondary-color: #FEE715;
+            --primary-color: #715A5A;
+            --secondary-color: #D3DAD9;
             --black: #000000;
             --white: #ffffff;
-            --gray: #efefef;
-            --gray-2: #1b1b1b;
+            --gray: #44444E;
+            --gray-2: #37353E;
 
-            --facebook-color: #4267B2;
-            --google-color: #DB4437;
+            --facebook-color: #1877F2;
+            --google-color: #EA4335;
             --twitter-color: #1DA1F2;
             --insta-color: #E1306C;
+            --youtube-color: #FF0000;
+            --linkedin-color: #0A66C2;
+            --github-color: #333333;
         }
 
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
@@ -36,7 +39,40 @@
             height: 100vh;
             overflow: hidden;
         }
+        
 
+        /* Navbar container */
+        .navbar {
+            width: 100%;
+            background-color: #ffffff; /* White background, adjust if needed */
+            padding: 10px 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* subtle shadow */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Inner container */
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* keep logo on the left */
+        }
+
+        /* Logo */
+        .logo img {
+            height: 40px;     /* adjust size to be clear, not blurred */
+            width: auto;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        /* Hover effect for logo */
+        .logo img:hover {
+            transform: scale(1.08); /* slight zoom */
+            filter: brightness(1.1);
+        }
         .container {
             position: relative;
             min-height: 100vh;
@@ -99,6 +135,11 @@
             border-radius: .5rem;
             border: 0.125rem solid var(--white);
             outline: none;
+            color: var(--white);
+        }
+
+        .input-group input::placeholder {
+            color: #ccc;
         }
 
         .input-group input:focus {
@@ -120,11 +161,15 @@
 
         .form button:hover {
             background-color: var(--secondary-color);
+            color: var(--gray-2);
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--secondary-color);
         }
 
         .form p {
             margin: 1rem 0;
             font-size: .8rem;
+            color: var(--gray-2);
         }
 
         .flex-col {
@@ -137,44 +182,36 @@
             border-radius: 1.5rem;
             width: 100%;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
             transform: scale(0);
             transition: .5s ease-in-out;
-            transition-delay: 1.2s;
         }
 
         .social-list>div {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: var(--white);
-            margin: 0 .5rem;
-            padding: .7rem;
-            border-radius: .5rem;
+            border-radius: 50%;
             cursor: pointer;
             transform: scale(0);
-            transition: .5s ease-in-out;
-        }
-
-        .social-list>div:nth-child(1) {
-            transition-delay: 1.4s;
-        }
-
-        .social-list>div:nth-child(2) {
-            transition-delay: 1.6s;
-        }
-
-        .social-list>div:nth-child(3) {
-            transition-delay: 1.8s;
-        }
-
-        .social-list>div:nth-child(4) {
-            transition-delay: 2s;
-        }
-
-        .social-list>div>i {
-            font-size: 1.5rem;
             transition: .4s ease-in-out;
+            font-size: 1.5rem;
+            opacity: 0;
         }
 
-        .social-list>div:hover i {
-            transform: scale(1.5);
+        .social-list>div.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .social-list>div:hover {
+            transform: scale(1.3);
+            box-shadow: 0 0 15px currentColor;
         }
 
         .facebook-bg {
@@ -191,6 +228,18 @@
 
         .insta-bg {
             background-color: var(--insta-color);
+        }
+
+        .youtube-bg {
+            background-color: var(--youtube-color);
+        }
+
+        .linkedin-bg {
+            background-color: var(--linkedin-color);
+        }
+
+        .github-bg {
+            background-color: var(--github-color);
         }
 
         .pointer {
@@ -217,7 +266,7 @@
 
         .text {
             margin: 4rem;
-            color: var(-gray-2);
+            color: var(--gray-2);
         }
 
         .text h2 {
@@ -234,7 +283,9 @@
         }
 
         .img img {
-            width: 30vw;
+            width: 25vw;
+            display: block;
+            margin: 0 auto;
             transition: 1s ease-in-out;
             transition-delay: .4s;
         }
@@ -242,12 +293,14 @@
         .text.sign-in h2,
         .text.sign-in p,
         .img.sign-in img {
+            color: #D3DAD9;
             transform: translateX(-250%);
         }
 
         .text.sign-up h2,
         .text.sign-up p,
         .img.sign-up img {
+            color: #D3DAD9;
             transform: translateX(250%);
         }
 
@@ -269,7 +322,7 @@
             height: 100vh;
             width: 300vw;
             transform: translate(35%, 0);
-            background-image: linear-gradient(-45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background-image: linear-gradient(-45deg, var(--gray-2) 0%, var(--gray) 100%);
             transition: 1s ease-in-out;
             z-index: 6;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -351,6 +404,16 @@
 
 <body>
 
+    <!-- Navbar -->
+            <header class="navbar">
+            <div class="navbar-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                <img src="./assets/mainn.png" alt="KnowledgeBase Logo">
+                </a>
+            </div>
+            </header> 
+
     <div id="container" class="container">
         <div class="row">
             <!-- SIGN UP -->
@@ -366,6 +429,13 @@
                         <div class="input-group"><i class='bx bxs-lock-alt'></i><input type="password"
                                 placeholder="Confirm Password"></div>
                         <button>Sign Up</button>
+
+                        <div class="social-list sign-up">
+                            <div class="google-bg"><i class='bx bxl-gmail'></i></div>
+                            <div class="linkedin-bg"><i class='bx bxl-linkedin'></i></div>
+                            <div class="github-bg"><i class='bx bxl-github'></i></div>
+                        </div>
+
                         <p><span>Already have an account?</span> <b onclick="toggle()" class="pointer">Sign in here</b>
                         </p>
                     </div>
@@ -380,6 +450,13 @@
                         <div class="input-group"><i class='bx bxs-lock-alt'></i><input type="password"
                                 placeholder="Password"></div>
                         <button>Sign In</button>
+
+                        <div class="social-list sign-in">
+                            <div class="google-bg"><i class='bx bxl-gmail'></i></div>
+                            <div class="linkedin-bg"><i class='bx bxl-linkedin'></i></div>
+                            <div class="github-bg"><i class='bx bxl-github'></i></div>
+                        </div>
+
                         <p><b>Forgot password?</b></p>
                         <p><span>Don't have an account?</span> <b onclick="toggle()" class="pointer">Sign up here</b>
                         </p>
@@ -396,12 +473,16 @@
                     <p>Sign in and continue your journey</p>
                 </div>
                 <div class="img sign-in">
-                    <img src="signin.png" alt="sign in image">
+                    <a href="../docs/index.html">
+                        <img src="./assets/mainn.png" alt="KnowledgeBase Logo">
+                    </a>
                 </div>
             </div>
             <div class="col align-items-center flex-col">
                 <div class="img sign-up">
-                    <img src="signup.png" alt="sign up image">
+                    <a href="../docs/index.html">
+                        <img src="./assets/mainn.png" alt="KnowledgeBase Logo">
+                    </a>
                 </div>
                 <div class="text sign-up">
                     <h2>Join with us</h2>
@@ -421,6 +502,14 @@
 
         setTimeout(() => {
             container.classList.add('sign-in');
+
+            // Animate social icons staggered
+            const socialIcons = document.querySelectorAll('.social-list>div');
+            socialIcons.forEach((icon, index) => {
+                setTimeout(() => {
+                    icon.classList.add('visible');
+                }, index * 150);
+            });
         }, 200);
     </script>
 
