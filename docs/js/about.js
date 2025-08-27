@@ -9,39 +9,53 @@ window.addEventListener("scroll", () => {
     });
 });
 
-// Typed text effect
-const words = [
-    "AI-powered tools 🚀",
-    "expert tutorials 📘",
-    "real-world projects 💻",
-    "a supportive community 🌍",
-    "future-driven knowledge 🔮"
-];
-let i = 0, j = 0, currentWord = "", isDeleting = false;
+// HERO TYPED ANIMATION (Multiple Texts)
 const typedText = document.getElementById("typed-text");
+const texts = [
+    "KnowledgeBase: Connecting IT Minds Everywhere",
+"Learn, Solve, and Share IT Knowledge with Ease",
+"From Tutorials to Troubleshooting – Grow Smarter",
+"Your Hub for IT Learning, Collaboration, and Innovation",
+"Explore, Build, and Master Technology Together",
+"Turning IT Curiosity into Real Skills",
+"Guides, Community, and Tools – All in One Place"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100;   // typing speed
+let deletingSpeed = 50;  // deleting speed
+let delayBetween = 1500; // pause before switching text
 
 function typeEffect() {
-    if (!typedText) return;
+    const currentText = texts[textIndex];
 
-    if (i < words.length) {
-        if (!isDeleting && j <= words[i].length) {
-            currentWord = words[i].substring(0, j++);
-            typedText.textContent = currentWord;
-        } else if (isDeleting && j >= 0) {
-            currentWord = words[i].substring(0, j--);
-            typedText.textContent = currentWord;
-        }
-
-        if (j === words[i].length + 1) {
+    if (!isDeleting && charIndex < currentText.length) {
+        // Typing characters
+        typedText.textContent += currentText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, typingSpeed);
+    }
+    else if (isDeleting && charIndex > 0) {
+        // Deleting characters
+        typedText.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(typeEffect, deletingSpeed);
+    }
+    else {
+        if (!isDeleting && charIndex === currentText.length) {
+            // Pause before deleting
             isDeleting = true;
-            setTimeout(typeEffect, 1000);
-            return;
-        } else if (isDeleting && j === 0) {
-            isDeleting = false;
-            i = (i + 1) % words.length;
+            setTimeout(typeEffect, delayBetween);
         }
-        setTimeout(typeEffect, isDeleting ? 60 : 100);
+        else if (isDeleting && charIndex === 0) {
+            // Move to next text
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(typeEffect, typingSpeed);
+        }
     }
 }
 
-typeEffect();
+document.addEventListener("DOMContentLoaded", typeEffect);
