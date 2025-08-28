@@ -1,0 +1,371 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #ECD06F;   /* Page background */
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background: #ffffff; /* White navbar */
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+    display: block;
+}
+
+/* Menu */
+.nav-links {
+    flex: 1;
+    margin-left: 2rem;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul.sub-links {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.nav-links a {
+    color: #111111;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #3a7ca5;
+    font-weight: 600;
+}
+
+/* Right Actions */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #666666;
+}
+
+.icon-btn:hover {
+    color: #3a7ca5;
+}
+
+.nav-login {
+    text-decoration: none;
+    color: #444444;
+    font-size: 0.95rem;
+}
+
+.nav-login:hover {
+    color: #3a7ca5;
+}
+
+.nav-cta {
+    background: #3a7ca5;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.nav-cta:hover {
+    background: #1d3557;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    color: #111111;
+    transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+    background: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Troubleshooting Dropdown */
+.nav-links .dropdown {
+  position: relative;
+}
+
+.nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Drop below parent */
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  min-width: 200px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
+
+.nav-links .dropdown-content li {
+  list-style: none;
+}
+
+.nav-links .dropdown-content li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: #111111;
+  transition: all 0.3s ease;
+}
+
+.nav-links .dropdown-content li a:hover {
+  background: #f5f5f5;
+  color: #c39200; /* Hover accent */
+  transform: translateX(4px);
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #d9b84f, #c7a23f); /* darker gradient */
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero-logo {
+  max-width: 220px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff6d5;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-left {
+  flex: 1;
+}
+
+.contact-left h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #8b6f00;
+}
+
+.contact-info p {
+  margin: 0.6rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Subscription Box */
+.subscription-box {
+  flex: 1;
+  background: #ecd06f;
+  padding: 2rem;
+  border-radius: 12px;
+  color: #111;
+  box-shadow: inset 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.subscription-box h3 {
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.subscription-form input,
+.subscription-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.subscription-form button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscription-form button:hover {
+  background: #8b6f00;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons img {
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
+.footer {
+    background: #ffffff; /* White footer */
+    color: #111111;
+    padding: 3rem 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer h4 {
+    color: #111111;
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+    color: #444444;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #3a7ca5;
+    transform: translateX(4px);
+}
+
+.footer .social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .social a {
+    font-size: 1.5rem;
+    color: #444444;
+    transition: 0.3s;
+}
+
+.footer .social a:hover {
+    color: #3a7ca5;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #dddddd;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
