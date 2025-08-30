@@ -59,3 +59,69 @@ function typeEffect() {
 }
 
 document.addEventListener("DOMContentLoaded", typeEffect);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+            // Close all other open FAQ items
+            faqItems.forEach(el => {
+                if (el !== item) {
+                    el.classList.remove("active");
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle("active");
+        });
+    });
+});
+   
+AOS.init({
+                duration: 1000,   // animation speed in ms
+                once: true,       // animation happens only once
+                easing: 'ease-in-out'
+            });
+
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("show");
+                            observer.unobserve(entry.target); // animate once
+                        }
+                    });
+                }, { threshold: 0.2 });
+
+                // Target all elements that fade in
+                const cards = document.querySelectorAll(
+                    ".feature-card, .explore .card, .perk-card, .value-cards .card"
+                );
+
+                cards.forEach(card => observer.observe(card));
+            });
+        
+
+            // Fade-in on scroll
+            const fadeElems = document.querySelectorAll('.feature-card, .explore .card, .perk-card, .value-cards .card');
+
+            function checkFade() {
+                const triggerBottom = window.innerHeight * 0.85;
+
+                fadeElems.forEach(el => {
+                    const boxTop = el.getBoundingClientRect().top;
+
+                    if (boxTop < triggerBottom) {
+                        el.classList.add('show');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkFade);
+            window.addEventListener('load', checkFade);

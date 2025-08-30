@@ -25,52 +25,53 @@
     
             <!-- Menu -->
             <nav class="nav-links">
-  <ul>
-    <li><a href="ai_tools.html">AI Tools</a></li>
+                <ul>
+                    <li><a href="ai_tools.html">AI Tools</a></li>
 
-    <!-- Troubleshooting Dropdown -->
-    <li class="dropdown">
-      <a href="troubleshooting.html">Troubleshooting ▾</a>
-      <ul class="dropdown-content">
-        <li><a href="networking.html">Networking</a></li>
-        <li><a href="hardware.html">Hardware</a></li>
-        <li><a href="software.html">Software</a></li>
-        <li><a href="os_support.html">Operating Systems</a></li>
-      </ul>
-    </li>
+                    <!-- Troubleshooting Dropdown -->
+                    <li class="dropdown">
+                    <a href="troubleshooting.html" class="dropdown-toggle">Troubleshooting ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="networking.html">Networking</a></li>
+                        <li><a href="hardware.html">Hardware</a></li>
+                        <li><a href="software.html">Software</a></li>
+                        <li><a href="os_support.html">Operating Systems</a></li>
+                    </ul>
+                    </li>
 
-    <li><a href="tips.html">Tips & Tricks</a></li>
-    <li><a href="security.html">Cybersecurity</a></li>
-  </ul>
+                    <li><a href="tips.html">Tips & Tricks</a></li>
+                    <li><a href="security.html">Cybersecurity</a></li>
+                </ul>
 
-  <ul class="sub-links">
-    <li><a href="about_us.html" class="active">About Us</a></li>
-    <li><a href="case_studies.html">Case Studies</a></li>
-    <li><a href="certifications.html">Certifications</a></li>
-    <li><a href="team.html">Our Team</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact Support</a></li>
-  </ul>
-</nav>
+                <ul class="sub-links">
+                    <li><a href="about_us.html" class="active">About Us</a></li>
+                    <li><a href="case_studies.html">Case Studies</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Support</a></li>
+                </ul>
+                </nav>
     
             <!-- Right Side Actions -->
-            <div class="nav-actions">
-                <button class="icon-btn" title="Search"><i class="fas fa-search"></i></button>
-    
-                <div class="dropdown">
-                    <button class="icon-btn">Support ▾</button>
-                    <div class="dropdown-content">
-                        <a href="support.html">Help Center</a>
-                        <a href="community.html">Community</a>
-                        <a href="docs.html">Documentation</a>
+                    <div class="nav-actions">
+                    <button class="icon-btn" title="Search"><i class="fas fa-search"></i></button>
+
+                    <!-- Support Dropdown -->
+                        <li class="dropdown">
+                        <a href="support.html" class="dropdown-toggle">Support ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="support.html">Help Center</a></li>
+                            <li><a href="community.html">Community</a></li>
+                            <li><a href="docs.html">Documentation</a></li>
+                        </ul>
+                        </li>
+
+                    <button class="icon-btn" title="Language"><i class="fas fa-globe"></i></button>
+                    <a href="auth.html" class="nav-login"><i class="fas fa-user"></i> Log In</a>
+                    <a href="downloads.html" class="nav-cta">Free Resources</a>
                     </div>
-                </div>
-    
-                <button class="icon-btn" title="Language"><i class="fas fa-globe"></i></button>
-                <a href="auth.html" class="nav-login"><i class="fas fa-user"></i> Log In</a>
-                <a href="downloads.html" class="nav-cta">Free Resources</a>
-            </div>
         </div>
     </header>
 
@@ -445,10 +446,28 @@
   </div>
   <button class="chatbox-toggle" id="openChat"><i class="fas fa-comment-dots"></i></button>
 
-  <!-- 🔹 FOOTER -->
-    <footer class="footer">
+    <!-- 🔹 FOOTER -->
+<footer class="footer">
+    <div class="footer-top">
+        <!-- Logo + About -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <img src="./assets/mainn.png" alt="IT Hub Logo">
+            </a>
+            <p>IT Troubleshooting & Networking Hub — helping professionals solve IT challenges with ease.</p>
+            
+            <!-- Social Icons -->
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-medium"></i></a>
+            </div>
+        </div>
+
+        <!-- Footer Links -->
         <div class="footer-container">
-    
             <!-- Company -->
             <div class="footer-col">
                 <h4>About IT Hub</h4>
@@ -461,13 +480,10 @@
                     <li><a href="partners.html">Technology Partners</a></li>
                     <li><a href="policies.html">Policies</a></li>
                     <li><a href="#">Tech Protect</a></li>
-                    <li><a href="#">Innovation Lab</a></li>
-                    <li><a href="#">Research Center</a></li>
-                    <li><a href="resources.html">Why IT Hub?</a></li>
                 </ul>
             </div>
-    
-            <!-- Products -->
+
+            <!-- Solutions -->
             <div class="footer-col">
                 <h4>Solutions</h4>
                 <ul>
@@ -478,61 +494,54 @@
                     <li><a href="products.html">All Solutions</a></li>
                 </ul>
             </div>
-    
-            <!-- IT Hub Sites -->
+
+            <!-- Resources -->
             <div class="footer-col">
                 <h4>Resources</h4>
                 <ul>
                     <li><a href="conf.html">TechConf</a></li>
                     <li><a href="documentation.html">Documentation</a></li>
-                    <li><a href="investors.html">Investor Relations</a></li>
-                    <li><a href="training.html">Training & Certification</a></li>
+                    <li><a href="training.html">Training</a></li>
                     <li><a href="store.html">IT Store</a></li>
                     <li><a href="videos.html">Video Library</a></li>
                     <li><a href="resources.html">All Resources</a></li>
                 </ul>
             </div>
-    
-            <!-- Learn -->
+
+            <!-- Knowledge -->
             <div class="footer-col">
                 <h4>Knowledge Center</h4>
                 <ul>
                     <li><a href="#">Network Basics</a></li>
                     <li><a href="#">Firewall Essentials</a></li>
                     <li><a href="#">OS Configuration</a></li>
-                    <li><a href="#">Server Management</a></li>
-                    <li><a href="#">System Monitoring</a></li>
                     <li><a href="#">Cybersecurity Tips</a></li>
-                    <li><a href="#">Troubleshooting Metrics</a></li>
-                    <li><a href="#">AI in Networking</a></li>
                     <li><a href="#">Tech Trends 2025</a></li>
                     <li><a href="articles.html">All Articles</a></li>
                 </ul>
             </div>
-    
+
             <!-- Contact -->
             <div class="footer-col">
-                <h4>Contact IT Hub</h4>
+                <h4>Contact</h4>
                 <ul>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="support.html">Tech Support</a></li>
                     <li><a href="community.html">Community Forum</a></li>
                 </ul>
-    
-                <h4>Reviews</h4>
-                <ul>
-                    <li><a href="#">Peer Insights</a></li>
-                    <li><a href="#">TechSpot</a></li>
-                    <li><a href="#">TrustReviews</a></li>
-                </ul>
             </div>
-    
         </div>
-    
-        <div class="footer-bottom">
-            <p>© 2025 IT Troubleshooting & Networking Hub. All rights reserved.</p>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        <p>© 2025 IT Troubleshooting & Networking Hub. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="policies.html">Terms & Policies</a>
+            <a href="#">Cookies Settings</a>
         </div>
-    </footer>
+    </div>
+</footer>
    
   <script src="js/ai.js"></script>
 
