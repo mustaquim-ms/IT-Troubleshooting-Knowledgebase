@@ -74,15 +74,70 @@
     </header>
 
 
-
-    <!-- 🔹 HERO SECTION -->
-<section class="tips-hero">
+  <!-- 🔹 HERO -->
+  <section class="hero">
   <div class="hero-content">
-    <h1 class="glow-text">⚡ IT Tips & Tricks Hub ⚡</h1>
-    <p>Smart fixes, hidden shortcuts, and troubleshooting hacks that make IT life easier.</p>
-    <a href="#quick-tips" class="hero-btn">Explore Tips</a>
+    <h1>IT Troubleshooting Tips & Tricks</h1>
+    <p>Practical fixes for Windows, Mac, Linux, hardware & software issues.</p>
+    <div class="search-box">
+      <input type="text" placeholder="Search a problem (e.g., WiFi not working)">
+      <button>Search</button>
+    </div>
+    <div class="categories">
+      <button>Windows</button>
+      <button>macOS</button>
+      <button>Linux</button>
+      <button>Hardware</button>
+      <button>Software</button>
+    </div>
   </div>
 </section>
+
+<!-- Tips Section -->
+  <section class="cards-container">
+    
+    <!-- BASIC ISSUES -->
+    <h2>🟢 Basic Issues</h2>
+    <div class="cards">
+      <div class="card" data-solution="Restart your computer to clear temporary system glitches.">
+        Computer Running Slow
+      </div>
+      <div class="card" data-solution="Check if your WiFi is turned on, then restart the router.">
+        No Internet Connection
+      </div>
+      <div class="card" data-solution="Reconnect the monitor cable or adjust brightness settings.">
+        Blank Screen on Startup
+      </div>
+    </div>
+
+    <!-- INTERMEDIATE ISSUES -->
+    <h2>🟡 Intermediate Issues</h2>
+    <div class="cards">
+      <div class="card" data-solution="Update GPU drivers and check hardware acceleration in settings.">
+        Display Driver Crashes
+      </div>
+      <div class="card" data-solution="Boot into Safe Mode and uninstall recent conflicting software.">
+        System Freezes Frequently
+      </div>
+      <div class="card" data-solution="Check Task Manager for resource hogging apps and disable them.">
+        High CPU Usage
+      </div>
+    </div>
+
+    <!-- ADVANCED ISSUES -->
+    <h2>🔴 Advanced Issues</h2>
+    <div class="cards">
+      <div class="card" data-solution="Run sfc /scannow in command prompt as administrator.">
+        Corrupted System Files
+      </div>
+      <div class="card" data-solution="Check SMART status of your drive and backup immediately.">
+        Hard Drive Failure Signs
+      </div>
+      <div class="card" data-solution="Boot into recovery mode and repair bootloader manually.">
+        Bootloader Corruption
+      </div>
+    </div>
+  </section>
 
 
 
@@ -182,5 +237,9 @@
         </div>
     </div>
 </footer>
+
+
+    <script src="js/tips.js"></script>
+
 </body>
 </html>
