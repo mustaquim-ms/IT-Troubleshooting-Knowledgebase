@@ -74,67 +74,60 @@
     </header>
 
 
-  <!-- 🔹 HERO -->
-  <section class="hero">
+    <!-- 🔹 Hero Section -->
+<section class="tips-hero">
   <div class="hero-content">
-    <h1>IT Troubleshooting Tips & Tricks</h1>
-    <p>Practical fixes for Windows, Mac, Linux, hardware & software issues.</p>
-    <div class="search-box">
-      <input type="text" placeholder="Search a problem (e.g., WiFi not working)">
-      <button>Search</button>
-    </div>
-    <div class="categories">
-      <button>Windows</button>
-      <button>macOS</button>
-      <button>Linux</button>
-      <button>Hardware</button>
-      <button>Software</button>
-    </div>
+    <h1 class="glow-text">Tips & Tricks Hub</h1>
+    <p>Boost your IT troubleshooting skills with practical solutions, shortcuts, and insider knowledge across all platforms.</p>
+    <a href="#cards" class="hero-btn">Explore Now</a>
   </div>
+
+  <!-- Decorative Background Shapes -->
+  <div class="hero-shape shape1"></div>
+  <div class="hero-shape shape2"></div>
+  <div class="hero-shape shape3"></div>
 </section>
 
-<!-- Tips Section -->
-  <section class="cards-container">
-    
-    <!-- BASIC ISSUES -->
-    <h2>🟢 Basic Issues</h2>
-    <div class="cards">
-      <div class="card" data-solution="Restart your computer to clear temporary system glitches.">
-        Computer Running Slow
+
+    <!-- 🔹 Card Stack Section -->
+  <section class="card-stack">
+    <div class="card" data-category="windows">
+      <div class="card-front">
+        <i class="fa-brands fa-windows"></i>
+        <h3>Windows</h3>
       </div>
-      <div class="card" data-solution="Check if your WiFi is turned on, then restart the router.">
-        No Internet Connection
-      </div>
-      <div class="card" data-solution="Reconnect the monitor cable or adjust brightness settings.">
-        Blank Screen on Startup
+      <div class="card-back">
+        <p>Common issues include blue screen errors, driver conflicts, and system slowdowns.</p>
       </div>
     </div>
 
-    <!-- INTERMEDIATE ISSUES -->
-    <h2>🟡 Intermediate Issues</h2>
-    <div class="cards">
-      <div class="card" data-solution="Update GPU drivers and check hardware acceleration in settings.">
-        Display Driver Crashes
+    <div class="card" data-category="mac">
+      <div class="card-front">
+        <i class="fa-brands fa-apple"></i>
+        <h3>Mac</h3>
       </div>
-      <div class="card" data-solution="Boot into Safe Mode and uninstall recent conflicting software.">
-        System Freezes Frequently
-      </div>
-      <div class="card" data-solution="Check Task Manager for resource hogging apps and disable them.">
-        High CPU Usage
+      <div class="card-back">
+        <p>MacOS users often face software incompatibility, startup disk errors, and update issues.</p>
       </div>
     </div>
 
-    <!-- ADVANCED ISSUES -->
-    <h2>🔴 Advanced Issues</h2>
-    <div class="cards">
-      <div class="card" data-solution="Run sfc /scannow in command prompt as administrator.">
-        Corrupted System Files
+    <div class="card" data-category="linux">
+      <div class="card-front">
+        <i class="fa-brands fa-linux"></i>
+        <h3>Linux</h3>
       </div>
-      <div class="card" data-solution="Check SMART status of your drive and backup immediately.">
-        Hard Drive Failure Signs
+      <div class="card-back">
+        <p>Linux troubleshooting covers kernel panics, package dependency issues, and hardware drivers.</p>
       </div>
-      <div class="card" data-solution="Boot into recovery mode and repair bootloader manually.">
-        Bootloader Corruption
+    </div>
+
+    <div class="card" data-category="phone">
+      <div class="card-front">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <h3>Phone</h3>
+      </div>
+      <div class="card-back">
+        <p>Mobile issues include app crashes, overheating, battery drain, and connectivity problems.</p>
       </div>
     </div>
   </section>
