@@ -3,60 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tips & Tricks | IT Troubleshooting Hub</title>
+  <title>IT Troubleshooting Hub</title>
   <link rel="stylesheet" href="css/tips.css"/>
   <link rel="stylesheet" href="css/animations.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
-  <!-- 🔹 HEADER / NAVBAR (as provided) -->
+  <!-- 🔹 HEADER / NAVBAR (unchanged) -->
   <header class="navbar">
     <div class="navbar-container">
-      <!-- Logo -->
       <a href="index.html" class="logo">
         <img src="./assets/mainn.png" alt="IT Troubleshooting Logo">
       </a>
 
-      <!-- Menu -->
       <nav class="nav-links">
-        <ul>
-          <li><a href="ai_tools.html">AI Tools</a></li>
-
-          <!-- Troubleshooting Dropdown -->
-          <li class="dropdown">
-            <a href="troubleshooting.html" class="dropdown-toggle">Troubleshooting ▾</a>
-            <ul class="dropdown-content">
-              <li><a href="networking.html">Networking</a></li>
-              <li><a href="hardware.html">Hardware</a></li>
-              <li><a href="software.html">Software</a></li>
-              <li><a href="os_support.html">Operating Systems</a></li>
+            <ul>
+                    <li><a href="ai_tools.html">AI Tools</a></li>
+                    <li><a href="tips.html" class="active">Tips & Tricks</a></li>
+                    <li><a href="security.html">Cybersecurity</a></li>
             </ul>
-          </li>
+            <ul class="sub-links">
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="case_studies.html">Case Studies</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Support</a></li>
+            </ul>
+        </nav>
 
-          <li><a href="tips.html" class="active">Tips & Tricks</a></li>
-          <li><a href="security.html">Cybersecurity</a></li>
-        </ul>
-
-        <ul class="sub-links">
-          <li><a href="about_us.html">About Us</a></li>
-          <li><a href="case_studies.html">Case Studies</a></li>
-          <li><a href="certifications.html">Certifications</a></li>
-          <li><a href="team.html">Our Team</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact Support</a></li>
-        </ul>
-      </nav>
-
-      <!-- Right Side Actions -->
       <div class="nav-actions">
         <button class="icon-btn" title="Search"><i class="fas fa-search"></i></button>
-
-        <!-- Support Dropdown -->
         <li class="dropdown">
           <a href="support.html" class="dropdown-toggle">Support ▾</a>
           <ul class="dropdown-content">
@@ -65,7 +47,6 @@
             <li><a href="docs.html">Documentation</a></li>
           </ul>
         </li>
-
         <button class="icon-btn" title="Language"><i class="fas fa-globe"></i></button>
         <a href="auth.html" class="nav-login"><i class="fas fa-user"></i> Log In</a>
         <a href="downloads.html" class="nav-cta">Free Resources</a>
@@ -73,191 +54,172 @@
     </div>
   </header>
 
-  <!-- 🔹 HERO with Matrix Canvas -->
-  <section class="tips-hero">
-    <canvas id="matrix-bg" aria-hidden="true"></canvas>
+
+<!-- 🔹 HERO -->
+  <section class="hero">
     <div class="hero-content">
-      <h1 class="glow-text">Tips & Tricks Hub</h1>
-      <p>Explore categorized troubleshooting guides, solutions, and tips for all IT platforms, from basic fixes to advanced command-line mastery.</p>
-      <div class="hero-cta">
-        <a href="#cats" class="hero-btn">Explore Now</a>
-        <a href="#tutorials" class="hero-btn ghost">Tutorials</a>
+      <h1>🚀 IT Troubleshooting Hub</h1>
+      <p>Fix IT issues from <strong>basic errors</strong> to <strong>advanced runbooks</strong>. Search, filter, and share deep-linked solutions.</p>
+      <div class="search-box">
+        <input type="text" id="searchBar" placeholder="Search problems, fixes, or OS commands...">
+        <button><i class="fas fa-search"></i></button>
       </div>
     </div>
-    <!-- floating orbs -->
-    <span class="hero-shape shape1"></span>
-    <span class="hero-shape shape2"></span>
-    <span class="hero-shape shape3"></span>
   </section>
 
-  <!-- 🔹 SEARCH + FILTERS -->
-  <section class="filters">
-    <input type="text" id="searchBox" placeholder="🔍 Search problems...">
-    <div class="tags">
-      <button data-level="all" class="tag active">All</button>
-      <button data-level="Basic" class="tag">Basic</button>
-      <button data-level="Intermediate" class="tag">Intermediate</button>
-      <button data-level="Advanced" class="tag">Advanced</button>
+   <!-- 🔹 BROWSE ISSUES -->
+  <section class="problems">
+    <h2>🛠 Browse Issues</h2>
+
+    <div id="categoriesContainer">
+      <!-- JS will render categories + horizontal scrollable cards -->
     </div>
   </section>
 
-  <!-- 🔹 CATEGORY SECTION -->
-  <section class="categories">
-    <div id="categoryContainer"></div>
-  </section>
-
-  <!-- 🔹 MODAL -->
-  <div id="modal" class="modal">
+  <!-- 🔹 SOLUTION MODAL -->
+  <div class="modal" id="solutionModal">
     <div class="modal-content">
-      <span id="closeModal">&times;</span>
-      <h2 id="modalProblem"></h2>
-      <p id="modalSolution"></p>
-      <pre><code id="modalCode"></code></pre>
-      <button id="copyCode">📋 Copy Code</button>
+      <span class="close">&times;</span>
+      <h2 id="solutionTitle"></h2>
+      <p id="solutionDescription"></p>
+      <pre><code id="solutionCode"></code></pre>
+      <button id="exportRunbook"><i class="fas fa-file-export"></i> Export Runbook</button>
     </div>
   </div>
 
-  <!-- 🔹 CATEGORY CARDS SELECTOR -->
-  <section id="cats" class="category-tabs">
-    <button class="cat-tab active" data-cat="windows"><i class="fa-brands fa-windows"></i> Windows</button>
-    <button class="cat-tab" data-cat="mac"><i class="fa-brands fa-apple"></i> Mac</button>
-    <button class="cat-tab" data-cat="linux"><i class="fa-brands fa-linux"></i> Linux</button>
-    <button class="cat-tab" data-cat="android"><i class="fa-solid fa-mobile-screen"></i> Android / iOS</button>
-    <button class="cat-tab" data-cat="terminal"><i class="fa-solid fa-terminal"></i> Terminal (Bash)</button>
-    <button class="cat-tab" data-cat="powershell"><i class="fa-solid fa-code"></i> PowerShell</button>
-    <button class="cat-tab" data-cat="cmd"><i class="fa-solid fa-keyboard"></i> Command Prompt</button>
-  </section>
-
-  <!-- 🔹 PROBLEM CARDS (one horizontal stack per category, we toggle which is visible) -->
-  <main class="problems-area">
-    <!-- Containers are auto-filled by JS -->
-    <section id="list-windows" class="problem-strip visible"></section>
-    <section id="list-mac" class="problem-strip"></section>
-    <section id="list-linux" class="problem-strip"></section>
-    <section id="list-android" class="problem-strip"></section>
-    <section id="list-terminal" class="problem-strip"></section>
-    <section id="list-powershell" class="problem-strip"></section>
-    <section id="list-cmd" class="problem-strip"></section>
-  </main>
-
-  <!-- 🔹 Tutorials Section -->
-  <section id="tutorials" class="tutorials">
-    <h2 class="section-title">Tutorials & Guides</h2>
-    <p class="section-sub">Short videos and guided walkthroughs to reinforce the solutions.</p>
-    <div class="tutorial-grid">
-      <article class="tutorial-card">
-        <iframe src="https://www.youtube.com/embed/8ZtInClXe1Q" title="Windows Troubleshooting Basics" allowfullscreen></iframe>
-        <h4>Windows Troubleshooting Basics</h4>
+  <!-- 🔹 BLOGS -->
+  <section class="blogs">
+    <h2>📘 Latest Tips & Blogs</h2>
+    <div class="blog-grid">
+      <article class="blog-card">
+        <h3>10 Terminal Hacks You Should Know</h3>
+        <p>Boost productivity with these command-line tricks.</p>
+        <a href="#">Read More →</a>
       </article>
-      <article class="tutorial-card">
-        <iframe src="https://www.youtube.com/embed/oxuRxtrO2Ag" title="Linux Terminal Essentials" allowfullscreen></iframe>
-        <h4>Linux Terminal Essentials</h4>
+      <article class="blog-card">
+        <h3>How to Diagnose Network Latency</h3>
+        <p>Step-by-step guide with ping and traceroute examples.</p>
+        <a href="#">Read More →</a>
       </article>
-      <article class="tutorial-card">
-        <iframe src="https://www.youtube.com/embed/P0Slo59cH8E" title="Make your Mac last" allowfullscreen"></iframe>
-        <h4>Mac Maintenance & Fixes</h4>
+      <article class="blog-card">
+        <h3>Fixing Slow Boot Times</h3>
+        <p>Diagnose startup bottlenecks across OS platforms.</p>
+        <a href="#">Read More →</a>
       </article>
     </div>
   </section>
 
-  <!-- 🔹 MODAL for Solutions -->
-  <div id="solution-modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-content" role="document">
-      <button class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-      <h3 id="modal-title"></h3>
-      <p id="modal-solution"></p>
-      <pre><code id="modal-code"></code></pre>
+  <!-- 🔹 VIDEOS -->
+  <section class="videos">
+    <h2>🎥 Troubleshooting in Action</h2>
+    <div class="video-grid">
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Tutorial"></iframe>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/3fumBcKC6RE" title="Video Tutorial"></iframe>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- 🔹 FOOTER (kept) -->
-  <footer class="footer">
+
+   <!-- 🔹 FOOTER -->
+<footer class="footer">
     <div class="footer-top">
-      <!-- Brand -->
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">
-          <img src="./assets/mainn.png" alt="IT Hub Logo">
-        </a>
-        <p>IT Troubleshooting & Networking Hub — helping professionals solve IT challenges with ease.</p>
-        <div class="social">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-medium"></i></a>
-        </div>
-      </div>
-
-      <!-- Links -->
-      <div class="footer-container">
-        <div class="footer-col">
-          <h4>About IT Hub</h4>
-          <ul>
-            <li><a href="about.html">Who We Are</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="#">Why Choose Us</a></li>
-            <li><a href="#">Our Experts</a></li>
-            <li><a href="newsroom.html">Newsroom</a></li>
-            <li><a href="partners.html">Technology Partners</a></li>
-            <li><a href="policies.html">Policies</a></li>
-            <li><a href="#">Tech Protect</a></li>
-          </ul>
+        <!-- Logo + About -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <img src="./assets/mainn.png" alt="IT Hub Logo">
+            </a>
+            <p>IT Troubleshooting & Networking Hub — helping professionals solve IT challenges with ease.</p>
+            
+            <!-- Social Icons -->
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-medium"></i></a>
+            </div>
         </div>
 
-        <div class="footer-col">
-          <h4>Solutions</h4>
-          <ul>
-            <li><a href="ai_tools.html">AI Utilities</a></li>
-            <li><a href="learnbase.html">Learning Hub</a></li>
-            <li><a href="#">Free Downloads</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="products.html">All Solutions</a></li>
-          </ul>
-        </div>
+        <!-- Footer Links -->
+        <div class="footer-container">
+            <!-- Company -->
+            <div class="footer-col">
+                <h4>About IT Hub</h4>
+                <ul>
+                    <li><a href="about.html">Who We Are</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="#">Why Choose Us</a></li>
+                    <li><a href="#">Our Experts</a></li>
+                    <li><a href="newsroom.html">Newsroom</a></li>
+                    <li><a href="partners.html">Technology Partners</a></li>
+                    <li><a href="policies.html">Policies</a></li>
+                    <li><a href="#">Tech Protect</a></li>
+                </ul>
+            </div>
 
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="conf.html">TechConf</a></li>
-            <li><a href="documentation.html">Documentation</a></li>
-            <li><a href="training.html">Training</a></li>
-            <li><a href="store.html">IT Store</a></li>
-            <li><a href="videos.html">Video Library</a></li>
-            <li><a href="resources.html">All Resources</a></li>
-          </ul>
-        </div>
+            <!-- Solutions -->
+            <div class="footer-col">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="ai_tools.html">AI Utilities</a></li>
+                    <li><a href="learnbase.html">Learning Hub</a></li>
+                    <li><a href="#">Free Downloads</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="products.html">All Solutions</a></li>
+                </ul>
+            </div>
 
-        <div class="footer-col">
-          <h4>Knowledge Center</h4>
-          <ul>
-            <li><a href="#">Network Basics</a></li>
-            <li><a href="#">Firewall Essentials</a></li>
-            <li><a href="#">OS Configuration</a></li>
-            <li><a href="#">Cybersecurity Tips</a></li>
-            <li><a href="#">Tech Trends 2025</a></li>
-            <li><a href="articles.html">All Articles</a></li>
-          </ul>
-        </div>
+            <!-- Resources -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="conf.html">TechConf</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="store.html">IT Store</a></li>
+                    <li><a href="videos.html">Video Library</a></li>
+                    <li><a href="resources.html">All Resources</a></li>
+                </ul>
+            </div>
 
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="support.html">Tech Support</a></li>
-            <li><a href="community.html">Community Forum</a></li>
-          </ul>
+            <!-- Knowledge -->
+            <div class="footer-col">
+                <h4>Knowledge Center</h4>
+                <ul>
+                    <li><a href="#">Network Basics</a></li>
+                    <li><a href="#">Firewall Essentials</a></li>
+                    <li><a href="#">OS Configuration</a></li>
+                    <li><a href="#">Cybersecurity Tips</a></li>
+                    <li><a href="#">Tech Trends 2025</a></li>
+                    <li><a href="articles.html">All Articles</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="support.html">Tech Support</a></li>
+                    <li><a href="community.html">Community Forum</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
 
+    <!-- Bottom -->
     <div class="footer-bottom">
-      <p>© 2025 IT Troubleshooting & Networking Hub. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="policies.html">Terms & Policies</a>
-        <a href="#">Cookies Settings</a>
-      </div>
+        <p>© 2025 IT Troubleshooting & Networking Hub. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="policies.html">Terms & Policies</a>
+            <a href="#">Cookies Settings</a>
+        </div>
     </div>
-  </footer>
+</footer>
+
 
   <script src="js/tips.js"></script>
 </body>
