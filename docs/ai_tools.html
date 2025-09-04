@@ -62,17 +62,27 @@
         </div>
     </header>
 
-  <!-- HERO -->
-    <section class="hero animate-fade-in">
-        <h1 class="hero-title"><span id="typed-text"></span><span class="cursor">_</span></h1>
-        <p class="hero-subtitle">Solve Smarter, Not Harder: The AI-Powered Pathway to Flawless IT.</p>
-        <p class="hero-text">
-            Welcome to the KnowledgeBase, your <b>AI-Powered Hub</b> for smarter IT. This page offers a curated selection of AI tools to transform your 
-            workflow—from fixing issues faster to predicting problems before they happen. Discover how to minimize downtime, boost efficiency, 
-            and build a more resilient system with AI.
-        </p>
-        <a href="auth.html" class="btn">Join KnowledgeBase</a>
-    </section>
+  <!-- 🔹 CHAT HERO SECTION -->
+        <section class="chat-hero">
+          <div class="chat-container">
+            <h1>Welcome to <span class="highlight">KnowledgeBase</span>.</h1>
+            <p class="subtitle">How can I help you today?</p>
+
+            <div class="chat-input-box">
+              <input type="text" placeholder="Type your question here..." />
+              <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+
+  <!-- Quick action suggestions --> 
+            <div class="chat-suggestions">
+              <button><i class="fas fa-search"></i> Research</button>
+              <button><i class="fas fa-bolt"></i> Brainstorm</button>
+              <button><i class="fas fa-chart-bar"></i> Analyze Data</button>
+              <button><i class="fas fa-image"></i> Create Images</button>
+              <button><i class="fas fa-code"></i> Code</button>
+            </div>
+          </div>
+        </section>
 
     <!-- 🔹 CATEGORIES -->
 <section class="categories">
@@ -347,91 +357,56 @@
 <section class="pricing">
   <div class="section-header" data-aos="fade-up">
     <h2>Pricing Plans</h2>
-    <p>Choose a plan that fits your needs and scale with ease.</p>
+    <p>Flexible. Scalable. Smart AI tools for every need.</p>
   </div>
+
   <div class="pricing-grid">
+    <!-- Free / Starter -->
     <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-      <h3>Free</h3>
-      <p class="price">$0</p>
+      <h3>Starter Plan</h3>
+      <p class="price">$0 <span>/month</span></p>
+      <p class="subtitle">Perfect for exploring AI tools</p>
       <ul>
-        <li>Basic AI Tools</li>
-        <li>Limited Usage</li>
-        <li>Email Support</li>
+        <li><i class="fas fa-check-circle"></i> Access to basic AI tools</li>
+        <li><i class="fas fa-check-circle"></i> 10 prompts per day</li>
+        <li><i class="fas fa-check-circle"></i> Email support</li>
+        <li><i class="fas fa-check-circle"></i> Community access</li>
       </ul>
       <button>Get Started</button>
     </div>
+
+    <!-- Pro -->
     <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
-      <h3>Pro</h3>
-      <p class="price">$19/mo</p>
+      <h3>Pro Plan</h3>
+      <p class="price">$19 <span>/month</span></p>
+      <p class="subtitle">For professionals & creators</p>
       <ul>
-        <li>All AI Tools</li>
-        <li>Unlimited Usage</li>
-        <li>Priority Support</li>
+        <li><i class="fas fa-check-circle"></i> Unlimited AI tool access</li>
+        <li><i class="fas fa-check-circle"></i> Advanced text & code generation</li>
+        <li><i class="fas fa-check-circle"></i> Image creation with AI</li>
+        <li><i class="fas fa-check-circle"></i> Save & manage chat history</li>
+        <li><i class="fas fa-check-circle"></i> Priority customer support</li>
       </ul>
       <button>Upgrade</button>
     </div>
+
+    <!-- Enterprise -->
     <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-      <h3>Enterprise</h3>
-      <p class="price">Custom</p>
+      <h3>Enterprise Plan</h3>
+      <p class="price">Custom <span>/year</span></p>
+      <p class="subtitle">Tailored for teams & companies</p>
       <ul>
-        <li>Team Access</li>
-        <li>Dedicated AI Models</li>
-        <li>24/7 Premium Support</li>
+        <li><i class="fas fa-check-circle"></i> Team collaboration access</li>
+        <li><i class="fas fa-check-circle"></i> Custom AI model integration</li>
+        <li><i class="fas fa-check-circle"></i> API access & automation</li>
+        <li><i class="fas fa-check-circle"></i> Unlimited document analysis</li>
+        <li><i class="fas fa-check-circle"></i> 24/7 premium support</li>
+        <li><i class="fas fa-check-circle"></i> Dedicated account manager</li>
       </ul>
       <button>Contact Us</button>
     </div>
   </div>
 </section>
-
-<!-- 🔹 FAQ (Accordion) -->
-<section class="faq">
-  <div class="section-header" data-aos="fade-up">
-    <h2>FAQ</h2>
-    <p>Answers to the most common questions about our tools.</p>
-  </div>
-  <div class="faq-list">
-    <div class="faq-item">
-      <button class="faq-question">How do I access the tools? <i class="fas fa-chevron-down"></i></button>
-      <div class="faq-answer">
-        <p>Simply sign up and start using our free tools right away.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">Can I upgrade anytime? <i class="fas fa-chevron-down"></i></button>
-      <div class="faq-answer">
-        <p>Yes, you can upgrade or downgrade your plan whenever you like.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">Do you offer student discounts? <i class="fas fa-chevron-down"></i></button>
-      <div class="faq-answer">
-        <p>We offer special pricing for students and educators. Contact us!</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">Is my data secure? <i class="fas fa-chevron-down"></i></button>
-      <div class="faq-answer">
-        <p>Absolutely! We use advanced AI-driven security for all data protection.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- 🔹 CHATBOX WIDGET -->
-  <div class="chatbox" id="chatbox">
-    <div class="chatbox-header">
-      <span>💬 Instant Feedback</span>
-      <button id="closeChat"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="chatbox-body">
-      <p>Hi! How can we assist you today?</p>
-    </div>
-    <div class="chatbox-footer">
-      <input type="text" placeholder="Type your message...">
-      <button><i class="fas fa-paper-plane"></i></button>
-    </div>
-  </div>
-  <button class="chatbox-toggle" id="openChat"><i class="fas fa-comment-dots"></i></button>
 
     <!-- 🔹 FOOTER -->
 <footer class="footer">

@@ -95,7 +95,7 @@ body.loaded {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #06402B;
+    color:#00BCD4;
     font-weight: 600;
 }
 
@@ -115,7 +115,7 @@ body.loaded {
 }
 
 .icon-btn:hover {
-    color: #06402B;
+    color: #00BCD4;
 }
 
 .nav-login {
@@ -125,7 +125,7 @@ body.loaded {
 }
 
 .nav-login:hover {
-    color: #06402B;
+    color: #00BCD4;
 }
 
 .nav-cta {
@@ -139,7 +139,7 @@ body.loaded {
 }
 
 .nav-cta:hover {
-    background: #06402B;
+    background: #00BCD4;
 }
 
 /* General Dropdown */
@@ -198,7 +198,7 @@ body.loaded {
 /* Hover effect on links */
 .dropdown-content li a:hover {
   background-color: #f5f5f5; /* Soft hover background */
-  color: #c39200; /* Accent color */
+  color: #00BCD4; /* Accent color */
   transform: translateX(4px); /* Smooth movement */
 }
 
@@ -436,7 +436,7 @@ body.loaded {
   margin-top: 0.6rem;
   font-size: 0.75rem;
   font-weight: 500;
-  color: #ff4081;
+  color: #00BCD4;
   background: rgba(255, 64, 129, 0.15);
   padding: 0.3rem 0.6rem;
   border-radius: 0.4rem;
@@ -497,7 +497,7 @@ body.loaded {
     transition: 0.3s;
 }
 .social a:hover {
-    color: #ff4081;
+    color: #00BCD4;
 }
 
 /* Links Section */
@@ -526,7 +526,7 @@ body.loaded {
     font-size: 0.95rem;
 }
 .footer ul li a:hover {
-    color: #ff4081;
+    color: #00BCD4;
     transform: translateX(4px);
 }
 
@@ -547,7 +547,7 @@ body.loaded {
     transition: 0.3s;
 }
 .footer-links a:hover {
-    color: #ff4081;
+    color: #00BCD4;
 }
 
 /* ANIMATIONS */
@@ -592,45 +592,89 @@ body.loaded {
 }
 
 
-/* 🔹 Tool & Extended Cards */
-.tools-grid, .extended-grid {
+/* 🔹 AI Tools Section Wrapper */
+.ai-tools,
+.tools-extended {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #0f111a 0%, #1a1d29 100%);
+}
+
+.ai-tools .section-header,
+.tools-extended .section-header {
+  margin-bottom: 3rem;
+}
+
+.ai-tools .section-header h2,
+.tools-extended .section-header h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.ai-tools .section-header p,
+.tools-extended .section-header p {
+  color: #b0b4c3;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 🔹 Tools Grid Shared */
+.tools-grid,
+.extended-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
-.tool-card, .extended-card {
-  background: rgba(30,30,30,0.9);
-  border: 1px solid rgba(255,255,255,0.1);
+/* 🔹 Tool & Extended Cards */
+.tool-card,
+.extended-card {
+  background: rgba(26, 29, 41, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
 }
-.tool-card:hover, .extended-card:hover {
+
+.tool-card:hover,
+.extended-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 25px rgba(0,191,166,0.4);
+  box-shadow: 0 0 25px rgba(58, 209, 255, 0.4);
+  border-color: #3ad1ff;
 }
-.tool-card i, .extended-card i {
-  font-size: 3rem;
+
+/* 🔹 Icons */
+.tool-card i,
+.extended-card i {
+  font-size: 2.8rem;
   margin-bottom: 1rem;
-  color: #00bfa6;
+  color: #3ad1ff;
 }
-.tool-card h3, .extended-card h3 {
+
+/* 🔹 Titles & Text */
+.tool-card h3,
+.extended-card h3 {
   margin: 0.5rem 0;
   color: #fff;
 }
-.tool-card p, .extended-card p {
-  color: #bbb;
+
+.tool-card p,
+.extended-card p {
+  color: #b0b4c3;
   font-size: 0.95rem;
 }
+
+/* 🔹 Links */
 .card-link {
   display: inline-block;
   margin-top: 1rem;
-  color: #00bfa6;
+  color: #3ad1ff;
   font-weight: bold;
   transition: color 0.3s, transform 0.3s;
 }
@@ -658,8 +702,17 @@ body.loaded {
 /* 🔹 Coming Soon Badges */
 .coming-soon {
   position: absolute;
-  bottom: 15px
+  bottom: 15px;
+  left: 15px;
+  background: rgba(255, 76, 96, 0.9);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
+
+
 
 /* ================================
    Quick Links - Futuristic (4x4 layout)
@@ -732,153 +785,109 @@ body.loaded {
 }
 
 /* ================================
-   Chatbox - Bottom Reveal
-=================================*/
-.chatbox {
-  position: fixed;
-  bottom: 90px;
-  right: 30px;
-  width: 320px;
-  background: #181e27;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+   KnowledgeBase Chat Hero (Grok Inspired)
+   ================================ */
+
+.chat-hero {
   display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  transform: translateY(120%);
-  opacity: 0;
-  transition: all 0.4s ease;
-  z-index: 999;
-}
-
-.chatbox.active {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.chatbox-header {
-  background: #10141b;
-  padding: 1rem;
-  font-weight: bold;
-  color: #3ad1ff;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 70vh;
+  padding-top: 80px;
+  background: #0f111a;
   text-align: center;
-  position: relative;
-  animation: fadeText 2s infinite alternate;
+  color: #f5f7fa;
 }
 
-@keyframes fadeText {
-  0% { letter-spacing: 1px; opacity: 0.8; }
-  100% { letter-spacing: 3px; opacity: 1; }
+.chat-container {
+  max-width: 700px;
+  width: 100%;
+  padding: 20px;
 }
 
-.chatbox-header button {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  background: transparent;
+.chat-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.chat-container .highlight {
+  color: #5865f2;
+}
+
+.chat-container .subtitle {
+  font-size: 1.2rem;
+  color: #b0b4c3;
+  margin-bottom: 25px;
+}
+
+/* Chat Input */
+.chat-input-box {
+  display: flex;
+  align-items: center;
+  background: #1a1d29;
+  border: 1px solid #2f3242;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.chat-input-box input {
+  flex: 1;
+  padding: 12px;
   border: none;
-  color: #aaa;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: color 0.3s;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
 }
 
-.chatbox-header button:hover {
+.chat-input-box button {
+  background: #5865f2;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-left: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.chat-input-box button:hover {
+  background: #4752c4;
+  transform: scale(1.05);
+}
+
+/* Suggestions */
+.chat-suggestions {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.chat-suggestions button {
+  background: #1f2233;
+  border: 1px solid #2f3242;
+  color: #d2d6e6;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.chat-suggestions button:hover {
+  background: #2a2e40;
+  border-color: #5865f2;
   color: #fff;
 }
 
-.chatbox-body {
-  padding: 1rem;
-  font-size: 0.95rem;
-  color: #ccc;
-  min-height: 120px;
-}
-
-.chatbox-footer {
-  display: flex;
-  align-items: center;
-  border-top: 1px solid #2c3444;
-  padding: 0.6rem;
-}
-
-.chatbox-footer input {
-  flex: 1;
-  border: none;
-  background: #10141b;
-  color: #e0e0e0;
-  padding: 0.6rem;
-  border-radius: 8px;
-  outline: none;
-  transition: background 0.3s;
-}
-
-.chatbox-footer input:focus {
-  background: #151a24;
-}
-
-.chatbox-footer button {
-  background: #3ad1ff;
-  border: none;
-  margin-left: 0.5rem;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s;
-}
-
-.chatbox-footer button:hover {
-  transform: scale(1.1);
-  background: #2bb1d6;
-}
-
-/* Typing dots */
-.typing {
-  display: flex;
-  gap: 5px;
-  margin-top: 0.5rem;
-}
-
-.typing span {
-  width: 6px;
-  height: 6px;
-  background: #3ad1ff;
-  border-radius: 50%;
-  animation: blink 1.2s infinite;
-}
-
-.typing span:nth-child(2) { animation-delay: 0.2s; }
-.typing span:nth-child(3) { animation-delay: 0.4s; }
-
-@keyframes blink {
-  0%, 100% { opacity: 0.2; transform: translateY(0); }
-  50% { opacity: 1; transform: translateY(-3px); }
-}
-
-/* ================================
-   Chatbox Toggle Button
-=================================*/
-.chatbox-toggle {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #3ad1ff;
-  border: none;
-  color: #000;
-  font-size: 1.3rem;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
-  z-index: 1000;
-}
-
-.chatbox-toggle:hover {
-  transform: scale(1.1);
-}
 
 /* ================================
    Categories
@@ -950,107 +959,108 @@ body.loaded {
 =================================*/
 .pricing {
   padding: 4rem 2rem;
-  background: #10141b;
+  background: #10141b; /* keep existing background */
+  text-align: center;
 }
+.pricing .section-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.pricing .section-header p {
+  color: #aaa;
+  margin-bottom: 3rem;
+}
+
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  align-items: stretch;
+  justify-content: center;
 }
+
 .pricing-card {
   background: #181e27;
   border-radius: 1rem;
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.3s ease;
+  padding: 2.5rem 2rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
 .pricing-card h3 {
+  font-size: 1.3rem;
   color: #fff;
   margin-bottom: 0.5rem;
 }
+
 .pricing-card .price {
   font-size: 2rem;
+  font-weight: bold;
   color: #3ad1ff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
+.pricing-card .price span {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.pricing-card .subtitle {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-bottom: 1.5rem;
+}
+
 .pricing-card ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 .pricing-card ul li {
-  margin: 0.5rem 0;
+  margin: 0.6rem 0;
   color: #ccc;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+.pricing-card ul li i {
+  color: #3ad1ff;
+  font-size: 1rem;
+}
+
 .pricing-card button {
-  padding: 0.7rem 1.5rem;
+  align-self: flex-start;
+  padding: 0.8rem 1.6rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   background: #3ad1ff;
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s;
 }
 .pricing-card button:hover {
   background: #00bfa6;
-}
-.pricing-card.featured {
-  border: 2px solid #3ad1ff;
-  transform: scale(1.05);
+  transform: translateY(-2px);
 }
 
-/* ================================
-   FAQ Accordion
-=================================*/
-.faq {
-  padding: 4rem 2rem;
-  background: #10141b;
+/* Featured Card Highlight */
+.pricing-card.featured {
+  background: #202735;
+  border: 2px solid #3ad1ff;
+  transform: scale(1.05);
+  z-index: 2;
 }
-.faq-list {
-  max-width: 800px;
-  margin: auto;
-}
-.faq-item {
-  background: #181e27;
-  border-radius: 0.8rem;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  transition: background 0.3s ease;
-}
-.faq-item:hover {
-  background: #1f2633;
-}
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 1.2rem;
-  font-size: 1.1rem;
-  text-align: left;
-  color: #3ad1ff;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-  padding: 0 1.2rem;
-}
-.faq-answer p {
-  color: #ccc;
-  font-size: 0.95rem;
-  margin: 1rem 0;
-}
-.faq-item.active .faq-answer {
-  max-height: 200px;
-  padding: 1.2rem;
-}
-.faq-item.active .faq-question i {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease;
+.pricing-card.featured:hover {
+  transform: scale(1.08);
 }
