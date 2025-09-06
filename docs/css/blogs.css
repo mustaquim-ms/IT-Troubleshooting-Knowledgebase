@@ -1,6 +1,14 @@
 /* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #f8fafc, #e3f2fd); color: #333; line-height: 1.6; }
+* {
+   margin: 0; 
+   padding: 0; 
+   box-sizing: border-box; 
+  }
+
+body {
+  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  background:#16161d; color: #333; line-height: 1.6; 
+}
 
 
 /* Navbar */
@@ -311,6 +319,7 @@ body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, 
   overflow: hidden;
 }
 .page-header h1 {
+  font-family: 'Helvetica';
   font-size: 3rem;
   margin-bottom: 10px;
   text-shadow: 0 2px 10px rgba(0,0,0,0.4);
@@ -334,7 +343,7 @@ body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, 
 .header-overlay {
   position: absolute;
   top:0;left:0;width:100%;height:100%;
-  background: linear-gradient(270deg,#6a11cb,#2575fc,#00c6ff,#0072ff);
+  background: #16161d;
   background-size: 800% 800%;
   animation: gradientShift 20s ease infinite;
   z-index: -1;
@@ -347,7 +356,7 @@ body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, 
 
 /* Popular Blogs */
 .popular-blogs { padding: 50px 20px; text-align: center; }
-.popular-blogs h2 { font-size: 2rem; margin-bottom: 20px; }
+.popular-blogs h2 { font-size: 2rem; color: #00c6ff; margin-bottom: 20px; }
 .popular-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
 .popular-post { background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; max-width: 300px; transition: transform 0.3s ease; }
 .popular-post:hover { transform: translateY(-5px); }
