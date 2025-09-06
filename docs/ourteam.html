@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team | KnowledgeBase</title>
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="./css/team.css" />
+
+  <!-- Icons + AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+
+  <!-- 🔹 HEADER / NAVBAR (UNCHANGED) -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="./assets/mainn.png" alt="KnowledgeBase Logo" />
+      </a>
+
+      <!-- Menu -->
+      <nav class="nav-links">
+        <ul>
+          <li><a href="ai_tools.html">AI Tools</a></li>
+          <li><a href="tips.html">Tips & Tricks</a></li>
+          <li><a href="security.html">Cybersecurity</a></li>
+        </ul>
+        <ul class="sub-links">
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="learn.html">LearnBase</a></li>
+          <li><a href="ourteam.html" class="active">Our Team</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contact.html">Contact Support</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Side Actions -->
+      <div class="nav-actions">
+        <button class="icon-btn" title="Search"><i class="fas fa-search"></i></button>
+
+        <!-- Support Dropdown -->
+        <li class="dropdown">
+          <a href="support.html" class="dropdown-toggle">Support ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="support.html">Help Center</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="career.html">Career</a></li>
+          </ul>
+        </li>
+
+        <button class="icon-btn" title="Language"><i class="fas fa-globe"></i></button>
+        <a href="auth.html" class="nav-login"><i class="fas fa-user"></i> Log In</a>
+        <a href="downloads.html" class="nav-cta">Free Resources</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🔹 HERO HEADER -->
+  <section class="team-hero">
+    <div class="hero-inner" data-aos="fade-up">
+      <h1><span class="thin">Meet the</span> <span class="kb">KnowledgeBase</span> Team</h1>
+      <p>We’re passionate about solving tech problems, explaining complex systems, and building tools that make technology accessible for everyone.</p>
+      <div class="hero-pill"></div>
+    </div>
+    <div class="shapes">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+      <div class="grid"></div>
+    </div>
+  </section>
+
+  <!-- 🔹 VALUES & FEATURES -->
+  <section class="values-section">
+    <h2 class="section-title" data-aos="fade-up">Our Values & Features</h2>
+    <div class="values-grid">
+      <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Security First</h3>
+        <p>Protecting businesses with enterprise-grade solutions.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-robot"></i>
+        <h3>AI & Automation</h3>
+        <p>Leveraging AI to simplify workflows and drive efficiency.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-network-wired"></i>
+        <h3>Networking</h3>
+        <p>Building fast, reliable, and scalable global networks.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovation</h3>
+        <p>Pioneering modern solutions to keep you ahead.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔸 FEATURES (What We Do Best) -->
+  <section class="features">
+    <h2 data-aos="fade-up">What We Do Best</h2>
+    <div class="feature-grid">
+      <div class="feature" data-aos="fade-up" data-aos-delay="0">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Cybersecurity</h3>
+        <p>Protecting businesses from digital threats with enterprise-grade solutions.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="120">
+        <i class="fas fa-brain"></i>
+        <h3>AI & Automation</h3>
+        <p>Leveraging AI to simplify workflows and drive efficiency at scale.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="240">
+        <i class="fas fa-network-wired"></i>
+        <h3>Networking</h3>
+        <p>Designing fast, reliable, and scalable networks for global teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Team Section -->
+<section class="team-section">
+  <h2 class="section-title" data-aos="fade-up">Meet Our Experts</h2>
+  <div class="team-grid">
+    <!-- 1 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Alice" alt="Alice Johnson">
+      <h3>Alice Johnson</h3>
+      <p>Cybersecurity Specialist</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="150">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Bob" alt="Bob Smith">
+      <h3>Bob Smith</h3>
+      <p>AI & Cloud Engineer</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Carla" alt="Carla Adams">
+      <h3>Carla Adams</h3>
+      <p>Linux Systems Admin</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="250">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=David" alt="David Lee">
+      <h3>David Lee</h3>
+      <p>Full-Stack Developer</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Elena" alt="Elena Wong">
+      <h3>Elena Wong</h3>
+      <p>Network Architect</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="350">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Frank" alt="Frank Rivera">
+      <h3>Frank Rivera</h3>
+      <p>DevOps Engineer</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Grace" alt="Grace Patel">
+      <h3>Grace Patel</h3>
+      <p>Data Scientist</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="450">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Henry" alt="Henry Zhao">
+      <h3>Henry Zhao</h3>
+      <p>Mobile App Developer</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="500">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Ivy" alt="Ivy Gupta">
+      <h3>Ivy Gupta</h3>
+      <p>UI/UX Designer</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="550">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Jake" alt="Jake Kim">
+      <h3>Jake Kim</h3>
+      <p>Cloud Security Expert</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="600">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Laura" alt="Laura Chen">
+      <h3>Laura Chen</h3>
+      <p>Software Tester</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="team-card" data-aos="fade-up" data-aos-delay="650">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Mike" alt="Mike Brown">
+      <h3>Mike Brown</h3>
+      <p>Technical Writer</p>
+      <div class="team-socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- 🔹 CULTURE -->
+  <section class="values-section">
+    <h2 class="section-title" data-aos="fade-up">Our Culture</h2>
+    <div class="values-grid">
+      <div class="culture-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-users"></i>
+        <h3>Teamwork</h3>
+        <p>We believe collaboration drives innovation and powerful solutions.</p>
+      </div>
+      <div class="culture-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovation</h3>
+        <p>We embrace fresh ideas to stay ahead in the rapidly evolving tech space.</p>
+      </div>
+      <div class="culture-card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-book"></i>
+        <h3>Learning</h3>
+        <p>We foster continuous learning, knowledge sharing, and adaptation.</p>
+      </div>
+      <div class="culture-card" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-universal-access"></i>
+        <h3>Accessibility</h3>
+        <p>Our mission is to make technology simple and accessible to everyone.</p>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- 🔹 CTA -->
+  <section class="cta-section">
+    <div class="cta-content" data-aos="zoom-in">
+      <h2>Let’s Build the Future of Tech Together</h2>
+      <p>Want to collaborate or join our mission? Reach out to us and let’s shape innovation side by side.</p>
+      <a href="contact.html" class="btn-primary">Join Us</a>
+    </div>
+  </section>
+
+  <!-- 🔹 FOOTER (UNCHANGED) -->
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Logo + About -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="./assets/mainn.png" alt="IT Hub Logo" />
+        </a>
+        <p>IT Troubleshooting & Networking Hub — helping professionals solve IT challenges with ease.</p>
+
+        <!-- Social Icons -->
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-medium"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>About IT Hub</h4>
+          <ul>
+            <li><a href="about.html">Who We Are</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="#">Why Choose Us</a></li>
+            <li><a href="#">Our Experts</a></li>
+            <li><a href="newsroom.html">Newsroom</a></li>
+            <li><a href="partners.html">Technology Partners</a></li>
+            <li><a href="policies.html">Policies</a></li>
+            <li><a href="#">Tech Protect</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="ai_tools.html">AI Utilities</a></li>
+            <li><a href="learnbase.html">Learning Hub</a></li>
+            <li><a href="#">Free Downloads</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="products.html">All Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="conf.html">TechConf</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="store.html">IT Store</a></li>
+            <li><a href="videos.html">Video Library</a></li>
+            <li><a href="resources.html">All Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Knowledge Center</h4>
+          <ul>
+            <li><a href="#">Network Basics</a></li>
+            <li><a href="#">Firewall Essentials</a></li>
+            <li><a href="#">OS Configuration</a></li>
+            <li><a href="#">Cybersecurity Tips</a></li>
+            <li><a href="#">Tech Trends 2025</a></li>
+            <li><a href="articles.html">All Articles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="support.html">Tech Support</a></li>
+            <li><a href="community.html">Community Forum</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2025 IT Troubleshooting & Networking Hub. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="policies.html">Terms & Policies</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS Init -->
+  <script>
+        AOS.init({
+        duration: 1000, // animation duration
+        easing: 'ease-in-out',
+        once: true,     // animation happens only once
+        mirror: false
+        });
+  </script>
+</body>
+</html>
