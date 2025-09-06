@@ -35,7 +35,7 @@
         <ul class="sub-links">
           <li><a href="about_us.html">About Us</a></li>
           <li><a href="learn.html">LearnBase</a></li>
-          <li><a href="ourteam.html" class="active">Our Team</a></li>
+          <li><a href="team.html" class="active">Our Team</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><a href="blogs.html">Blogs</a></li>
           <li><a href="contact.html">Contact Support</a></li>
@@ -72,12 +72,19 @@
       <div class="hero-pill"></div>
     </div>
     <div class="shapes">
-      <div class="blob b1"></div>
-      <div class="blob b2"></div>
-      <div class="blob b3"></div>
-      <div class="grid"></div>
+        <div class="blob b1" data-speed="15"></div>
+        <div class="blob b2" data-speed="25"></div>
+        <div class="blob b3" data-speed="35"></div>
     </div>
   </section>
+
+  <div class="wave-divider">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path fill="#f9fafb" fill-opacity="1" 
+      d="M0,64L80,80C160,96,320,128,480,133.3C640,139,800,117,960,112C1120,107,1280,117,1360,122.7L1440,128V0H0Z">
+    </path>
+  </svg>
+</div>
 
   <!-- 🔹 VALUES & FEATURES -->
   <section class="values-section">
@@ -402,6 +409,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/team.js"></script>
 
   <!-- AOS Init -->
   <script>

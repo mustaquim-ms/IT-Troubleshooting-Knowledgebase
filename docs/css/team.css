@@ -337,7 +337,9 @@ body {
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 6px 25px rgba(0,0,0,0.05);
-  transition: all 0.4s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  perspective: 1000px;
+  will-change: transform;
 }
 
 .feature i {
@@ -486,4 +488,17 @@ body {
   .nav-links ul { gap: 1rem; }
   .hero-header { padding: 3.5rem 1.2rem; }
   .values-section, .features, .team-section, .cta-section { padding: 3rem 1.2rem; }
+}
+
+
+.wave-divider {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  margin-top: -1px;
+}
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 100px;
 }
