@@ -7,6 +7,8 @@
   <title>Our Team | KnowledgeBase</title>
 
   <!-- Page CSS -->
+   <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/team.css" />
 
   <!-- Icons + AOS -->
@@ -110,7 +112,6 @@
         <h3>Innovation</h3>
         <p>Pioneering modern solutions to keep you ahead.</p>
       </div>
-    </div>
   </section>
 
   <!-- 🔸 FEATURES (What We Do Best) -->
@@ -135,155 +136,284 @@
     </div>
   </section>
 
-  <!-- ✅ Team Section -->
+  <!-- 🔸 Team Section -->
+
 <section class="team-section">
   <h2 class="section-title" data-aos="fade-up">Meet Our Experts</h2>
+
   <div class="team-grid">
+
     <!-- 1 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="100">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Alice" alt="Alice Johnson">
-      <h3>Alice Johnson</h3>
-      <p>Cybersecurity Specialist</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
+    <div class="team-card bio-trigger" 
+         data-name="Mustaquim Ahmad"
+         data-position="Owner and IT, CS & Cloud Specialist"
+         data-bio="Mustaquim is the visionary behind the team, bringing expertise in IT, computer science, and cloud systems to help businesses grow with secure and scalable solutions."
+         data-img="assets/avatars/mustaquimm.png"
+         data-quote="Innovation distinguishes between a leader and a follower.">
+      <img src="assets/avatars/mustaquimm.png" alt="Mustaquim Ahmad">
+      <h3>Mustaquim Ahmad</h3>
+      <p>Owner and IT, CS & Cloud Specialist</p>
     </div>
 
     <!-- 2 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="150">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Bob" alt="Bob Smith">
-      <h3>Bob Smith</h3>
+    <div class="team-card bio-trigger" 
+         data-name="Safin Rabbani"
+         data-position="AI & Cloud Engineer"
+         data-bio="Safin specializes in AI-driven cloud solutions, building scalable platforms and automation workflows to optimize business operations."
+         data-img="assets/avatars/safin.png"
+         data-quote="AI is not the future, it’s the present reshaping our world.">
+      <img src="assets/avatars/safin.png" alt="Safin Rabbani">
+      <h3>Safin Rabbani</h3>
       <p>AI & Cloud Engineer</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
     </div>
 
     <!-- 3 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="200">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Carla" alt="Carla Adams">
-      <h3>Carla Adams</h3>
+    <div class="team-card bio-trigger" 
+         data-name="Sabrina Sarah"
+         data-position="Linux Systems Admin"
+         data-bio="Sabrina is an expert in Linux environments, ensuring secure, optimized, and reliable server infrastructure across global networks."
+         data-img="assets/avatars/sabrina.png"
+         data-quote="In a world full of GUIs, be a command line.">
+      <img src="assets/avatars/sabrina.png" alt="Sabrina Sarah">
+      <h3>Sabrina Sarah</h3>
       <p>Linux Systems Admin</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
     </div>
 
     <!-- 4 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="250">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=David" alt="David Lee">
-      <h3>David Lee</h3>
+    <div class="team-card bio-trigger" 
+         data-name="Tanvir Rahman"
+         data-position="Full-Stack Developer"
+         data-bio="Tanvir is a versatile developer who builds responsive, high-performing web applications from frontend to backend."
+         data-img="assets/avatars/tanvir.png"
+         data-quote="Code is like humor. When you have to explain it, it’s bad.">
+      <img src="assets/avatars/tanvir.png" alt="Tanvir Rahman">
+      <h3>Tanvir Rahman</h3>
       <p>Full-Stack Developer</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
     </div>
 
     <!-- 5 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="300">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Elena" alt="Elena Wong">
-      <h3>Elena Wong</h3>
+    <div class="team-card bio-trigger" 
+         data-name="Mantasha Jahan"
+         data-position="Network Architect"
+         data-bio="Mantasha designs high-performance and scalable network infrastructures that support business growth and innovation."
+         data-img="assets/avatars/mantasha.png"
+         data-quote="Great networks are invisible until they fail.">
+      <img src="assets/avatars/mantasha.png" alt="Mantasha Jahan">
+      <h3>Mantasha Jahan</h3>
       <p>Network Architect</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
     </div>
 
     <!-- 6 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="350">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Frank" alt="Frank Rivera">
-      <h3>Frank Rivera</h3>
+    <div class="team-card bio-trigger" 
+         data-name="Rajib Akash"
+         data-position="DevOps Engineer"
+         data-bio="Rajib bridges development and operations, automating workflows and ensuring continuous integration and delivery pipelines."
+         data-img="assets/avatars/rajib.png"
+         data-quote="Automate everything, because life’s too short for manual deployments.">
+      <img src="assets/avatars/rajib.png" alt="Rajib Akash">
+      <h3>Rajib Akash</h3>
       <p>DevOps Engineer</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
     </div>
 
     <!-- 7 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="400">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Grace" alt="Grace Patel">
-      <h3>Grace Patel</h3>
+    <div class="team-card bio-trigger" 
+         data-name="Raffat Esha"
+         data-position="Data Scientist"
+         data-bio="Raffat extracts insights from complex datasets, applying machine learning to help businesses make smarter decisions."
+         data-img="assets/avatars/eshu.png"
+         data-quote="Data is the new oil, but insight is the engine.">
+      <img src="assets/avatars/eshu.png" alt="Raffat Esha">
+      <h3>Raffat Esha</h3>
       <p>Data Scientist</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
     </div>
 
     <!-- 8 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="450">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Henry" alt="Henry Zhao">
-      <h3>Henry Zhao</h3>
+    <div class="team-card bio-trigger" 
+         data-name="Bruce Wayne"
+         data-position="Mobile App Developer"
+         data-bio="Bruce creates sleek, user-friendly mobile applications with a focus on performance, security, and cross-platform support."
+         data-img="assets/avatars/mustaquim.png"
+         data-quote="There’s an app for everything, and I probably built it.">
+      <img src="assets/avatars/mustaquim.png" alt="Bruce Wayne">
+      <h3>Bruce Wayne</h3>
       <p>Mobile App Developer</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
     </div>
 
     <!-- 9 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="500">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Ivy" alt="Ivy Gupta">
-      <h3>Ivy Gupta</h3>
+    <div class="team-card bio-trigger" 
+         data-name="Sabrina Shanta"
+         data-position="UI/UX Designer"
+         data-bio="Sabrina crafts engaging digital experiences, combining creativity and usability for intuitive user journeys."
+         data-img="assets/avatars/shanta.png"
+         data-quote="Design is not just what it looks like; it’s how it works.">
+      <img src="assets/avatars/shanta.png" alt="Sabrina Shanta">
+      <h3>Sabrina Shanta</h3>
       <p>UI/UX Designer</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
     </div>
 
     <!-- 10 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="550">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Jake" alt="Jake Kim">
-      <h3>Jake Kim</h3>
+    <div class="team-card bio-trigger" 
+         data-name="Go Yoon-jung"
+         data-position="Cloud Security Expert"
+         data-bio="Go Yoon-jung is a security specialist focused on protecting cloud infrastructures against modern cyber threats."
+         data-img="assets/avatars/Go Yoon-jung.png"
+         data-quote="Security is not a product, it’s a process.">
+      <img src="assets/avatars/Go Yoon-jung.png" alt="Go Yoon-jung">
+      <h3>Go Yoon-jung</h3>
       <p>Cloud Security Expert</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
     </div>
 
     <!-- 11 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="600">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Laura" alt="Laura Chen">
-      <h3>Laura Chen</h3>
+    <div class="team-card bio-trigger" 
+         data-name="Cristiano Ronaldo"
+         data-position="Software Tester"
+         data-bio="Cristiano ensures software reliability with rigorous testing, delivering bug-free and user-ready applications."
+         data-img="assets/avatars/cristiano.png"
+         data-quote="Breaking things is my job, so you don’t have to.">
+      <img src="assets/avatars/cristiano.png" alt="Cristiano Ronaldo">
+      <h3>Cristiano Ronaldo</h3>
       <p>Software Tester</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
     </div>
 
     <!-- 12 -->
-    <div class="team-card" data-aos="fade-up" data-aos-delay="650">
-      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Mike" alt="Mike Brown">
-      <h3>Mike Brown</h3>
+    <div class="team-card bio-trigger" 
+         data-name="Peter Parker"
+         data-position="Technical Writer"
+         data-bio="Peter turns complex technical concepts into clear, engaging documentation and tutorials for all users."
+         data-img="assets/avatars/peter.png"
+         data-quote="Documentation is love, documentation is life.">
+      <img src="assets/avatars/peter.png" alt="Peter Parker">
+      <h3>Peter Parker</h3>
       <p>Technical Writer</p>
-      <div class="team-socials">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-      </div>
     </div>
+
+    <!-- 13 -->
+    <div class="team-card bio-trigger" 
+         data-name="Esha Rahman"
+         data-position="Programmer"
+         data-bio="Esha builds efficient, clean, and scalable codebases, contributing to multiple software products and projects."
+         data-img="assets/avatars/esha.png"
+         data-quote="Eat. Sleep. Code. Repeat.">
+      <img src="assets/avatars/esha.png" alt="Esha Rahman">
+      <h3>Esha Rahman</h3>
+      <p>Programmer</p>
+    </div>
+
+    <!-- 14 -->
+    <div class="team-card bio-trigger" 
+         data-name="Mahin Ahmad"
+         data-position="Cybersecurity Analyst"
+         data-bio="Mahin analyzes and mitigates threats, ensuring businesses remain resilient against cyber risks."
+         data-img="assets/avatars/mahin.png"
+         data-quote="Hackers never sleep, and neither do I.">
+      <img src="assets/avatars/mahin.png" alt="Mahin Ahmad">
+      <h3>Mahin Ahmad</h3>
+      <p>Cybersecurity Analyst</p>
+    </div>
+
+    <!-- 15 -->
+    <div class="team-card bio-trigger" 
+         data-name="Arpi Islam"
+         data-position="Business Analyst"
+         data-bio="Arpi bridges business and technology by analyzing workflows and driving efficiency through digital solutions."
+         data-img="assets/avatars/arpi.png"
+         data-quote="Business problems are just opportunities in disguise.">
+      <img src="assets/avatars/arpi.png" alt="Arpi Islam">
+      <h3>Arpi Islam</h3>
+      <p>Business Analyst</p>
+    </div>
+
+    <!-- 16 -->
+    <div class="team-card bio-trigger" 
+         data-name="Omar Khattab"
+         data-position="Backend Developer"
+         data-bio="Omar builds robust server-side systems, APIs, and database integrations that power dynamic web applications."
+         data-img="assets/avatars/omar.png"
+         data-quote="Behind every great app is an even greater backend.">
+      <img src="assets/avatars/omar.png" alt="Omar Khattab">
+      <h3>Omar Khattab</h3>
+      <p>Backend Developer</p>
+    </div>
+
+    <!-- 17 -->
+    <div class="team-card bio-trigger" 
+         data-name="Shanta Islam"
+         data-position="Frontend Developer"
+         data-bio="Shanta specializes in crafting modern, responsive, and engaging user interfaces with attention to detail."
+         data-img="assets/avatars/shantaa.png"
+         data-quote="First impressions are 94% design. No pressure.">
+      <img src="assets/avatars/shantaa.png" alt="Shanta Islam">
+      <h3>Shanta Islam</h3>
+      <p>Frontend Developer</p>
+    </div>
+
+    <!-- 18 -->
+    <div class="team-card bio-trigger" 
+         data-name="Aladdin Abu"
+         data-position="Database Administrator"
+         data-bio="Aladdin manages complex databases, ensuring security, scalability, and high availability for mission-critical systems."
+         data-img="assets/avatars/aladdin.png"
+         data-quote="A database is only as good as the admin behind it.">
+      <img src="assets/avatars/aladdin.png" alt="Aladdin Abu">
+      <h3>Aladdin Abu</h3>
+      <p>Database Administrator</p>
+    </div>
+
+    <!-- 19 -->
+    <div class="team-card bio-trigger" 
+         data-name="Maneera Siddiquea"
+         data-position="Product Designer"
+         data-bio="Maneera designs user-focused products with a perfect balance between aesthetics and functionality."
+         data-img="assets/avatars/maneera.png"
+         data-quote="Good design is good business.">
+      <img src="assets/avatars/maneera.png" alt="Maneera Siddiquea">
+      <h3>Maneera Siddiquea</h3>
+      <p>Product Designer</p>
+    </div>
+
+    <!-- 20 -->
+    <div class="team-card bio-trigger" 
+         data-name="Shelina Jahan"
+         data-position="Machine Learning Engineer"
+         data-bio="Shelina builds intelligent systems using deep learning and AI, delivering next-gen automation solutions."
+         data-img="assets/avatars/shelina.png"
+         data-quote="Machines learn fast, but I teach them faster.">
+      <img src="assets/avatars/shelina.png" alt="Shelina Jahan">
+      <h3>Shelina Jahan</h3>
+      <p>Machine Learning Engineer</p>
+    </div>
+
   </div>
 </section>
+
+
+<!-- Modal Popup -->
+<div id="bioModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <h2 id="modal-name"></h2>
+    <h4 id="modal-position"></h4>
+    <p id="modal-bio"></p>
+    <blockquote id="modal-quote"></blockquote> <!-- ✨ New Favorite Quote -->
+  </div>
+</div>
+
+<!-- ✅ Team Statistics -->
+<div class="team-stats" data-aos="fade-up">
+  <div class="stat-box">
+    <h3>20+</h3>
+    <p>Experts</p>
+  </div>
+  <div class="stat-box">
+    <h3>10+</h3>
+    <p>Skills</p>
+  </div>
+  <div class="stat-box">
+    <h3>50+</h3>
+    <p>Projects Completed</p>
+  </div>
+</div>
 
   <!-- 🔹 CULTURE -->
   <section class="values-section">
@@ -421,5 +551,9 @@
         mirror: false
         });
   </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 </html>

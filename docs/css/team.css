@@ -166,6 +166,19 @@ body {
   border-bottom-right-radius: 60px;
 }
 
+.team-card img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.05);
+}
+
 .team-hero .hero-inner {
   position: relative;
   z-index: 2;
@@ -366,64 +379,109 @@ body {
   box-shadow: 0 14px 35px rgba(0,0,0,0.12);
 }
 
-/* ========= TEAM ========= */
+/* ✅ Team Section Styling */
 .team-section {
-  padding: 5rem 2rem;
-  background: var(--bg);
+  text-align: center;       /* Center text content */
+  padding: 60px 20px;       /* Add spacing */
+  max-width: 1200px;        /* Keep layout neat */
+  margin: 0 auto;           /* Center the whole section */
 }
-.team-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #0d1b2a;
+
+.team-section .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #222;
 }
+
+/* Team Grid */
 .team-grid {
-  max-width: 1200px;
-  margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-content: center;  /* Center grid items */
+  align-items: start;
 }
+
 .team-card {
   background: #fff;
   border-radius: 15px;
   padding: 2rem 1.5rem;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  transition: all 0.4s var(--ease-out);
+  width: 100%;
+  max-width: 260px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
+
 .team-card img {
   width: 110px;
   height: 110px;
   border-radius: 50%;
   margin-bottom: 1rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease;
 }
-.team-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+
+.team-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.15);
 }
-.team-card p {
-  font-size: 0.95rem;
-  color: var(--muted);
-  margin-bottom: 1rem;
+
+.team-card:hover img {
+  transform: scale(1.1) rotate(3deg);
 }
-.team-socials {
+
+.team-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(47,143,70,0.1), transparent 70%);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.team-card:hover::before {
+  opacity: 1;
+}
+
+/* Team Stats Section */
+.team-stats {
   display: flex;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 3rem;
+  margin-top: 60px;
+  text-align: center;
 }
-.team-socials a {
+
+.stat-box {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2f8f46;
+  margin-bottom: 0.3rem;
+}
+
+.stat-box p {
+  font-size: 1rem;
   color: #555;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
 }
-.team-socials a:hover {
-  color: var(--primary);
-  transform: scale(1.2);
-}
-.team-card:hover {
-  transform: translateY(-10px);
+
+.stat-box:hover {
+  transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
@@ -502,3 +560,76 @@ body {
   width: 100%;
   height: 100px;
 }
+
+/* Modal Background */
+
+
+/* Modal Quote */
+.modal-content blockquote {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: #2f8f46;
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #2f8f46;
+  background: #f8fdf9;
+  border-radius: 8px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px); /* 🔥 Blur effect */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden; /* Prevent modal scrollbars */
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.modal .close {
+  position: absolute;
+  top: 15px; right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.modal .close:hover {
+  color: #e74c3c;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Disable background scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+

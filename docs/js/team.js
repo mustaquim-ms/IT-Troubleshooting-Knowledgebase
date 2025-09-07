@@ -21,3 +21,43 @@ features.forEach((card) => {
     card.style.transform = "rotateX(0) rotateY(0) scale(1)";
   });
 });
+
+// Modal elements
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("bioModal");
+  const modalImg = document.getElementById("modal-img");
+  const modalName = document.getElementById("modal-name");
+  const modalPosition = document.getElementById("modal-position");
+  const modalBio = document.getElementById("modal-bio");
+  const modalQuote = document.getElementById("modal-quote");
+  const closeBtn = document.querySelector(".modal .close");
+
+  // Open modal when clicking a card
+  document.querySelectorAll(".bio-trigger").forEach(card => {
+    card.addEventListener("click", () => {
+      modalImg.src = card.dataset.img;
+      modalName.textContent = card.dataset.name;
+      modalPosition.textContent = card.dataset.position;
+      modalBio.textContent = card.dataset.bio;
+      modalQuote.textContent = card.dataset.quote || ""; // 🎯 new quote
+      modal.style.display = "flex";
+      document.body.classList.add("modal-open");
+    });
+  });
+
+  // Close modal
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+  });
+
+  // Close modal on outside click
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      document.body.classList.remove("modal-open");
+    }
+  });
+});
+
