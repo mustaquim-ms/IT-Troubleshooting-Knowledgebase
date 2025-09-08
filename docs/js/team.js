@@ -23,7 +23,6 @@ features.forEach((card) => {
 });
 
 // Modal elements
-
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("bioModal");
   const modalImg = document.getElementById("modal-img");
@@ -33,6 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalQuote = document.getElementById("modal-quote");
   const closeBtn = document.querySelector(".modal .close");
 
+  const quoteStyles = ["quote-style-1", "quote-style-2", "quote-style-3", "quote-style-4", "quote-style-5"];
+
   // Open modal when clicking a card
   document.querySelectorAll(".bio-trigger").forEach(card => {
     card.addEventListener("click", () => {
@@ -40,7 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
       modalName.textContent = card.dataset.name;
       modalPosition.textContent = card.dataset.position;
       modalBio.textContent = card.dataset.bio;
-      modalQuote.textContent = card.dataset.quote || ""; // 🎯 new quote
+      modalQuote.textContent = card.dataset.quote || "";
+
+      // Remove previous style
+      modalQuote.className = "";
+      // Assign a random style
+      const randomStyle = quoteStyles[Math.floor(Math.random() * quoteStyles.length)];
+      modalQuote.classList.add(randomStyle);
+
       modal.style.display = "flex";
       document.body.classList.add("modal-open");
     });
@@ -60,4 +68,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
