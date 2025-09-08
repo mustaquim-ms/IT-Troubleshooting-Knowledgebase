@@ -46,3 +46,44 @@ function typeEffect() {
 }
 
 document.addEventListener("DOMContentLoaded", typeEffect);
+const canvas = document.getElementById("hero-canvas");
+const ctx = canvas.getContext("2d");
+let width, height, t = 0;
+
+function resize() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
+
+function draw() {
+  ctx.clearRect(0, 0, width, height);
+
+  let waveHeight = 120;
+  let waveLength = 0.015;
+  let speed = 0.02;
+
+  // Gradient intensity: brighter at center, fades outward
+  let cx = width / 2, cy = height / 2;
+  let maxDist = Math.sqrt(cx * cx + cy * cy);
+
+  for (let i = 0; i < height; i += 8) {
+    ctx.beginPath();
+    for (let x = 0; x < width; x++) {
+      let y = Math.sin(x * waveLength + t) * waveHeight * Math.sin(i * 0.01) + i;
+      ctx.lineTo(x, y);
+    }
+
+    // Compute distance to center row for radial glow
+    let distFactor = 1 - Math.abs(i - cy) / cy;
+    let alpha = 0.05 + distFactor * 0.15;
+
+    ctx.strokeStyle = `hsla(190, 100%, 60%, ${alpha})`;
+    ctx.stroke();
+  }
+
+  t += speed;
+  requestAnimationFrame(draw);
+}
+draw();
