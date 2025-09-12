@@ -1050,113 +1050,116 @@ body.loaded {
   transform: scale(1.2) rotate(10deg);
 }
 
-/* ================================
-   Auto-Scroll Testimonials (2 rows)
-=================================*/
+/* ==============================
+   Testimonial Section
+============================== */
 .testimonials {
   padding: 5rem 2rem;
   background: #0d1117;
-  color: #fff;
   overflow: hidden;
-  position: relative;
 }
-
 .section-header {
   text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.section-header h2 {
-  font-size: 2rem;
   margin-bottom: 5rem;
+}
+.section-header h2 {
   color: #fff;
+  font-size: 2rem;
 }
 
+/* Slider Layout */
 .testimonial-slider {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
-
+.slider-wrapper {
+  overflow: hidden;
+  position: relative;
+}
 .slider-track {
   display: flex;
   gap: 1.5rem;
   width: max-content;
 }
-
 .row-1 {
-  animation: scroll-left 25s linear infinite;
+  animation: scroll-left 35s linear infinite;
 }
-.row-2 {
-  animation: scroll-right 25s linear infinite;
-}
+/* .row-2 {
+  animation: scroll-right 40s linear infinite;
+} */
 
-@keyframes scroll-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@keyframes scroll-right {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
-}
-
+/* Cards */
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 1.8rem;
-  min-width: 320px;
-  max-width: 340px;
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  flex-shrink: 0;
-  transition: transform 0.3s ease, border 0.3s ease;
+  flex: 0 0 280px;
+  background: #161b22;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .testimonial-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  border-color: rgba(106,90,205,0.7);
-  box-shadow: 0 10px 25px rgba(106,90,205,0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.7);
 }
-
-.quote {
+.testimonial-card .quote {
   font-size: 2rem;
-  color: #6a5acd;
+  color: #3ad1ff;
+  margin-bottom: 0.5rem;
+}
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #ccc;
   margin-bottom: 1rem;
 }
 
-.testimonial-card p {
-  font-size: 0.95rem;
-  color: #ddd;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
-
+/* Footer */
 .testimonial-footer {
   display: flex;
   align-items: center;
   gap: 0.8rem;
 }
-
 .avatar {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 2px solid rgba(106,90,205,0.7);
+  object-fit: cover;
 }
-
 .user-info h3 {
   margin: 0;
   font-size: 1rem;
   color: #fff;
 }
-
 .user-info span {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #aaa;
 }
 
+/* Rating Pills */
+.rating {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 3px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.rating.green { background: linear-gradient(135deg, #00c853, #66bb6a); }
+.rating.blue { background: linear-gradient(135deg, #2196f3, #64b5f6); }
+.rating.orange { background: linear-gradient(135deg, #ff9800, #ffb74d); }
+.rating.red { background: linear-gradient(135deg, #f44336, #e57373); }
+
+/* Animations */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scroll-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
 
 /* ================================
    Pricing

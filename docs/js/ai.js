@@ -138,6 +138,21 @@ extendedBtns.forEach(btn => {
   });
 });
 
+// Auto-assign rating colors
+document.querySelectorAll('.rating').forEach(rating => {
+  const value = parseFloat(rating.textContent.replace("⭐", "").trim());
+  if (value >= 4.9) rating.classList.add("green");
+  else if (value >= 4.5) rating.classList.add("blue");
+  else if (value >= 4.0) rating.classList.add("orange");
+  else rating.classList.add("red");
+});
+
+// Duplicate testimonials for infinite effect
+document.querySelectorAll('.slider-track').forEach(track => {
+  track.innerHTML += track.innerHTML;
+});
+
+// Pause on hover
 document.querySelectorAll(".slider-track").forEach(track => {
   track.addEventListener("mouseenter", () => {
     track.style.animationPlayState = "paused";
