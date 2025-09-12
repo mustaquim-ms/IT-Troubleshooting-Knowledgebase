@@ -87,3 +87,62 @@ function draw() {
   requestAnimationFrame(draw);
 }
 draw();
+
+
+// 🎯 Category filter with active state
+categoryBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    categoryBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const category = btn.dataset.category;
+    toolCards.forEach(card => {
+      const categories = card.dataset.category.split(",");
+      card.style.display = (category === "all" || categories.includes(category)) 
+        ? "block" 
+        : "none";
+    });
+  });
+});
+
+// Extended Search + Filter
+const extendedSearch = document.getElementById("extended-search");
+const extendedCards = document.querySelectorAll(".extended-card");
+const extendedBtns = document.querySelectorAll(".tools-extended .category-btn");
+
+// 🔎 Search filter
+extendedSearch.addEventListener("input", () => {
+  const query = extendedSearch.value.toLowerCase();
+  extendedCards.forEach(card => {
+    const name = card.querySelector("h3").textContent.toLowerCase();
+    const desc = card.querySelector("p").textContent.toLowerCase();
+    card.style.display = (name.includes(query) || desc.includes(query)) 
+      ? "block" 
+      : "none";
+  });
+});
+
+// 🎯 Category filter
+extendedBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    extendedBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const category = btn.dataset.category;
+    extendedCards.forEach(card => {
+      const categories = card.dataset.category.split(",");
+      card.style.display = (category === "all" || categories.includes(category)) 
+        ? "block" 
+        : "none";
+    });
+  });
+});
+
+document.querySelectorAll(".slider-track").forEach(track => {
+  track.addEventListener("mouseenter", () => {
+    track.style.animationPlayState = "paused";
+  });
+  track.addEventListener("mouseleave", () => {
+    track.style.animationPlayState = "running";
+  });
+});

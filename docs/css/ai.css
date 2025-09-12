@@ -41,6 +41,32 @@ body.loaded {
   opacity: 1;
 }
 
+/* ================================
+   Scroll Entrance Animations
+================================ */
+
+/* Default hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Active state (when scrolled into view) */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variants */
+.reveal.fade-up { transform: translateY(40px); }
+.reveal.fade-down { transform: translateY(-40px); }
+.reveal.fade-left { transform: translateX(-40px); }
+.reveal.fade-right { transform: translateX(40px); }
+.reveal.zoom-in { transform: scale(0.9); }
+.reveal.zoom-in.active { transform: scale(1); }
+
+
 /* Navbar */
 .navbar {
     background: #ffffff;
@@ -815,8 +841,6 @@ body.loaded {
   font-weight: bold;
 }
 
-
-
 /* ================================
    Quick Links - Futuristic (4x4 layout)
 =================================*/
@@ -832,7 +856,7 @@ body.loaded {
 
 .quick-links .section-header h2 {
   font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 5rem;
   color: #3ad1ff;
 }
 
@@ -1027,35 +1051,112 @@ body.loaded {
 }
 
 /* ================================
-   Testimonials (tool-card style)
+   Auto-Scroll Testimonials (2 rows)
 =================================*/
 .testimonials {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   background: #0d1117;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
 }
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-.testimonial-card {
-  padding: 2rem;
+
+.section-header {
   text-align: center;
+  margin-bottom: 2.5rem;
 }
-.testimonial-card i {
+
+.section-header h2 {
   font-size: 2rem;
-  margin-bottom: 0.8rem;
-  color: #3ad1ff;
-}
-.testimonial-card h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  margin-bottom: 5rem;
   color: #fff;
 }
+
+.testimonial-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.slider-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+}
+
+.row-1 {
+  animation: scroll-left 25s linear infinite;
+}
+.row-2 {
+  animation: scroll-right 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.8rem;
+  min-width: 320px;
+  max-width: 340px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-color: rgba(106,90,205,0.7);
+  box-shadow: 0 10px 25px rgba(106,90,205,0.4);
+}
+
+.quote {
+  font-size: 2rem;
+  color: #6a5acd;
+  margin-bottom: 1rem;
+}
+
 .testimonial-card p {
   font-size: 0.95rem;
-  color: #ccc;
+  color: #ddd;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid rgba(106,90,205,0.7);
+}
+
+.user-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.user-info span {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
 
 /* ================================
    Pricing
@@ -1166,4 +1267,72 @@ body.loaded {
 }
 .pricing-card.featured:hover {
   transform: scale(1.08);
+}
+
+/* 🔎 Search Box (Shared Style) */
+.tool-search {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.tool-search input {
+  width: 60%;
+  max-width: 600px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  outline: none;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.tool-search input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.tool-search input:focus {
+  border-color: #6a5acd;
+  box-shadow: 0 0 12px rgba(106, 90, 205, 0.7);
+  transform: scale(1.02);
+}
+
+/* 🎯 Category Buttons (Shared Style) */
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.category-btn:hover {
+  background: rgba(106, 90, 205, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(106, 90, 205, 0.5);
+}
+
+.category-btn.active {
+  background: linear-gradient(135deg, #6a5acd, #00c6ff);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 6px 18px rgba(106, 90, 205, 0.6);
+  transform: translateY(-2px);
 }

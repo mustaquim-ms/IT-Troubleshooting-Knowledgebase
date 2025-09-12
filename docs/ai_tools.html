@@ -108,285 +108,749 @@
           </div>
         </section>
 
-    <!-- 🔹 CATEGORIES -->
-<section class="categories">
-  <div class="section-header" data-aos="fade-up">
-    <h2>Categories</h2>
-    <p>Explore AI tools designed for different use cases and industries.</p>
-  </div>
-  <div class="categories-grid">
-    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
-      <i class="fas fa-graduation-cap"></i>
-      <h3>Students</h3>
-      <p>Boost learning with study aids, summarizers, and writing assistants.</p>
-    </div>
-    <div class="category-card" data-aos="fade-up" data-aos-delay="200">
-      <i class="fas fa-briefcase"></i>
-      <h3>Businesses</h3>
-      <p>Automate workflows, enhance analytics, and drive smarter decisions.</p>
-    </div>
-    <div class="category-card" data-aos="fade-up" data-aos-delay="300">
-      <i class="fas fa-code"></i>
-      <h3>Developers</h3>
-      <p>Accelerate coding with AI-powered code completion and debugging.</p>
-    </div>
-    <div class="category-card" data-aos="fade-up" data-aos-delay="400">
-      <i class="fas fa-paint-brush"></i>
-      <h3>Creators</h3>
-      <p>Generate designs, images, and content effortlessly with AI.</p>
-    </div>
-  </div>
-</section>
-
-  <!-- 🔹 FEATURED TOOLS GRID -->
+    <!-- 🔹 FEATURED TOOLS WITH SEARCH + CATEGORIES -->
 <section class="ai-tools" id="tools">
-  <div class="section-header" data-aos="fade-up">
+  <div class="section-header reveal fade-up">
     <h2>Featured AI Tools</h2>
     <p>Hand-picked tools to supercharge your learning, research, and daily tasks.</p>
   </div>
+
+  <!-- 🔎 Search Box -->
+  <div class="tool-search reveal fade-up">
+    <input type="text" id="toolSearch" placeholder="Search AI tools by name or purpose...">
+  </div>
+
+  <!-- 🎯 Category Buttons -->
+  <div class="category-buttons reveal fade-up">
+    <button class="category-btn" data-category="all">All</button>
+    <button class="category-btn" data-category="students">Students</button>
+    <button class="category-btn" data-category="business">Business</button>
+    <button class="category-btn" data-category="research">Research</button>
+    <button class="category-btn" data-category="creators">Creators</button>
+    <button class="category-btn" data-category="developers">Developers</button>
+  </div>
+
+  <!-- 🛠️ Tools Grid -->
   <div class="tools-grid">
-    <!-- Original -->
-    <div class="tool-card" data-aos="fade-up" data-aos-delay="100">
-      <span class="tag tag-unique">Unique</span>
-      <i class="fas fa-robot"></i>
-      <h3>AI Writing</h3>
-      <p>Generate blogs, summaries, or reports with intelligent writing assistance.</p>
-      <a href="#" class="card-link">Try Now <i class="fas fa-arrow-right"></i></a>
+    <!-- Assistants -->
+    <div class="tool-card reveal fade-up" data-category="assistants,students,business,developers">
+      <i class="fas fa-comments"></i>
+      <h3><a href="https://chat.openai.com/" target="_blank">ChatGPT</a></h3>
+      <p>General-purpose AI assistant for learning, work, and development.</p>
     </div>
-    <div class="tool-card" data-aos="fade-up" data-aos-delay="200">
-      <span class="tag tag-premium">Premium</span>
-      <i class="fas fa-language"></i>
-      <h3>Language Translator</h3>
-      <p>Translate text instantly across 100+ languages with contextual accuracy.</p>
-      <span class="coming-soon">Unlimited</span>
-      <a href="#" class="card-link">Try Now <i class="fas fa-arrow-right"></i></a>
-    </div>
-    <div class="tool-card" data-aos="fade-up" data-aos-delay="300">
-      <span class="tag tag-popular">Popular</span>
+    <div class="tool-card reveal fade-up" data-category="assistants,business,students">
       <i class="fas fa-brain"></i>
-      <h3>Research Assistant</h3>
-      <p>Summarize research papers and extract insights in seconds.</p>
-      <a href="#" class="card-link">Try Now <i class="fas fa-arrow-right"></i></a>
+      <h3><a href="https://x.ai/" target="_blank">Grok</a></h3>
+      <p>X’s conversational assistant for productivity and insights.</p>
     </div>
-    <div class="tool-card" data-aos="fade-up" data-aos-delay="400">
-      <span class="tag tag-lowcost">Low Cost</span>
-      <i class="fas fa-chart-line"></i>
-      <h3>Data Insights</h3>
-      <p>Analyze data and generate meaningful patterns automatically.</p>
-      <span class="coming-soon">Coming Soon</span>
-      <a href="#" class="card-link">Try Now <i class="fas fa-arrow-right"></i></a>
+    <div class="tool-card reveal fade-up" data-category="assistants,research,business">
+      <i class="fas fa-lightbulb"></i>
+      <h3><a href="https://claude.ai/" target="_blank">Claude</a></h3>
+      <p>Anthropic’s safe and reasoning-focused AI assistant.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="assistants,developers,students">
+      <i class="fas fa-robot"></i>
+      <h3><a href="https://gemini.google.com/" target="_blank">Gemini</a></h3>
+      <p>Google’s AI assistant for code, research, and general tasks.</p>
     </div>
 
-    <!-- Added -->
-    <div class="tool-card" data-aos="fade-up" data-aos-delay="500">
-      <span class="tag tag-unique">Unique</span>
-      <i class="fas fa-microphone"></i>
-      <h3>Voice Assistant</h3>
-      <p>Control apps and create notes with voice-powered AI.</p>
-      <a href="#" class="card-link">Try Now <i class="fas fa-arrow-right"></i></a>
-    </div>
-    <div class="tool-card" data-aos="fade-up" data-aos-delay="600">
-      <span class="tag tag-premium">Premium</span>
-      <i class="fas fa-music"></i>
-      <h3>Music Generator</h3>
-      <p>Create soundtracks and remixes instantly with AI music composition.</p>
-      <span class="coming-soon">Unlimited</span>
-      <a href="#" class="card-link">Try Now <i class="fas fa-arrow-right"></i></a>
-    </div>
-    <div class="tool-card" data-aos="fade-up" data-aos-delay="700">
-      <span class="tag tag-popular">Popular</span>
-      <i class="fas fa-image"></i>
-      <h3>Image Creator</h3>
-      <p>Generate realistic and artistic images in seconds.</p>
-      <a href="#" class="card-link">Try Now <i class="fas fa-arrow-right"></i></a>
-    </div>
-    <div class="tool-card" data-aos="fade-up" data-aos-delay="800">
-      <span class="tag tag-lowcost">Low Cost</span>
+    <!-- Video Generation -->
+    <div class="tool-card reveal fade-up" data-category="video,creators,business,students">
       <i class="fas fa-video"></i>
-      <h3>Video Editor AI</h3>
-      <p>Automate video cutting, transitions, and effects using AI.</p>
-      <a href="#" class="card-link">Try Now <i class="fas fa-arrow-right"></i></a>
+      <h3><a href="https://www.synthesia.io/" target="_blank">Synthesia</a></h3>
+      <p>Create AI-generated videos with realistic avatars.</p>
     </div>
-    <div class="tool-card" data-aos="fade-up" data-aos-delay="900">
-      <span class="tag tag-unique">Unique</span>
-      <i class="fas fa-comments"></i>
-      <h3>Chat Companion</h3>
-      <p>Engage in natural conversations with AI-driven companions.</p>
-      <a href="#" class="card-link">Try Now <i class="fas fa-arrow-right"></i></a>
+    <div class="tool-card reveal fade-up" data-category="video,creators,developers">
+      <i class="fas fa-play-circle"></i>
+      <h3><a href="https://deepmind.google/discover/veo/" target="_blank">Google Veo</a></h3>
+      <p>Next-gen AI video generation from Google DeepMind.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="video,creators,students">
+      <i class="fas fa-film"></i>
+      <h3><a href="https://www.opus.pro/" target="_blank">OpusClip</a></h3>
+      <p>Auto-generate clips from long videos for social media.</p>
+    </div>
+
+    <!-- Image Generation -->
+    <div class="tool-card reveal fade-up" data-category="image,creators,students">
+      <i class="fas fa-image"></i>
+      <h3><a href="https://openai.com/gpt-4" target="_blank">GPT-4o</a></h3>
+      <p>Multimodal AI for images, text, and advanced creativity.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="image,creators">
+      <i class="fas fa-palette"></i>
+      <h3><a href="https://www.midjourney.com/" target="_blank">Midjourney</a></h3>
+      <p>Create artistic and realistic AI-generated images.</p>
+    </div>
+
+    <!-- Meeting Assistants -->
+    <div class="tool-card reveal fade-up" data-category="meeting,business,students">
+      <i class="fas fa-microphone"></i>
+      <h3><a href="https://fathom.video/" target="_blank">Fathom</a></h3>
+      <p>Record, transcribe, and summarize meetings automatically.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="meeting,business">
+      <i class="fas fa-headphones"></i>
+      <h3><a href="https://nyota.ai/" target="_blank">Nyota</a></h3>
+      <p>AI meeting assistant for teams and professionals.</p>
+    </div>
+
+    <!-- Automation -->
+    <div class="tool-card reveal fade-up" data-category="automation,developers,business">
+      <i class="fas fa-cogs"></i>
+      <h3><a href="https://n8n.io/" target="_blank">n8n</a></h3>
+      <p>Powerful workflow automation with open-source flexibility.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="automation,developers">
+      <i class="fas fa-tools"></i>
+      <h3><a href="https://www.manus.ai/" target="_blank">Manus</a></h3>
+      <p>AI automation for tasks, workflows, and integrations.</p>
+    </div>
+
+    <!-- Research -->
+    <div class="tool-card reveal fade-up" data-category="research,students,business">
+      <i class="fas fa-search"></i>
+      <h3><a href="https://www.deepresearch.ai/" target="_blank">Deep Research</a></h3>
+      <p>AI-driven deep research assistant for complex topics.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="research,students">
+      <i class="fas fa-book-open"></i>
+      <h3><a href="https://notebooklm.google/" target="_blank">NotebookLM</a></h3>
+      <p>Organize, summarize, and analyze documents with AI.</p>
+    </div>
+
+    <!-- Writing -->
+    <div class="tool-card reveal fade-up" data-category="writing,students,business">
+      <i class="fas fa-pen-nib"></i>
+      <h3><a href="https://rytr.me/" target="_blank">Rytr</a></h3>
+      <p>AI writing assistant for blogs, essays, and content creation.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="writing,creators,students">
+      <i class="fas fa-keyboard"></i>
+      <h3><a href="https://www.sudowrite.com/" target="_blank">Sudowrite</a></h3>
+      <p>Creative writing assistant for novels and storytelling.</p>
+    </div>
+
+    <!-- Search Engines -->
+    <div class="tool-card reveal fade-up" data-category="search,research,students">
+      <i class="fas fa-search-plus"></i>
+      <h3><a href="https://google.com/" target="_blank">Google AI Mode</a></h3>
+      <p>Enhanced search powered by Google’s AI advancements.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="search,research,students">
+      <i class="fas fa-search"></i>
+      <h3><a href="https://www.perplexity.ai/" target="_blank">Perplexity</a></h3>
+      <p>AI-powered search engine with cited results and accuracy.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="search,assistants">
+      <i class="fas fa-globe"></i>
+      <h3><a href="https://chat.openai.com/" target="_blank">ChatGPT Search</a></h3>
+      <p>Search powered by ChatGPT with conversational answers.</p>
+    </div>
+
+    <!-- Graphic Design -->
+    <div class="tool-card reveal fade-up" data-category="design,creators,students">
+      <i class="fas fa-paint-brush"></i>
+      <h3><a href="https://www.canva.com/magic-studio/" target="_blank">Canva Magic Studio</a></h3>
+      <p>AI-powered design and creative assets generation.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="design,creators,business">
+      <i class="fas fa-drafting-compass"></i>
+      <h3><a href="https://looka.com/" target="_blank">Looka</a></h3>
+      <p>AI-driven logo and brand identity creation.</p>
+    </div>
+
+    <!-- App Builders & Coding -->
+    <div class="tool-card reveal fade-up" data-category="coding,developers">
+      <i class="fas fa-mobile-alt"></i>
+      <h3><a href="https://lovable.dev/" target="_blank">Lovable</a></h3>
+      <p>AI-powered app builder for quick prototypes and startups.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="coding,developers">
+      <i class="fas fa-code"></i>
+      <h3><a href="https://www.cursor.sh/" target="_blank">Cursor</a></h3>
+      <p>AI coding assistant and IDE with deep integration.</p>
+    </div>
+
+    <!-- Knowledge Management -->
+    <div class="tool-card reveal fade-up" data-category="knowledge,students,business">
+      <i class="fas fa-book"></i>
+      <h3><a href="https://www.notion.so/product/ai" target="_blank">Notion Q&A</a></h3>
+      <p>AI-powered knowledge management and Q&A in Notion.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="knowledge,business">
+      <i class="fas fa-folder-open"></i>
+      <h3><a href="https://www.getguru.com/" target="_blank">Guru</a></h3>
+      <p>Knowledge base and AI assistant for organizations.</p>
+    </div>
+
+    <!-- Email -->
+    <div class="tool-card reveal fade-up" data-category="email,business">
+      <i class="fas fa-envelope"></i>
+      <h3><a href="https://www.hubspot.com/products/marketing/email" target="_blank">Hubspot Email Writer</a></h3>
+      <p>AI email content generator integrated with Hubspot CRM.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="email,business">
+      <i class="fas fa-paper-plane"></i>
+      <h3><a href="https://www.fyxer.com/" target="_blank">Fyxer</a></h3>
+      <p>AI email writing and productivity assistant.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="email,business,students">
+      <i class="fas fa-inbox"></i>
+      <h3><a href="https://shortwave.com/" target="_blank">Shortwave</a></h3>
+      <p>AI email organization and smart replies.</p>
+    </div>
+
+    <!-- Scheduling -->
+    <div class="tool-card reveal fade-up" data-category="scheduling,business,students">
+      <i class="fas fa-calendar-alt"></i>
+      <h3><a href="https://reclaim.ai/" target="_blank">Reclaim</a></h3>
+      <p>AI scheduling assistant for busy professionals.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="scheduling,business">
+      <i class="fas fa-clock"></i>
+      <h3><a href="https://www.getclockwise.com/" target="_blank">Clockwise</a></h3>
+      <p>Smart calendar optimization powered by AI.</p>
+    </div>
+
+    <!-- Presentations -->
+    <div class="tool-card reveal fade-up" data-category="presentations,students,business">
+      <i class="fas fa-chalkboard"></i>
+      <h3><a href="https://gamma.app/" target="_blank">Gamma</a></h3>
+      <p>Create AI-generated presentations instantly.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="presentations,business,students">
+      <i class="fas fa-file-powerpoint"></i>
+      <h3><a href="https://copilot.microsoft.com/" target="_blank">Copilot for PowerPoint</a></h3>
+      <p>Microsoft’s AI assistant for professional presentations.</p>
+    </div>
+
+    <!-- Resume Builders -->
+    <div class="tool-card reveal fade-up" data-category="resume,students">
+      <i class="fas fa-id-card"></i>
+      <h3><a href="https://www.tealhq.com/" target="_blank">Teal</a></h3>
+      <p>AI-powered resume builder and career toolkit.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="resume,students">
+      <i class="fas fa-user"></i>
+      <h3><a href="https://kickresume.com/" target="_blank">Kickresume</a></h3>
+      <p>AI resume builder for job seekers and students.</p>
+    </div>
+
+    <!-- Voice Generation -->
+    <div class="tool-card reveal fade-up" data-category="voice,creators,business">
+      <i class="fas fa-microphone-alt"></i>
+      <h3><a href="https://elevenlabs.io/" target="_blank">ElevenLabs</a></h3>
+      <p>Generate realistic AI voices for narration and media.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="voice,creators">
+      <i class="fas fa-headset"></i>
+      <h3><a href="https://murf.ai/" target="_blank">Murf</a></h3>
+      <p>AI-powered text-to-speech for voiceovers and content.</p>
+    </div>
+
+    <!-- Music Generation -->
+    <div class="tool-card reveal fade-up" data-category="music,creators,students">
+      <i class="fas fa-music"></i>
+      <h3><a href="https://suno.ai/" target="_blank">Suno</a></h3>
+      <p>Create songs and music tracks instantly with AI.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="music,creators">
+      <i class="fas fa-guitar"></i>
+      <h3><a href="https://www.udio.com/" target="_blank">Udio</a></h3>
+      <p>AI music generation platform for creators.</p>
+    </div>
+
+    <!-- Marketing -->
+    <div class="tool-card reveal fade-up" data-category="marketing,business">
+      <i class="fas fa-bullhorn"></i>
+      <h3><a href="https://www.adcreative.ai/" target="_blank">AdCreative</a></h3>
+      <p>AI-powered ad and marketing creative generation.</p>
+    </div>
+    <div class="tool-card reveal fade-up" data-category="marketing,business,developers">
+      <i class="fas fa-rocket"></i>
+      <h3><a href="https://www.airops.com/" target="_blank">AirOps</a></h3>
+      <p>AI workflows for scaling marketing and operations.</p>
     </div>
   </div>
 </section>
 
 <!-- 🔹 EXTENDED AI TOOLS SECTION -->
-<section class="tools-extended">
+<section class="tools-extended" id="extended-tools">
   <div class="section-header" data-aos="fade-up">
     <h2>Explore More AI Tools</h2>
     <p>Discover specialized AI tools for PC, OS, Networking, Security, and productivity hacks.</p>
   </div>
 
+  <!-- 🔎 Search Bar -->
+  <div class="tool-search" data-aos="fade-up">
+    <input type="text" id="extended-search" placeholder="Search extended AI tools by name or purpose...">
+  </div>
+
+  <!-- 🎯 Category Buttons -->
+  <div class="category-buttons" data-aos="fade-up" data-aos-delay="100">
+    <button class="category-btn active" data-category="all">All</button>
+    <button class="category-btn" data-category="pc">PC</button>
+    <button class="category-btn" data-category="os">OS</button>
+    <button class="category-btn" data-category="networking">Networking</button>
+    <button class="category-btn" data-category="security">Security</button>
+    <button class="category-btn" data-category="productivity">Productivity</button>
+  </div>
+
   <div class="extended-grid">
-    <!-- Original -->
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="extended-card" data-category="pc" data-aos="fade-up" data-aos-delay="100">
       <span class="tag tag-unique">Unique</span>
       <i class="fas fa-desktop"></i>
       <h3>PC Optimizer AI</h3>
       <p>Boost your computer’s performance with intelligent optimization.</p>
     </div>
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="extended-card" data-category="os" data-aos="fade-up" data-aos-delay="200">
       <span class="tag tag-premium">Premium</span>
       <i class="fab fa-windows"></i>
       <h3>OS Enhancer</h3>
       <p>Customize and enhance your operating system experience with AI tweaks.</p>
       <span class="coming-soon">Coming Soon</span>
     </div>
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="300">
+    <div class="extended-card" data-category="networking" data-aos="fade-up" data-aos-delay="300">
       <span class="tag tag-popular">Popular</span>
       <i class="fas fa-network-wired"></i>
       <h3>Network Guardian</h3>
       <p>Monitor and secure your network with real-time AI-powered analysis.</p>
     </div>
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="400">
+    <div class="extended-card" data-category="productivity" data-aos="fade-up" data-aos-delay="400">
       <span class="tag tag-lowcost">Low Cost</span>
       <i class="fas fa-lightbulb"></i>
       <h3>Tips & Tricks</h3>
       <p>Discover smart hacks and automation powered by AI.</p>
     </div>
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="500">
+    <div class="extended-card" data-category="security" data-aos="fade-up" data-aos-delay="500">
       <span class="tag tag-unique">Unique</span>
       <i class="fas fa-lock"></i>
       <h3>AI Security Shield</h3>
       <p>Protect your data with AI-driven security and threat detection.</p>
       <span class="coming-soon">Unlimited</span>
     </div>
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="600">
+    <div class="extended-card" data-category="productivity" data-aos="fade-up" data-aos-delay="600">
       <span class="tag tag-premium">Premium</span>
       <i class="fas fa-magic"></i>
       <h3>Creative Tools</h3>
       <p>Generate designs, images, and creative assets in seconds.</p>
     </div>
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="700">
+    <div class="extended-card" data-category="developers" data-aos="fade-up" data-aos-delay="700">
       <span class="tag tag-popular">Popular</span>
       <i class="fas fa-code"></i>
       <h3>Developer Assist</h3>
       <p>Speed up coding with intelligent AI-powered code completion.</p>
     </div>
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="800">
+    <div class="extended-card" data-category="productivity" data-aos="fade-up" data-aos-delay="800">
       <span class="tag tag-lowcost">Low Cost</span>
       <i class="fas fa-chart-pie"></i>
       <h3>Analytics Pro</h3>
       <p>Gain actionable insights with automated analytics and reporting.</p>
       <span class="coming-soon">Coming Soon</span>
     </div>
-
-    <!-- Added -->
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="900">
-      <span class="tag tag-unique">Unique</span>
-      <i class="fas fa-cloud"></i>
-      <h3>Cloud AI Manager</h3>
-      <p>Automate cloud resource scaling and cost optimization with AI.</p>
-    </div>
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="1000">
-      <span class="tag tag-premium">Premium</span>
-      <i class="fas fa-database"></i>
-      <h3>DB Optimizer</h3>
-      <p>Accelerate databases with AI query tuning and optimization.</p>
-    </div>
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="1100">
-      <span class="tag tag-popular">Popular</span>
-      <i class="fas fa-project-diagram"></i>
-      <h3>Workflow Automator</h3>
-      <p>Streamline processes and tasks with AI-driven automation.</p>
-    </div>
-    <div class="extended-card" data-aos="fade-up" data-aos-delay="1200">
-      <span class="tag tag-lowcost">Low Cost</span>
-      <i class="fas fa-user-shield"></i>
-      <h3>Privacy Guard</h3>
-      <p>Automatically mask sensitive data and protect user privacy.</p>
-    </div>
   </div>
 </section>
 
 <!-- 🔹 QUICK LINKS -->
 <section class="quick-links">
-  <div class="section-header" data-aos="fade-up">
+  <div class="section-header reveal fade-up">
     <h2>Quick Access</h2>
-    <p>Jump directly to useful resources, guides, and updates.</p>
   </div>
   <div class="links-grid">
-    <!-- Original -->
-    <a href="blogs.html" class="link-card" data-aos="zoom-in">
-      <i class="fas fa-blog"></i> Blogs
-    </a>
-    <a href="resources.html" class="link-card" data-aos="zoom-in" data-aos-delay="100">
-      <i class="fas fa-book"></i> Resources
-    </a>
-    <a href="tips.html" class="link-card" data-aos="zoom-in" data-aos-delay="200">
-      <i class="fas fa-lightbulb"></i> Tips & Hacks
-    </a>
-    <a href="security.html" class="link-card" data-aos="zoom-in" data-aos-delay="300">
-      <i class="fas fa-shield-alt"></i> Security
-    </a>
-
-    <!-- Added -->
-    <a href="guides.html" class="link-card" data-aos="zoom-in" data-aos-delay="400">
-      <i class="fas fa-map-signs"></i> Guides
-    </a>
-    <a href="updates.html" class="link-card" data-aos="zoom-in" data-aos-delay="500">
-      <i class="fas fa-sync-alt"></i> Updates
-    </a>
-    <a href="downloads.html" class="link-card" data-aos="zoom-in" data-aos-delay="600">
-      <i class="fas fa-download"></i> Downloads
-    </a>
-    <a href="faq.html" class="link-card" data-aos="zoom-in" data-aos-delay="700">
-      <i class="fas fa-question-circle"></i> FAQs
-    </a>
-    <a href="community.html" class="link-card" data-aos="zoom-in" data-aos-delay="800">
-      <i class="fas fa-users"></i> Community
-    </a>
-    <a href="support.html" class="link-card" data-aos="zoom-in" data-aos-delay="900">
-      <i class="fas fa-headset"></i> Support
-    </a>
+    <a href="blogs.html" class="link-card reveal zoom-in"><i class="fas fa-blog"></i> Blogs</a>
+    <a href="resources.html" class="link-card reveal zoom-in"><i class="fas fa-book"></i> Resources</a>
+    <a href="tips.html" class="link-card reveal zoom-in"><i class="fas fa-lightbulb"></i> Tips & Hacks</a>
+    <a href="security.html" class="link-card reveal zoom-in"><i class="fas fa-shield-alt"></i> Security</a>
+    <a href="guides.html" class="link-card reveal zoom-in"><i class="fas fa-map-signs"></i> Guides</a>
+    <a href="updates.html" class="link-card reveal zoom-in"><i class="fas fa-sync-alt"></i> Updates</a>
+    <a href="downloads.html" class="link-card reveal zoom-in"><i class="fas fa-download"></i> Downloads</a>
+    <a href="faq.html" class="link-card reveal zoom-in"><i class="fas fa-question-circle"></i> FAQs</a>
+    <a href="community.html" class="link-card reveal zoom-in"><i class="fas fa-users"></i> Community</a>
+    <a href="support.html" class="link-card reveal zoom-in"><i class="fas fa-headset"></i> Support</a>
   </div>
 </section>
 
-<!-- 🔹 TESTIMONIALS -->
-<section class="testimonials">
-  <div class="section-header" data-aos="fade-up">
-    <h2>What Users Say</h2>
-    <p>Trusted by professionals, students, and businesses worldwide.</p>
+<!-- 🔹 AUTO-SCROLL TESTIMONIALS (2 ROWS, EXPANDED + RATINGS) -->
+<section class="testimonials" id="testimonials">
+  <div class="section-header reveal fade-up">
+    <h2>Words of Praise</h2>
+    <p>Feedback from people who trust and use our AI tools daily.</p>
   </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card tool-card" data-aos="fade-up" data-aos-delay="100">
-      <span class="tag tag-popular">Programmer</span>
-      <i class="fas fa-user"></i>
-      <h3>Alex – Researcher</h3>
-      <p>"These AI tools saved me hours of research every week!"</p>
+
+  <div class="testimonial-slider">
+    <!-- Row 1 -->
+    <div class="slider-track row-1">
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>Creative geniuses who listen, understand, and craft captivating solutions — a platform that truly gets our needs.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=47" alt="Gabrielle" class="avatar">
+          <div class="user-info">
+            <h3>Gabrielle Williams</h3>
+            <span>Student</span>
+            <div class="rating">⭐ 4.9</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>Exceeded my expectations with tools that brought my ideas to life — truly a remarkable experience.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=48" alt="Samantha" class="avatar">
+          <div class="user-info">
+            <h3>Samantha Johnson</h3>
+            <span>Business Owner</span>
+            <div class="rating">⭐ 4.8</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>The ability to integrate AI in every project is unparalleled — a reliable and invaluable partner.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=49" alt="Isabella" class="avatar">
+          <div class="user-info">
+            <h3>Isabella Rodriguez</h3>
+            <span>Researcher</span>
+            <div class="rating">⭐ 4.7</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>The strategic approach resulted in amazing efficiency improvements — highly reliable and creative partner.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=12" alt="John" class="avatar">
+          <div class="user-info">
+            <h3>John Peter</h3>
+            <span>Freelancer</span>
+            <div class="rating">⭐ 4.6</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Added 10 more -->
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>These AI tools helped me reduce hours of manual work into minutes — simply brilliant.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=15" alt="Akira" class="avatar">
+          <div class="user-info">
+            <h3>Akira Tanaka</h3>
+            <span>Japanese Designer</span>
+            <div class="rating">⭐ 4.9</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>I use these tools daily in my marketing campaigns — the ROI has been incredible.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=46" alt="Amira" class="avatar">
+          <div class="user-info">
+            <h3>Amira Al-Fulan</h3>
+            <span>Arabian Marketer</span>
+            <div class="rating">⭐ 4.8</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>As a Bangladeshi developer, I rely on these tools for automation and they never disappoint.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=10" alt="Rafiq" class="avatar">
+          <div class="user-info">
+            <h3>Rafiq Hasan</h3>
+            <span>Bangladeshi Developer</span>
+            <div class="rating">⭐ 4.7</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>The AI writing assistant transformed the way I create content for my audience.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=65" alt="Emma" class="avatar">
+          <div class="user-info">
+            <h3>Emma Clarke</h3>
+            <span>British Blogger</span>
+            <div class="rating">⭐ 4.9</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>Streamlined my workflow so effectively, it feels like I have an extra teammate.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=7" alt="Yuto" class="avatar">
+          <div class="user-info">
+            <h3>Yuto Nakamura</h3>
+            <span>Japanese Engineer</span>
+            <div class="rating">⭐ 4.8</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>The AI search engine gives me results faster and more relevant than anything else.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=56" alt="Sophia" class="avatar">
+          <div class="user-info">
+            <h3>Sophia Müller</h3>
+            <span>German Researcher</span>
+            <div class="rating">⭐ 4.7</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>The automation tools saved my startup thousands of dollars in labor costs.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=9" alt="Karim" class="avatar">
+          <div class="user-info">
+            <h3>Karim El-Sayed</h3>
+            <span>Arabian Founder</span>
+            <div class="rating">⭐ 4.8</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>These AI solutions gave me the competitive edge in freelancing projects abroad.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=44" alt="Anika" class="avatar">
+          <div class="user-info">
+            <h3>Anika Rahman</h3>
+            <span>Bangladeshi Freelancer</span>
+            <div class="rating">⭐ 4.6</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>Brilliantly designed tools that are both powerful and easy to use.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=5" alt="Oliver" class="avatar">
+          <div class="user-info">
+            <h3>Oliver Smith</h3>
+            <span>British Student</span>
+            <div class="rating">⭐ 4.9</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="testimonial-card tool-card" data-aos="fade-up" data-aos-delay="200">
-      <span class="tag tag-unique">Designer</span>
-      <i class="fas fa-pen-nib"></i>
-      <h3>Sarah – Blogger</h3>
-      <p>"The writing assistant is a game-changer for my content creation."</p>
-    </div>
-    <div class="testimonial-card tool-card" data-aos="fade-up" data-aos-delay="300">
-      <span class="tag tag-premium">Engineer</span>
-      <i class="fas fa-briefcase"></i>
-      <h3>David – Startup Founder</h3>
-      <p>"Our team productivity skyrocketed after adopting these AI solutions."</p>
+
+    <!-- Row 2 -->
+    <div class="slider-track row-2">
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>From concept to execution, their tools know no bounds — a true game-changer for my workflow.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=58" alt="Natalie" class="avatar">
+          <div class="user-info">
+            <h3>Natalie Martinez</h3>
+            <span>Startup Founder</span>
+            <div class="rating">⭐ 4.8</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>A refreshing and imaginative AI platform that consistently delivers — highly recommended for everyone.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=59" alt="Victoria" class="avatar">
+          <div class="user-info">
+            <h3>Victoria Thompson</h3>
+            <span>Creator</span>
+            <div class="rating">⭐ 4.7</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>The writing assistant is a game-changer for my content creation workflow.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=68" alt="Sarah" class="avatar">
+          <div class="user-info">
+            <h3>Sarah Lee</h3>
+            <span>Blogger</span>
+            <div class="rating">⭐ 4.9</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>Our team productivity skyrocketed after adopting these AI solutions — simply brilliant.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=2" alt="David" class="avatar">
+          <div class="user-info">
+            <h3>David Kim</h3>
+            <span>Engineer</span>
+            <div class="rating">⭐ 4.8</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 more -->
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>AI-powered scheduling helped me balance work and personal life effectively.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=4" alt="Hiroshi" class="avatar">
+          <div class="user-info">
+            <h3>Hiroshi Yamamoto</h3>
+            <span>Japanese Manager</span>
+            <div class="rating">⭐ 4.7</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>The design assistant is a lifesaver when creating assets for campaigns.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=50" alt="Elena" class="avatar">
+          <div class="user-info">
+            <h3>Elena Petrova</h3>
+            <span>Russian Designer</span>
+            <div class="rating">⭐ 4.6</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>Using AI for research has cut my data collection time by half.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=8" alt="Khalid" class="avatar">
+          <div class="user-info">
+            <h3>Khalid Omar</h3>
+            <span>Arabian Analyst</span>
+            <div class="rating">⭐ 4.9</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>These tools allowed me to scale my startup faster than I imagined.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=42" alt="Amina" class="avatar">
+          <div class="user-info">
+            <h3>Amina Begum</h3>
+            <span>Bangladeshi Founder</span>
+            <div class="rating">⭐ 4.8</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>The music generation tools are amazing — they spark creativity instantly.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=53" alt="Luca" class="avatar">
+          <div class="user-info">
+            <h3>Luca Romano</h3>
+            <span>Italian Musician</span>
+            <div class="rating">⭐ 4.9</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>I use the AI companion app to brainstorm — it's like having a co-creator by my side.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=45" alt="Yasmin" class="avatar">
+          <div class="user-info">
+            <h3>Yasmin Noor</h3>
+            <span>Bangladeshi Student</span>
+            <div class="rating">⭐ 4.7</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>The data insights feature makes it easy to present findings to clients in minutes.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=3" alt="George" class="avatar">
+          <div class="user-info">
+            <h3>George Brown</h3>
+            <span>British Consultant</span>
+            <div class="rating">⭐ 4.8</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>I’ve been able to scale my freelance business internationally with these AI tools.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=6" alt="Naoki" class="avatar">
+          <div class="user-info">
+            <h3>Naoki Suzuki</h3>
+            <span>Japanese Freelancer</span>
+            <div class="rating">⭐ 4.9</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>As a researcher, the AI note-taking assistant saves me countless hours every week.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=41" alt="Fatima" class="avatar">
+          <div class="user-info">
+            <h3>Fatima Zahra</h3>
+            <span>Arabian Researcher</span>
+            <div class="rating">⭐ 4.6</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p>Simple, intuitive, and powerful — everything I need in AI-powered tools.</p>
+        <div class="testimonial-footer">
+          <img src="https://i.pravatar.cc/100?img=39" alt="Markus" class="avatar">
+          <div class="user-info">
+            <h3>Markus Schneider</h3>
+            <span>German Developer</span>
+            <div class="rating">⭐ 4.7</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+
 
 <!-- 🔹 PRICING -->
 <section class="pricing">
-  <div class="section-header" data-aos="fade-up">
+  <div class="section-header reveal fade-up">
     <h2>Pricing Plans</h2>
     <p>Flexible. Scalable. Smart AI tools for every need.</p>
   </div>
 
   <div class="pricing-grid">
-    <!-- Free / Starter -->
-    <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="pricing-card reveal zoom-in">
       <h3>Starter Plan</h3>
       <p class="price">$0 <span>/month</span></p>
       <p class="subtitle">Perfect for exploring AI tools</p>
@@ -398,9 +862,7 @@
       </ul>
       <button>Get Started</button>
     </div>
-
-    <!-- Pro -->
-    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+    <div class="pricing-card featured reveal zoom-in">
       <h3>Pro Plan</h3>
       <p class="price">$19 <span>/month</span></p>
       <p class="subtitle">For professionals & creators</p>
@@ -413,9 +875,7 @@
       </ul>
       <button>Upgrade</button>
     </div>
-
-    <!-- Enterprise -->
-    <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+    <div class="pricing-card reveal zoom-in">
       <h3>Enterprise Plan</h3>
       <p class="price">Custom <span>/year</span></p>
       <p class="subtitle">Tailored for teams & companies</p>
@@ -564,6 +1024,54 @@
     });
   });
 </script>
+
+<script>
+// Scroll reveal animation
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      observer.unobserve(entry.target); // Animate once
+    }
+  });
+}, { threshold: 0.15 });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+<!-- 🔹 JS for Search & Categories -->
+<script>
+  const searchInput = document.getElementById("toolSearch");
+  const toolCards = document.querySelectorAll(".tool-card");
+  const categoryBtns = document.querySelectorAll(".category-btn");
+
+  // 🔎 Live search
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+    toolCards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(query) ? "block" : "none";
+    });
+  });
+
+  // 🎯 Category filter
+  categoryBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const category = btn.dataset.category;
+      toolCards.forEach(card => {
+        const categories = card.dataset.category.split(",");
+        if (category === "all" || categories.includes(category)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
 
 </body>
 
