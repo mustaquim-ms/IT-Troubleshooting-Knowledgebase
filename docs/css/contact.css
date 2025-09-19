@@ -1,0 +1,624 @@
+/* ✅ Prevent unwanted horizontal scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ✅ Ensure all sections respect container width */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* ================================
+   Global Reset
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fafafa;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+    display: block;
+}
+
+/* Menu */
+.nav-links {
+    flex: 1;
+    margin-left: 2rem;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul.sub-links {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.nav-links a {
+    color: #222;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2f8f46;
+    /* vibrant highlight */
+    font-weight: 600;
+}
+
+/* Right Actions */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.icon-btn:hover {
+    color: #2f8f46;
+}
+
+.nav-login {
+    text-decoration: none;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.nav-login:hover {
+    color: #2f8f46;
+}
+
+.nav-cta {
+    background: #0d1b2a;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.nav-cta:hover {
+    background: #2f8f46;
+}
+
+/* General Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block; /* keeps it inline with other menu items */
+}
+
+/* Dropdown Trigger Link */
+.dropdown-toggle {
+  color: #111;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on the trigger link */
+.dropdown-toggle:hover {
+  color: #2f8f46; /* accent color */
+  transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* places it below the dropdown toggle */
+  left: 0;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  min-width: 200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
+
+/* Dropdown Item Styles */
+.dropdown-content li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect on links */
+.dropdown-content li a:hover {
+  background-color: #f5f5f5; /* Soft hover background */
+  color: #2f8f46; /* Accent color */
+  transform: translateX(4px); /* Smooth movement */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Add smooth fade-in on hover */
+.dropdown-content {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+}
+
+
+/* Footer */
+.footer {
+    background: #10141b;
+    color: #ccc;
+    padding: 3rem 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-top {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+/* Brand Section */
+.footer-brand {
+    flex: 1 1 250px;
+    min-width: 250px;
+}
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+.footer-brand p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.social {
+    display: flex;
+    gap: 1rem;
+}
+.social a {
+    font-size: 1.3rem;
+    color: #ccc;
+    transition: 0.3s;
+}
+.social a:hover {
+    color: #2f8f46;
+}
+
+/* Links Section */
+.footer-container {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+}
+.footer h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+.footer ul li {
+    margin-bottom: 0.6rem;
+}
+.footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+.footer ul li a:hover {
+    color: #2f8f46;
+    transform: translateX(4px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    max-width: 1300px;
+    margin: 2rem auto 0;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0.85rem;
+}
+.footer-links a {
+    margin-left: 1.5rem;
+    color: #ccc;
+    transition: 0.3s;
+}
+.footer-links a:hover {
+    color: #ff4081;
+}
+
+/* ANIMATIONS */
+@keyframes wobble {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(4deg);
+    }
+}
+
+* {
+    text-decoration: none;
+}
+
+/* ================================
+   Global FAQ Section Styling
+================================ */
+.faq {
+  padding: 4rem 2rem;
+  background: #10141b; /* Dark clean background */
+  text-align: center;
+}
+
+.faq-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.faq-header p {
+  color: #bbb;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ================================
+   Tabs
+================================ */
+.faq-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.faq-tabs .tab {
+  background: #181e27;
+  color: #eee;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.faq-tabs .tab:hover {
+  background: #2f8f46; /* Green hover */
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.faq-tabs .tab.active {
+  background: #34a853; /* Active green */
+  color: #fff;
+}
+
+/* ================================
+   FAQ Lists (Fade-In Animation)
+================================ */
+.faq-list {
+  max-width: 800px;
+  margin: auto;
+  display: none;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: left;
+}
+
+.faq-list.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================
+   FAQ Items
+================================ */
+.faq-item {
+  background: #181e27;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.faq-item:hover {
+  background: #223029; /* Subtle green tint */
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.2rem 1.5rem;
+  font-size: 1rem;
+  text-align: left;
+  color: #34a853; /* Green text */
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #2f8f46; /* Darker green hover */
+}
+
+.faq-question i {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg); /* Rotate chevron */
+}
+
+/* ================================
+   FAQ Answers
+================================ */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.faq-answer p {
+  color: #ddd;
+  font-size: 0.95rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 1rem 1.5rem;
+}
+
+
+/* ================================
+   Contact Section
+================================ */
+.contact {
+  padding: 4rem 2rem;
+  background: #fafafa;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.contact p {
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.contact-container {
+  display: flex;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 2;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: #111;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #444;
+}
+
+.contact-info {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.contact-info h3 {
+  margin-top: 1rem;
+  color: #111;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: #111;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   Testimonial Section
+================================ */
+.testimonial {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.testimonial-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.testimonial-text {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.testimonial-text .author {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.testimonial-image {
+  flex: 1;
+}
+
+.testimonial-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.logos {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.logos img {
+  height: 40px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.logos img:hover {
+  opacity: 1;
+}

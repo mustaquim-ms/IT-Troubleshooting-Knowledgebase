@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | KnowledgeBase</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- 🔹 HEADER / NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-container">
+    
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="./assets/mainn.png" alt="IT Troubleshooting Logo">
+            </a>
+    
+            <!-- Menu -->
+            <nav class="nav-links">
+            <ul>
+                    <li><a href="ai_tools.html">AI Tools</a></li>
+                    <li><a href="tips.html">Tips & Tricks</a></li>
+                    <li><a href="security.html">Cybersecurity</a></li>
+            </ul>
+            <ul class="sub-links">
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    
+            <!-- Right Side Actions -->
+                    <div class="nav-actions">
+                    <button class="icon-btn" title="Search"><i class="fas fa-search"></i></button>
+
+                    <!-- Support Dropdown -->
+                        <li class="dropdown">
+                        <a href="support.html" class="dropdown-toggle">Support ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="support.html">Help Center</a></li>
+                            <li><a href="community.html">Community</a></li>
+                            <li><a href="docs.html">Documentation</a></li>
+                            <li><a href="career.html">Career</a></li>
+                        </ul>
+                        </li>
+
+                    <button class="icon-btn" title="Language"><i class="fas fa-globe"></i></button>
+                    <a href="auth.html" class="nav-login"><i class="fas fa-user"></i> Log In</a>
+                    <a href="downloads.html" class="nav-cta">Free Resources</a>
+                    </div>
+        </div>
+    </header>
+
+  <!-- 🔹 FAQ Section -->
+<section class="faq">
+  <div class="faq-header">
+    <h2>Frequently asked questions</h2>
+    <p>These are the most commonly asked questions about our IT troubleshooting & learning platform.</p>
+    <div class="faq-tabs">
+      <button class="tab active" data-tab="general">General</button>
+      <button class="tab" data-tab="price">Price</button>
+      <button class="tab" data-tab="knowledgebase">KnowledgeBase Learning</button>
+      <button class="tab" data-tab="resources">Resources</button>
+    </div>
+  </div>
+
+  <!-- General FAQ -->
+  <div class="faq-list active" id="faq-general">
+    <div class="faq-item">
+      <button class="faq-question">What is the IT Troubleshooting Hub? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>It’s an all-in-one platform that provides IT troubleshooting guides, networking resources, and e-learning for professionals.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do I need prior IT knowledge? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>No, we provide resources for both beginners and advanced professionals in IT.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I access the platform on mobile? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, our website and resources are fully optimized for mobile and tablet use.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you offer community support? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, we have a community forum where IT enthusiasts and professionals help each other.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I suggest new troubleshooting topics? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Absolutely! We welcome user suggestions to improve our content library.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Price FAQ -->
+  <div class="faq-list" id="faq-price">
+    <div class="faq-item">
+      <button class="faq-question">Is there a free plan available? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, we offer a free tier with access to basic troubleshooting guides.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How much does the Pro plan cost? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>The Pro plan starts at $9.99/month and includes advanced guides, resources, and community perks.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you offer annual discounts? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, yearly subscriptions come with a 20% discount compared to monthly billing.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I switch between plans? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, you can upgrade or downgrade at any time from your dashboard.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What payment methods do you accept? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>We accept credit cards, PayPal, and bank transfers for corporate clients.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you provide invoices? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, invoices are automatically generated and available for download in your account.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- KnowledgeBase Learning FAQ -->
+  <div class="faq-list" id="faq-knowledgebase">
+    <div class="faq-item">
+      <button class="faq-question">What type of learning materials do you provide? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>We provide step-by-step troubleshooting guides, video tutorials, and interactive labs.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Are there certifications included? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, some learning paths come with completion certificates that can boost your IT profile.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you offer hands-on practice labs? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, our KnowledgeBase includes sandbox environments for real-world practice.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Is the content updated regularly? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, our IT experts update learning materials regularly to match current trends and tools.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resources FAQ -->
+  <div class="faq-list" id="faq-resources">
+    <div class="faq-item">
+      <button class="faq-question">Do you provide downloadable IT resources? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, we provide downloadable cheat sheets, configuration files, and IT templates.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I access cybersecurity tips? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, we provide a dedicated section for cybersecurity best practices and tutorials.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Are there case studies available? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, real-world IT troubleshooting case studies are available in the resources library.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I share these resources with my team? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes, resources can be shared internally within your organization, subject to licensing terms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- 🔹 Contact Section -->
+  <section class="contact">
+    <h2>Contact us</h2>
+    <p>Can’t find what you’re looking for? Chat to our friendly team!</p>
+
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="First name *" required>
+          <input type="text" placeholder="Last name *" required>
+        </div>
+        <input type="email" placeholder="Email *" required>
+        <input type="tel" placeholder="Phone number">
+        <select>
+          <option>1-50 people</option>
+          <option>51-200 people</option>
+          <option>200+ people</option>
+        </select>
+        <textarea placeholder="Message..."></textarea>
+        <div class="checkboxes">
+          <label><input type="checkbox"> Resources</label>
+          <label><input type="checkbox"> Trainigs</label>
+          <label><input type="checkbox"> Collaborate</label>
+        </div>
+        <button type="submit" class="btn-primary">Send message</button>
+      </form>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Chat to sales</h3>
+        <p>Email: <a href="mailto:sales@knowledgebase.com">sales@knowledgebase.com</a></p>
+
+        <h3>Email support</h3>
+        <p><a href="mailto:support@knowledgebase.com">support@knowledgebase.com</a></p>
+
+        <h3>Call us</h3>
+        <p>+12 345 678 90</p>
+
+        <h3>Our offices</h3>
+        <p><strong>Earth:</strong> 786, Everything 2015</p>
+        <p><strong>Mars:</strong> 555, Sabmus 1520</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Company Logos -->
+    </div>
+    <div class="logos">
+      <img src="./assets/basecamp.png" alt="Basecamp">
+      <img src="./assets/uber.png" alt="Uber">
+      <img src="./assets/ghost.png" alt="Ghost">
+      <img src="./assets/zapier.png" alt="Zapier">
+      <img src="./assets/classpass.png" alt="Classpass">
+      <img src="./assets/descript.png" alt="Descript">
+      <img src="./assets/notion.png" alt="Notion">
+    </div>
+  </section>
+
+  <!-- 🔹 FOOTER -->
+<footer class="footer">
+    <div class="footer-top">
+        <!-- Logo + About -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <img src="./assets/mainn.png" alt="IT Hub Logo">
+            </a>
+            <p>IT Troubleshooting & Networking Hub — helping professionals solve IT challenges with ease.</p>
+            
+            <!-- Social Icons -->
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-medium"></i></a>
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="footer-container">
+            <!-- Company -->
+            <div class="footer-col">
+                <h4>About IT Hub</h4>
+                <ul>
+                    <li><a href="about.html">Who We Are</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="#">Why Choose Us</a></li>
+                    <li><a href="#">Our Experts</a></li>
+                    <li><a href="newsroom.html">Newsroom</a></li>
+                    <li><a href="partners.html">Technology Partners</a></li>
+                    <li><a href="policies.html">Policies</a></li>
+                    <li><a href="#">Tech Protect</a></li>
+                </ul>
+            </div>
+
+            <!-- Solutions -->
+            <div class="footer-col">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="ai_tools.html">AI Utilities</a></li>
+                    <li><a href="learnbase.html">Learning Hub</a></li>
+                    <li><a href="#">Free Downloads</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="products.html">All Solutions</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="conf.html">TechConf</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="store.html">IT Store</a></li>
+                    <li><a href="videos.html">Video Library</a></li>
+                    <li><a href="resources.html">All Resources</a></li>
+                </ul>
+            </div>
+
+            <!-- Knowledge -->
+            <div class="footer-col">
+                <h4>Knowledge Center</h4>
+                <ul>
+                    <li><a href="#">Network Basics</a></li>
+                    <li><a href="#">Firewall Essentials</a></li>
+                    <li><a href="#">OS Configuration</a></li>
+                    <li><a href="#">Cybersecurity Tips</a></li>
+                    <li><a href="#">Tech Trends 2025</a></li>
+                    <li><a href="articles.html">All Articles</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="support.html">Tech Support</a></li>
+                    <li><a href="community.html">Community Forum</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        <p>© 2025 IT Troubleshooting & Networking Hub. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="policies.html">Terms & Policies</a>
+            <a href="#">Cookies Settings</a>
+        </div>
+    </div>
+</footer>
+
+    <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+  <script>
+    // FAQ Accordion Toggle
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        faqItem.classList.toggle('active');
+      });
+    });
+
+    // FAQ Tabs
+    const tabs = document.querySelectorAll('.faq-tabs .tab');
+    const lists = document.querySelectorAll('.faq-list');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const target = tab.dataset.tab;
+        lists.forEach(list => {
+          list.classList.remove('active');
+          if (list.id === `faq-${target}`) {
+            list.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll(".faq-tabs .tab");
+    const lists = document.querySelectorAll(".faq-list");
+    const questions = document.querySelectorAll(".faq-question");
+
+    // Tab switching
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        lists.forEach(list => list.classList.remove("active"));
+        const targetId = `faq-${tab.dataset.tab}`;
+        document.getElementById(targetId).classList.add("active");
+      });
+    });
+
+    // FAQ accordion toggle
+    questions.forEach(question => {
+      question.addEventListener("click", () => {
+        const item = question.parentElement;
+        item.classList.toggle("active");
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>

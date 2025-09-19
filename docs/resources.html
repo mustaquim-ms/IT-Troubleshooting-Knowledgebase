@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resources | KnowledgeBase</title>
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="./css/resources.css" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🔹 NAVBAR (UNCHANGED) -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <img src="./assets/mainn.png" alt="KnowledgeBase Logo" />
+      </a>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="ai_tools.html">AI Tools</a></li>
+          <li><a href="tips.html">Tips & Tricks</a></li>
+          <li><a href="security.html">Cybersecurity</a></li>
+        </ul>
+        <ul class="sub-links">
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="resources.html" class="active">Resources</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" title="Search"><i class="fas fa-search"></i></button>
+        <li class="dropdown">
+          <a href="support.html" class="dropdown-toggle">Support ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="support.html">Help Center</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="career.html">Career</a></li>
+          </ul>
+        </li>
+        <button class="icon-btn" title="Language"><i class="fas fa-globe"></i></button>
+        <a href="auth.html" class="nav-login"><i class="fas fa-user"></i> Log In</a>
+        <a href="downloads.html" class="nav-cta">Free Resources</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🔹 HERO -->
+  <section class="resources-hero">
+    <div class="hero-content">
+      <h1>📚 Explore Our Resources</h1>
+      <p>Download books, tutorials, guides & practice materials — some free, some premium.</p>
+      <a href="#resources-grid" class="btn-primary">Browse Resources</a>
+    </div>
+  </section>
+
+<!-- 🔹 FILTER + SEARCH -->
+<div class="resources-controls">
+  <div class="resources-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="free">Free</button>
+    <button class="filter-btn" data-filter="paid">Paid</button>
+    <button class="filter-btn" data-filter="books">Books</button>
+    <button class="filter-btn" data-filter="pdfs">PDFs</button>
+    <button class="filter-btn" data-filter="tutorials">Tutorials</button>
+  </div>
+
+  <!-- 🔍 Search -->
+  <div class="resources-search">
+    <input type="text" id="resourceSearch" placeholder="Search resources...">
+    <i class="fas fa-search"></i>
+  </div>
+</div>
+
+  <!-- 🔹 RESOURCE GRID -->
+  <section id="resources-grid" class="resources-section">
+  <h2 class="section-title">Available Resources</h2>
+  <div class="grid">
+      
+      <!-- Card Example -->
+      <div class="resources-grid">
+
+  <!-- 1 -->
+  <div class="resource-card free" data-category="ui">
+    <img src="images/resource1.jpg" alt="React UI Kit">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>React UI Kit</h3>
+      <p>A modern UI kit with reusable React components for rapid prototyping.</p>
+      <a href="#" class="card-btn">Download</a>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="resource-card paid" data-category="dev">
+    <img src="images/resource2.jpg" alt="Advanced JS Course">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>Advanced JavaScript Course</h3>
+      <p>Master advanced JS with real-world projects and expert guidance.</p>
+      <a href="#" class="card-btn">Get Access</a>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="resource-card free" data-category="cloud">
+    <img src="images/resource3.jpg" alt="AWS Guide">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>AWS Beginner Guide</h3>
+      <p>A step-by-step tutorial for setting up your first cloud environment.</p>
+      <a href="#" class="card-btn">Read Guide</a>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="resource-card paid" data-category="ui">
+    <img src="images/resource4.jpg" alt="UI Design Templates">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>UI Design Templates</h3>
+      <p>Pixel-perfect Figma templates crafted for modern dashboards.</p>
+      <a href="#" class="card-btn">Get Templates</a>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="resource-card free" data-category="dev">
+    <img src="images/resource5.jpg" alt="GitHub Starter Pack">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>GitHub Starter Pack</h3>
+      <p>Essential workflows and automation scripts to supercharge GitHub.</p>
+      <a href="#" class="card-btn">Download</a>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="resource-card paid" data-category="cloud">
+    <img src="images/resource6.jpg" alt="Kubernetes Mastery">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>Kubernetes Mastery</h3>
+      <p>Hands-on Kubernetes training for deploying and scaling apps.</p>
+      <a href="#" class="card-btn">Enroll</a>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="resource-card free" data-category="ui">
+    <img src="images/resource7.jpg" alt="Icon Pack">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>Minimal Icon Pack</h3>
+      <p>A collection of 200+ minimalist SVG icons for any project.</p>
+      <a href="#" class="card-btn">Grab Now</a>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="resource-card paid" data-category="dev">
+    <img src="images/resource8.jpg" alt="Node.js API Boilerplate">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>Node.js API Boilerplate</h3>
+      <p>Production-ready API boilerplate with auth, DB, and testing setup.</p>
+      <a href="#" class="card-btn">Get Code</a>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="resource-card free" data-category="cloud">
+    <img src="images/resource9.jpg" alt="Docker Cheat Sheet">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>Docker Cheat Sheet</h3>
+      <p>Quick reference guide for essential Docker commands & tips.</p>
+      <a href="#" class="card-btn">Download</a>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="resource-card paid" data-category="ui">
+    <img src="images/resource10.jpg" alt="UX Research Toolkit">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>UX Research Toolkit</h3>
+      <p>Comprehensive templates and guides for effective user research.</p>
+      <a href="#" class="card-btn">Get Toolkit</a>
+    </div>
+  </div>
+
+   <!-- 11 -->
+  <div class="resource-card free" data-category="dev">
+    <img src="images/resource11.jpg" alt="Python Crash Course PDF">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>Python Crash Course (PDF)</h3>
+      <p>A beginner-friendly guide to Python programming with hands-on exercises.</p>
+      <a href="#" class="card-btn">Download</a>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="resource-card paid" data-category="cloud">
+    <img src="images/resource12.jpg" alt="Azure Certification Guide">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>Azure Certification Guide</h3>
+      <p>Complete study material to ace Microsoft Azure cloud certifications.</p>
+      <a href="#" class="card-btn">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <div class="resource-card free" data-category="ui">
+    <img src="images/resource13.jpg" alt="CSS Grid Layout Handbook">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>CSS Grid Layout Handbook</h3>
+      <p>A free PDF explaining CSS Grid with examples and visual diagrams.</p>
+      <a href="#" class="card-btn">Read Now</a>
+    </div>
+  </div>
+
+  <!-- 14 -->
+  <div class="resource-card paid" data-category="dev">
+    <img src="images/resource14.jpg" alt="Full-Stack Dev Bootcamp">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>Full-Stack Dev Bootcamp</h3>
+      <p>Step-by-step online course covering React, Node, and MongoDB.</p>
+      <a href="#" class="card-btn">Enroll</a>
+    </div>
+  </div>
+
+  <!-- 15 -->
+  <div class="resource-card free" data-category="cloud">
+    <img src="images/resource15.jpg" alt="Linux Commands PDF">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>Linux Commands PDF</h3>
+      <p>One-page reference sheet of essential Linux commands for admins.</p>
+      <a href="#" class="card-btn">Download</a>
+    </div>
+  </div>
+
+  <!-- 16 -->
+  <div class="resource-card paid" data-category="ui">
+    <img src="images/resource16.jpg" alt="Illustrations Pack">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>Creative Illustrations Pack</h3>
+      <p>500+ vector illustrations for websites, apps, and presentations.</p>
+      <a href="#" class="card-btn">Get Pack</a>
+    </div>
+  </div>
+
+  <!-- 17 -->
+  <div class="resource-card free" data-category="dev">
+    <img src="images/resource17.jpg" alt="C++ Programming PDF">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>C++ Programming Guide</h3>
+      <p>A complete beginner-to-advanced programming guide for C++ learners.</p>
+      <a href="#" class="card-btn">Download</a>
+    </div>
+  </div>
+
+  <!-- 18 -->
+  <div class="resource-card paid" data-category="cloud">
+    <img src="images/resource18.jpg" alt="Cloud Architecture Patterns">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>Cloud Architecture Patterns</h3>
+      <p>Deep dive into cloud-native app design, scaling, and best practices.</p>
+      <a href="#" class="card-btn">Get eBook</a>
+    </div>
+  </div>
+
+  <!-- 19 -->
+  <div class="resource-card free" data-category="ui">
+    <img src="images/resource19.jpg" alt="Tailwind Components">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>Tailwind Components</h3>
+      <p>A collection of ready-to-use Tailwind CSS components for developers.</p>
+      <a href="#" class="card-btn">Grab Free</a>
+    </div>
+  </div>
+
+  <!-- 20 -->
+  <div class="resource-card paid" data-category="dev">
+    <img src="images/resource20.jpg" alt="AI & ML Course">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>AI & ML Mastery Course</h3>
+      <p>Learn artificial intelligence and machine learning from scratch.</p>
+      <a href="#" class="card-btn">Get Access</a>
+    </div>
+  </div>
+
+  <!-- 21 -->
+  <div class="resource-card free" data-category="cloud">
+    <img src="images/resource21.jpg" alt="Docker Beginner Guide">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>Docker Beginner Guide</h3>
+      <p>Simple, step-by-step PDF for learning Docker container basics.</p>
+      <a href="#" class="card-btn">Read Guide</a>
+    </div>
+  </div>
+
+  <!-- 22 -->
+  <div class="resource-card paid" data-category="ui">
+    <img src="images/resource22.jpg" alt="Pro UX Templates">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>Pro UX Templates</h3>
+      <p>Professional UX wireframes and research templates for agencies.</p>
+      <a href="#" class="card-btn">Get Templates</a>
+    </div>
+  </div>
+
+  <!-- 23 -->
+  <div class="resource-card free" data-category="dev">
+    <img src="images/resource23.jpg" alt="Java Programming Notes">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>Java Programming Notes</h3>
+      <p>Concise Java programming notes for interviews and exams.</p>
+      <a href="#" class="card-btn">Download</a>
+    </div>
+  </div>
+
+  <!-- 24 -->
+  <div class="resource-card paid" data-category="cloud">
+    <img src="images/resource24.jpg" alt="GCP Cloud Study Pack">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>GCP Cloud Study Pack</h3>
+      <p>Full study resources for Google Cloud Platform certifications.</p>
+      <a href="#" class="card-btn">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- 25 -->
+  <div class="resource-card free" data-category="ui">
+    <img src="images/resource25.jpg" alt="Open Source Fonts Pack">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>Open Source Fonts Pack</h3>
+      <p>100+ high-quality, free fonts for creative projects and branding.</p>
+      <a href="#" class="card-btn">Grab Free</a>
+    </div>
+  </div>
+
+  <!-- 26 -->
+  <div class="resource-card paid" data-category="dev">
+    <img src="images/resource26.jpg" alt="Advanced React Course">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>Advanced React Course</h3>
+      <p>Learn hooks, context, and performance optimization in React.</p>
+      <a href="#" class="card-btn">Enroll</a>
+    </div>
+  </div>
+
+  <!-- 27 -->
+  <div class="resource-card free" data-category="cloud">
+    <img src="images/resource27.jpg" alt="Networking Basics PDF">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>Networking Basics PDF</h3>
+      <p>Understand core networking concepts with this free guide.</p>
+      <a href="#" class="card-btn">Download</a>
+    </div>
+  </div>
+
+  <!-- 28 -->
+  <div class="resource-card paid" data-category="ui">
+    <img src="images/resource28.jpg" alt="3D UI Kit">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>3D UI Kit</h3>
+      <p>Beautiful, futuristic 3D-styled UI elements for web projects.</p>
+      <a href="#" class="card-btn">Get Kit</a>
+    </div>
+  </div>
+
+  <!-- 29 -->
+  <div class="resource-card free" data-category="dev">
+    <img src="images/resource29.jpg" alt="SQL Queries PDF">
+    <div class="card-content">
+      <span class="tag free">Free</span>
+      <h3>SQL Queries PDF</h3>
+      <p>Handy SQL queries reference for developers and database admins.</p>
+      <a href="#" class="card-btn">Download</a>
+    </div>
+  </div>
+
+  <!-- 30 -->
+  <div class="resource-card paid" data-category="cloud">
+    <img src="images/resource30.jpg" alt="DevOps Masterclass">
+    <div class="card-content">
+      <span class="tag paid">Premium</span>
+      <h3>DevOps Masterclass</h3>
+      <p>Learn CI/CD, automation, monitoring, and cloud-native DevOps practices.</p>
+      <a href="#" class="card-btn">Join Now</a>
+    </div>
+  </div>
+
+</div>
+  </section>
+
+<!-- 🔹 FOOTER (UNCHANGED) -->
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Logo + About -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="./assets/mainn.png" alt="IT Hub Logo" />
+        </a>
+        <p>IT Troubleshooting & Networking Hub — helping professionals solve IT challenges with ease.</p>
+
+        <!-- Social Icons -->
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-medium"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>About IT Hub</h4>
+          <ul>
+            <li><a href="about.html">Who We Are</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="#">Why Choose Us</a></li>
+            <li><a href="#">Our Experts</a></li>
+            <li><a href="newsroom.html">Newsroom</a></li>
+            <li><a href="partners.html">Technology Partners</a></li>
+            <li><a href="policies.html">Policies</a></li>
+            <li><a href="#">Tech Protect</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="ai_tools.html">AI Utilities</a></li>
+            <li><a href="learnbase.html">Learning Hub</a></li>
+            <li><a href="#">Free Downloads</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="products.html">All Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="conf.html">TechConf</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="store.html">IT Store</a></li>
+            <li><a href="videos.html">Video Library</a></li>
+            <li><a href="resources.html">All Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Knowledge Center</h4>
+          <ul>
+            <li><a href="#">Network Basics</a></li>
+            <li><a href="#">Firewall Essentials</a></li>
+            <li><a href="#">OS Configuration</a></li>
+            <li><a href="#">Cybersecurity Tips</a></li>
+            <li><a href="#">Tech Trends 2025</a></li>
+            <li><a href="articles.html">All Articles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="support.html">Tech Support</a></li>
+            <li><a href="community.html">Community Forum</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2025 IT Troubleshooting & Networking Hub. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="policies.html">Terms & Policies</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/resources.js"></script>
+
+</body>
+</html>

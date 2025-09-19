@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team | KnowledgeBase</title>
+
+  <!-- Page CSS -->
+   <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/team.css" />
+
+  <!-- Icons + AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+
+  <!-- 🔹 HEADER / NAVBAR (UNCHANGED) -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="./assets/mainn.png" alt="KnowledgeBase Logo" />
+      </a>
+
+      <!-- Menu -->
+      <nav class="nav-links">
+        <ul>
+          <li><a href="ai_tools.html">AI Tools</a></li>
+          <li><a href="tips.html">Tips & Tricks</a></li>
+          <li><a href="security.html">Cybersecurity</a></li>
+        </ul>
+        <ul class="sub-links">
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="team.html" class="active">Our Team</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Side Actions -->
+      <div class="nav-actions">
+        <button class="icon-btn" title="Search"><i class="fas fa-search"></i></button>
+
+        <!-- Support Dropdown -->
+        <li class="dropdown">
+          <a href="support.html" class="dropdown-toggle">Support ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="support.html">Help Center</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="career.html">Career</a></li>
+          </ul>
+        </li>
+
+        <button class="icon-btn" title="Language"><i class="fas fa-globe"></i></button>
+        <a href="auth.html" class="nav-login"><i class="fas fa-user"></i> Log In</a>
+        <a href="downloads.html" class="nav-cta">Free Resources</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🔹 HERO HEADER -->
+  <section class="team-hero">
+    <div class="hero-inner" data-aos="fade-up">
+      <h1><span class="thin">Meet the</span> <span class="kb">KnowledgeBase</span> Team</h1>
+      <p>We’re passionate about solving tech problems, explaining complex systems, and building tools that make technology accessible for everyone.</p>
+      <div class="hero-pill"></div>
+    </div>
+    <div class="shapes">
+        <div class="blob b1" data-speed="15"></div>
+        <div class="blob b2" data-speed="25"></div>
+        <div class="blob b3" data-speed="35"></div>
+    </div>
+  </section>
+
+  <div class="wave-divider">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path fill="#f9fafb" fill-opacity="1" 
+      d="M0,64L80,80C160,96,320,128,480,133.3C640,139,800,117,960,112C1120,107,1280,117,1360,122.7L1440,128V0H0Z">
+    </path>
+  </svg>
+</div>
+
+  <!-- 🔹 VALUES & FEATURES -->
+  <section class="values-section">
+    <h2 class="section-title" data-aos="fade-up">Our Values & Features</h2>
+    <div class="values-grid">
+      <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Security First</h3>
+        <p>Protecting businesses with enterprise-grade solutions.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-robot"></i>
+        <h3>AI & Automation</h3>
+        <p>Leveraging AI to simplify workflows and drive efficiency.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-network-wired"></i>
+        <h3>Networking</h3>
+        <p>Building fast, reliable, and scalable global networks.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovation</h3>
+        <p>Pioneering modern solutions to keep you ahead.</p>
+      </div>
+  </section>
+
+  <!-- 🔸 FEATURES (What We Do Best) -->
+  <section class="features">
+    <h2 data-aos="fade-up">What We Do Best</h2>
+    <div class="feature-grid">
+      <div class="feature" data-aos="fade-up" data-aos-delay="0">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Cybersecurity</h3>
+        <p>Protecting businesses from digital threats with enterprise-grade solutions.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="120">
+        <i class="fas fa-brain"></i>
+        <h3>AI & Automation</h3>
+        <p>Leveraging AI to simplify workflows and drive efficiency at scale.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="240">
+        <i class="fas fa-network-wired"></i>
+        <h3>Networking</h3>
+        <p>Designing fast, reliable, and scalable networks for global teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔸 Team Section -->
+
+<section class="team-section">
+  <h2 class="section-title" data-aos="fade-up">Meet Our Experts</h2>
+
+  <div class="team-grid">
+
+    <!-- 1 -->
+    <div class="team-card bio-trigger" 
+         data-name="Mustaquim Ahmad"
+         data-position="Owner, CS & Cloud Specialist"
+         data-bio="Mustaquim is the visionary behind the team, bringing expertise in IT, computer science, and cloud systems to help businesses grow with secure and scalable solutions."
+         data-img="assets/avatars/mustaquimm.png"
+         data-quote="Innovation distinguishes between a leader and a follower.">
+      <img src="assets/avatars/mustaquimm.png" alt="Mustaquim Ahmad">
+      <h3>Mustaquim Ahmad</h3>
+      <p>Owner, CS & Cloud Specialist</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="team-card bio-trigger" 
+         data-name="Safin Rabbani"
+         data-position="AI & Cloud Engineer"
+         data-bio="Safin specializes in AI-driven cloud solutions, building scalable platforms and automation workflows to optimize business operations."
+         data-img="assets/avatars/safin.png"
+         data-quote="AI is not the future, it’s the present reshaping our world.">
+      <img src="assets/avatars/safin.png" alt="Safin Rabbani">
+      <h3>Safin Rabbani</h3>
+      <p>AI & Cloud Engineer</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="team-card bio-trigger" 
+         data-name="Sabrina Sarah"
+         data-position="Linux Systems Admin"
+         data-bio="Sabrina is an expert in Linux environments, ensuring secure, optimized, and reliable server infrastructure across global networks."
+         data-img="assets/avatars/sabrina.png"
+         data-quote="In a world full of GUIs, be a command line.">
+      <img src="assets/avatars/sabrina.png" alt="Sabrina Sarah">
+      <h3>Sabrina Sarah</h3>
+      <p>Linux Systems Admin</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="team-card bio-trigger" 
+         data-name="Tanvir Rahman"
+         data-position="Full-Stack Developer"
+         data-bio="Tanvir is a versatile developer who builds responsive, high-performing web applications from frontend to backend."
+         data-img="assets/avatars/tanvir.png"
+         data-quote="Code is like humor. When you have to explain it, it’s bad.">
+      <img src="assets/avatars/tanvir.png" alt="Tanvir Rahman">
+      <h3>Tanvir Rahman</h3>
+      <p>Full-Stack Developer</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="team-card bio-trigger" 
+         data-name="Mantasha Jahan"
+         data-position="Network Architect"
+         data-bio="Mantasha designs high-performance and scalable network infrastructures that support business growth and innovation."
+         data-img="assets/avatars/mantasha.png"
+         data-quote="Great networks are invisible until they fail.">
+      <img src="assets/avatars/mantasha.png" alt="Mantasha Jahan">
+      <h3>Mantasha Jahan</h3>
+      <p>Network Architect</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="team-card bio-trigger" 
+         data-name="Rajib Akash"
+         data-position="DevOps Engineer"
+         data-bio="Rajib bridges development and operations, automating workflows and ensuring continuous integration and delivery pipelines."
+         data-img="assets/avatars/rajib.png"
+         data-quote="Automate everything, because life’s too short for manual deployments.">
+      <img src="assets/avatars/rajib.png" alt="Rajib Akash">
+      <h3>Rajib Akash</h3>
+      <p>DevOps Engineer</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="team-card bio-trigger" 
+         data-name="Raffat Esha"
+         data-position="Data Scientist"
+         data-bio="Raffat extracts insights from complex datasets, applying machine learning to help businesses make smarter decisions."
+         data-img="assets/avatars/eshu.png"
+         data-quote="Data is the new oil, but insight is the engine.">
+      <img src="assets/avatars/eshu.png" alt="Raffat Esha">
+      <h3>Raffat Esha</h3>
+      <p>Data Scientist</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="team-card bio-trigger" 
+         data-name="Bruce Wayne"
+         data-position="Mobile App Developer"
+         data-bio="Bruce creates sleek, user-friendly mobile applications with a focus on performance, security, and cross-platform support."
+         data-img="assets/avatars/mustaquim.png"
+         data-quote="There’s an app for everything, and I probably built it.">
+      <img src="assets/avatars/mustaquim.png" alt="Bruce Wayne">
+      <h3>Bruce Wayne</h3>
+      <p>Mobile App Developer</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="team-card bio-trigger" 
+         data-name="Sabrina Shanta"
+         data-position="UI/UX Designer"
+         data-bio="Sabrina crafts engaging digital experiences, combining creativity and usability for intuitive user journeys."
+         data-img="assets/avatars/shanta.png"
+         data-quote="Design is not just what it looks like; it’s how it works.">
+      <img src="assets/avatars/shanta.png" alt="Sabrina Shanta">
+      <h3>Sabrina Shanta</h3>
+      <p>UI/UX Designer</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="team-card bio-trigger" 
+         data-name="Go Yoon-jung"
+         data-position="Cloud Security Expert"
+         data-bio="Go Yoon-jung is a security specialist focused on protecting cloud infrastructures against modern cyber threats."
+         data-img="assets/avatars/Go Yoon-jung.png"
+         data-quote="Security is not a product, it’s a process.">
+      <img src="assets/avatars/Go Yoon-jung.png" alt="Go Yoon-jung">
+      <h3>Go Yoon-jung</h3>
+      <p>Cloud Security Expert</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="team-card bio-trigger" 
+         data-name="Cristiano Ronaldo"
+         data-position="Software Tester"
+         data-bio="Cristiano ensures software reliability with rigorous testing, delivering bug-free and user-ready applications."
+         data-img="assets/avatars/cristiano.png"
+         data-quote="Breaking things is my job, so you don’t have to.">
+      <img src="assets/avatars/cristiano.png" alt="Cristiano Ronaldo">
+      <h3>Cristiano Ronaldo</h3>
+      <p>Software Tester</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="team-card bio-trigger" 
+         data-name="Peter Parker"
+         data-position="Technical Writer"
+         data-bio="Peter turns complex technical concepts into clear, engaging documentation and tutorials for all users."
+         data-img="assets/avatars/peter.png"
+         data-quote="Documentation is love, documentation is life.">
+      <img src="assets/avatars/peter.png" alt="Peter Parker">
+      <h3>Peter Parker</h3>
+      <p>Technical Writer</p>
+    </div>
+
+    <!-- 13 -->
+    <div class="team-card bio-trigger" 
+         data-name="Esha Rahman"
+         data-position="Programmer"
+         data-bio="Esha builds efficient, clean, and scalable codebases, contributing to multiple software products and projects."
+         data-img="assets/avatars/esha.png"
+         data-quote="Eat. Sleep. Code. Repeat.">
+      <img src="assets/avatars/esha.png" alt="Esha Rahman">
+      <h3>Esha Rahman</h3>
+      <p>Programmer</p>
+    </div>
+
+    <!-- 14 -->
+    <div class="team-card bio-trigger" 
+         data-name="Mahin Ahmad"
+         data-position="Cybersecurity Analyst"
+         data-bio="Mahin analyzes and mitigates threats, ensuring businesses remain resilient against cyber risks."
+         data-img="assets/avatars/mahin.png"
+         data-quote="Hackers never sleep, and neither do I.">
+      <img src="assets/avatars/mahin.png" alt="Mahin Ahmad">
+      <h3>Mahin Ahmad</h3>
+      <p>Cybersecurity Analyst</p>
+    </div>
+
+    <!-- 15 -->
+    <div class="team-card bio-trigger" 
+         data-name="Arpi Islam"
+         data-position="Business Analyst"
+         data-bio="Arpi bridges business and technology by analyzing workflows and driving efficiency through digital solutions."
+         data-img="assets/avatars/arpi.png"
+         data-quote="Business problems are just opportunities in disguise.">
+      <img src="assets/avatars/arpi.png" alt="Arpi Islam">
+      <h3>Arpi Islam</h3>
+      <p>Business Analyst</p>
+    </div>
+
+    <!-- 16 -->
+    <div class="team-card bio-trigger" 
+         data-name="Omar Khattab"
+         data-position="Backend Developer"
+         data-bio="Omar builds robust server-side systems, APIs, and database integrations that power dynamic web applications."
+         data-img="assets/avatars/omar.png"
+         data-quote="Behind every great app is an even greater backend.">
+      <img src="assets/avatars/omar.png" alt="Omar Khattab">
+      <h3>Omar Khattab</h3>
+      <p>Backend Developer</p>
+    </div>
+
+    <!-- 17 -->
+    <div class="team-card bio-trigger" 
+         data-name="Shanta Islam"
+         data-position="Frontend Developer"
+         data-bio="Shanta specializes in crafting modern, responsive, and engaging user interfaces with attention to detail."
+         data-img="assets/avatars/shantaa.png"
+         data-quote="First impressions are 94% design. No pressure.">
+      <img src="assets/avatars/shantaa.png" alt="Shanta Islam">
+      <h3>Shanta Islam</h3>
+      <p>Frontend Developer</p>
+    </div>
+
+    <!-- 18 -->
+    <div class="team-card bio-trigger" 
+         data-name="Aladdin Abu"
+         data-position="Database Administrator"
+         data-bio="Aladdin manages complex databases, ensuring security, scalability, and high availability for mission-critical systems."
+         data-img="assets/avatars/aladdin.png"
+         data-quote="A database is only as good as the admin behind it.">
+      <img src="assets/avatars/aladdin.png" alt="Aladdin Abu">
+      <h3>Aladdin Abu</h3>
+      <p>Database Administrator</p>
+    </div>
+
+    <!-- 19 -->
+    <div class="team-card bio-trigger" 
+         data-name="Maneera Siddiquea"
+         data-position="Product Designer"
+         data-bio="Maneera designs user-focused products with a perfect balance between aesthetics and functionality."
+         data-img="assets/avatars/maneera.png"
+         data-quote="Good design is good business.">
+      <img src="assets/avatars/maneera.png" alt="Maneera Siddiquea">
+      <h3>Maneera Siddiquea</h3>
+      <p>Product Designer</p>
+    </div>
+
+    <!-- 20 -->
+    <div class="team-card bio-trigger" 
+         data-name="Shelina Jahan"
+         data-position="Machine Learning Engineer"
+         data-bio="Shelina builds intelligent systems using deep learning and AI, delivering next-gen automation solutions."
+         data-img="assets/avatars/shelina.png"
+         data-quote="Machines learn fast, but I teach them faster.">
+      <img src="assets/avatars/shelina.png" alt="Shelina Jahan">
+      <h3>Shelina Jahan</h3>
+      <p>Machine Learning Engineer</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Modal Popup -->
+<div id="bioModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <h2 id="modal-name"></h2>
+    <h4 id="modal-position"></h4>
+    <p id="modal-bio"></p>
+    <blockquote id="modal-quote"></blockquote> <!-- ✨ New Favorite Quote -->
+  </div>
+</div>
+
+<!-- ✅ Team Statistics -->
+<div class="team-stats" data-aos="fade-up">
+  <div class="stat-box">
+    <h3>20+</h3>
+    <p>Experts</p>
+  </div>
+  <div class="stat-box">
+    <h3>10+</h3>
+    <p>Skills</p>
+  </div>
+  <div class="stat-box">
+    <h3>50+</h3>
+    <p>Projects Completed</p>
+  </div>
+</div>
+
+  <!-- 🔹 CULTURE -->
+  <section class="values-section">
+    <h2 class="section-title" data-aos="fade-up">Our Culture</h2>
+    <div class="values-grid">
+      <div class="culture-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-users"></i>
+        <h3>Teamwork</h3>
+        <p>We believe collaboration drives innovation and powerful solutions.</p>
+      </div>
+      <div class="culture-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovation</h3>
+        <p>We embrace fresh ideas to stay ahead in the rapidly evolving tech space.</p>
+      </div>
+      <div class="culture-card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-book"></i>
+        <h3>Learning</h3>
+        <p>We foster continuous learning, knowledge sharing, and adaptation.</p>
+      </div>
+      <div class="culture-card" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-universal-access"></i>
+        <h3>Accessibility</h3>
+        <p>Our mission is to make technology simple and accessible to everyone.</p>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- 🔹 CTA -->
+  <section class="cta-section">
+    <div class="cta-content" data-aos="zoom-in">
+      <h2>Let’s Build the Future of Tech Together</h2>
+      <p>Want to collaborate or join our mission? Reach out to us and let’s shape innovation side by side.</p>
+      <a href="contact.html" class="btn-primary">Join Us</a>
+    </div>
+  </section>
+
+  <!-- 🔹 FOOTER (UNCHANGED) -->
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Logo + About -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="./assets/mainn.png" alt="IT Hub Logo" />
+        </a>
+        <p>IT Troubleshooting & Networking Hub — helping professionals solve IT challenges with ease.</p>
+
+        <!-- Social Icons -->
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-medium"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>About IT Hub</h4>
+          <ul>
+            <li><a href="about.html">Who We Are</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="#">Why Choose Us</a></li>
+            <li><a href="#">Our Experts</a></li>
+            <li><a href="newsroom.html">Newsroom</a></li>
+            <li><a href="partners.html">Technology Partners</a></li>
+            <li><a href="policies.html">Policies</a></li>
+            <li><a href="#">Tech Protect</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="ai_tools.html">AI Utilities</a></li>
+            <li><a href="learnbase.html">Learning Hub</a></li>
+            <li><a href="#">Free Downloads</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="products.html">All Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="conf.html">TechConf</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="store.html">IT Store</a></li>
+            <li><a href="videos.html">Video Library</a></li>
+            <li><a href="resources.html">All Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Knowledge Center</h4>
+          <ul>
+            <li><a href="#">Network Basics</a></li>
+            <li><a href="#">Firewall Essentials</a></li>
+            <li><a href="#">OS Configuration</a></li>
+            <li><a href="#">Cybersecurity Tips</a></li>
+            <li><a href="#">Tech Trends 2025</a></li>
+            <li><a href="articles.html">All Articles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="support.html">Tech Support</a></li>
+            <li><a href="community.html">Community Forum</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2025 IT Troubleshooting & Networking Hub. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="policies.html">Terms & Policies</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/team.js"></script>
+
+  <!-- AOS Init -->
+  <script>
+        AOS.init({
+        duration: 1000, // animation duration
+        easing: 'ease-in-out',
+        once: true,     // animation happens only once
+        mirror: false
+        });
+  </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+</html>

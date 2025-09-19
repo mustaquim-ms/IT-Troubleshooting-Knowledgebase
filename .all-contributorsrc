@@ -1,0 +1,11 @@
+{
+  "files": ["CONTRIBUTORS.md"],
+  "imageSize": 100,
+  "commit": false,
+  "contributorsPerLine": 6,
+  "contributors": [],
+  "projectName": "knowledgebase",
+  "projectOwner": "mustaquim-ms",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}

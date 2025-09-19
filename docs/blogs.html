@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs | KnowledgeBase</title>
+  <link rel="stylesheet" href="css/blogs.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- 🔹 HEADER / NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-container">
+    
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="./assets/mainn.png" alt="IT Troubleshooting Logo">
+            </a>
+    
+            <!-- Menu -->
+            <nav class="nav-links">
+            <ul>
+                    <li><a href="ai_tools.html">AI Tools</a></li>
+                    <li><a href="tips.html">Tips & Tricks</a></li>
+                    <li><a href="security.html">Cybersecurity</a></li>
+            </ul>
+            <ul class="sub-links">
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="blogs.html" class="active">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    
+            <!-- Right Side Actions -->
+                    <div class="nav-actions">
+                    <button class="icon-btn" title="Search"><i class="fas fa-search"></i></button>
+
+                    <!-- Support Dropdown -->
+                        <li class="dropdown">
+                        <a href="support.html" class="dropdown-toggle">Support ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="support.html">Help Center</a></li>
+                            <li><a href="community.html">Community</a></li>
+                            <li><a href="docs.html">Documentation</a></li>
+                            <li><a href="career.html">Career</a></li>
+                        </ul>
+                        </li>
+
+                    <button class="icon-btn" title="Language"><i class="fas fa-globe"></i></button>
+                    <a href="auth.html" class="nav-login"><i class="fas fa-user"></i> Log In</a>
+                    <a href="downloads.html" class="nav-cta">Free Resources</a>
+                    </div>
+        </div>
+    </header>
+
+      <!-- Page Header Section -->
+  <section class="page-header">
+    <div class="header-overlay"></div>
+    <h1>KnowledgeBase</h1>
+    <p>We explain and teache technology, solves tech problems and helps you make gadget buying decisions.</p>
+    <div class="subscribers">
+      <span id="subscriber-count">0</span> Subscribers 📈
+    </div>
+  </section>
+
+  <!-- Popular Blogs This Week -->
+  <section class="popular-blogs">
+    <h2>🔥 Popular This Week</h2>
+    <div class="popular-grid">
+      <article class="popular-post">
+        <img src="https://picsum.photos/400/250?random=10" alt="Popular 1">
+        <h3>10 Best Fixes for Windows 11 Issues</h3>
+        <p>Quick and effective solutions to the most common Windows 11 errors.</p>
+      </article>
+      <article class="popular-post">
+        <img src="https://picsum.photos/400/250?random=11" alt="Popular 2">
+        <h3>Top 5 WiFi Routers in 2025</h3>
+        <p>Our experts review the best routers for speed, range, and stability.</p>
+      </article>
+      <article class="popular-post">
+        <img src="https://picsum.photos/400/250?random=12" alt="Popular 3">
+        <h3>Best Antivirus Software for 2025</h3>
+        <p>Protect your devices with the most reliable security tools this year.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Modern Search Section -->
+  <section class="modern-search">
+    <h2>Find the Right Guide</h2>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="🔍 Search articles, guides, and tips...">
+      <button id="search-btn">Search</button>
+    </div>
+    <div class="search-categories">
+      <span class="search-chip" data-category="it">IT Troubleshooting</span>
+      <span class="search-chip" data-category="networking">Networking</span>
+      <span class="search-chip" data-category="security">Security</span>
+      <span class="search-chip" data-category="windows">Windows</span>
+      <span class="search-chip" data-category="mac">Mac</span>
+      <span class="search-chip" data-category="linux">Linux</span>
+      <span class="search-chip" data-category="programming">Programming</span>
+      <span class="search-chip" data-category="ai">AI</span>
+      <span class="search-chip" data-category="cloud">Cloud</span>
+      <span class="search-chip" data-category="gadgets">Gadgets</span>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-main">
+      <img src="https://picsum.photos/800/500?random=1" alt="IT Hero">
+      <div class="hero-content">
+        <span class="category">IT Troubleshooting</span>
+        <h1>Top IT Fixes You Should Know for Daily Work.</h1>
+        <p class="meta">Admin · September 5, 2025</p>
+      </div>
+    </div>
+
+    <div class="hero-side">
+      <div class="side-post">
+        <img src="https://picsum.photos/400/250?random=2" alt="Side Post">
+        <div class="side-content">
+          <span class="category green">Networking</span>
+          <h3>Understanding IP Conflicts in Windows.</h3>
+          <p class="meta">Admin · September 2, 2025</p>
+        </div>
+      </div>
+      <div class="side-post">
+        <img src="https://picsum.photos/400/250?random=3" alt="Side Post">
+        <div class="side-content">
+          <span class="category purple">Security</span>
+          <h3>How to Detect Malware on Your PC.</h3>
+          <p class="meta">Admin · August 28, 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="blog-grid" id="blog-grid">
+
+    <!-- 20+ New IT-Related Posts -->
+    <article class="post fade-in" data-category="cloud">
+      <img src="https://picsum.photos/400/300?random=20" alt="Cloud Automation" />
+      <div class="post-content">
+        <p class="date">August 19, 2025</p>
+        <h2>Cloud Automation with AWS & Azure</h2>
+        <p>Streamline deployment and operations using cloud automation.</p>
+        <span class="tags">Cloud</span>
+      </div>
+    </article>
+
+    <article class="post fade-in" data-category="programming">
+      <img src="https://picsum.photos/400/300?random=21" alt="Code Debugging" />
+      <div class="post-content">
+        <p class="date">August 18, 2025</p>
+        <h2>Debugging Tips Every Developer Should Know</h2>
+        <p>Efficient methods to track and fix bugs faster.</p>
+        <span class="tags">Programming</span>
+      </div>
+    </article>
+
+    <article class="post fade-in" data-category="ai">
+      <img src="https://picsum.photos/400/300?random=22" alt="AI Trends" />
+      <div class="post-content">
+        <p class="date">August 17, 2025</p>
+        <h2>Top AI Trends to Watch in 2025</h2>
+        <p>Explore the emerging AI technologies shaping the future.</p>
+        <span class="tags">AI</span>
+      </div>
+    </article>
+
+    <!-- More posts covering Linux, Mac, Gadgets, Programming, etc. -->
+    <article class="post fade-in" data-category="linux">
+      <img src="https://picsum.photos/400/300?random=23" alt="Linux Server" />
+      <div class="post-content">
+        <p class="date">August 16, 2025</p>
+        <h2>Linux Server Setup for Beginners</h2>
+        <p>A quick guide to launch your first Linux server securely.</p>
+        <span class="tags">Linux</span>
+      </div>
+    </article>
+    <article class="post fade-in" data-category="mac">
+      <img src="https://picsum.photos/400/300?random=24" alt="Mac Shortcuts" />
+      <div class="post-content">
+        <p class="date">August 15, 2025</p>
+        <h2>Mastering macOS Keyboard Shortcuts</h2>
+        <p>Maximize productivity with these built-in shortcuts.</p>
+        <span class="tags">Mac</span>
+      </div>
+    </article>
+    <article class="post fade-in" data-category="gadgets">
+      <img src="https://picsum.photos/400/300?random=25" alt="Smart Home" />
+      <div class="post-content">
+        <p class="date">August 14, 2025</p>
+        <h2>Integrating Smart Home Gadgets Easily</h2>
+        <p>Tech-savvy tips for a smarter home setup.</p>
+        <span class="tags">Gadgets</span>
+      </div>
+    </article>
+    <article class="post fade-in" data-category="windows">
+      <img src="https://picsum.photos/400/300?random=26" alt="Registry Fix" />
+      <div class="post-content">
+        <p class="date">August 13, 2025</p>
+        <h2>Windows Registry Fixes That Actually Work</h2>
+        <p>Clean up and repair Windows performance via registry tweaks.</p>
+        <span class="tags">Windows</span>
+      </div>
+    </article>
+    <article class="post fade-in" data-category="networking">
+      <img src="https://picsum.photos/400/300?random=27" alt="Cisco Setup" />
+      <div class="post-content">
+        <p class="date">August 12, 2025</p>
+        <h2>Setting Up Cisco Routers for Office Use</h2>
+        <p>How to configure Cisco hardware for small offices.</p>
+        <span class="tags">Networking</span>
+      </div>
+    </article>
+    <article class="post fade-in" data-category="security">
+      <img src="https://picsum.photos/400/300?random=28" alt="Firewall Setup" />
+      <div class="post-content">
+        <p class="date">August 11, 2025</p>
+        <h2>Implementing Firewall Best Practices</h2>
+        <p>Secure your home or small office network with firewalls.</p>
+        <span class="tags">Security</span>
+      </div>
+    </article>
+
+    <!-- Six more in similar style for Programming, AI, Cloud, Linux, Mac, Gadgets -->
+    <article class="post fade-in" data-category="programming">
+      <img src="https://picsum.photos/400/300?random=29" alt="Python Coding" />
+      <div class="post-content">
+        <p class="date">August 10, 2025</p>
+        <h2>Why Python Remains a Top Language in 2025</h2>
+        <p>Highlights of Python’s versatility and community support.</p>
+        <span class="tags">Programming</span>
+      </div>
+    </article>
+    <article class="post fade-in" data-category="ai">
+      <img src="https://picsum.photos/400/300?random=30" alt="AI Chatbot" />
+      <div class="post-content">
+        <p class="date">August 9, 2025</p>
+        <h2>Build a Simple AI Chatbot with OpenAI</h2>
+        <p>Step-by-step tutorial to create your own chatbot.</p>
+        <span class="tags">AI</span>
+      </div>
+    </article>
+    <article class="post fade-in" data-category="cloud">
+      <img src="https://picsum.photos/400/300?random=31" alt="Cloud Security" />
+      <div class="post-content">
+        <p class="date">August 8, 2025</p>
+        <h2>Cloud Security: Protecting Your Data in the Cloud</h2>
+        <p>Essential strategies to keep cloud-hosted data safe.</p>
+        <span class="tags">Cloud</span>
+      </div>
+    </article>
+    <article class="post fade-in" data-category="linux">
+      <img src="https://picsum.photos/400/300?random=32" alt="Kernel Tuning" />
+      <div class="post-content">
+        <p class="date">August 7, 2025</p>
+        <h2>Tune Your Linux Kernel for Better Performance</h2>
+        <p>Advanced tips to optimize Linux performance.</p>
+        <span class="tags">Linux</span>
+      </div>
+    </article>
+    <article class="post fade-in" data-category="windows">
+      <img src="https://picsum.photos/400/300?random=33" alt="Windows Terminal" />
+      <div class="post-content">
+        <p class="date">August 6, 2025</p>
+        <h2>Windows Terminal Power User Tips</h2>
+        <p>Get more out of Windows Terminal with these tweaks.</p>
+        <span class="tags">Windows</span>
+      </div>
+    </article>
+    <article class="post fade-in" data-category="mac">
+      <img src="https://picsum.photos/400/300?random=34" alt="Mac Time Machine" />
+      <div class="post-content">
+        <p class="date">August 5, 2025</p>
+        <h2>Using Time Machine for Effortless Mac Backups</h2>
+        <p>Ensure data safety with an easy backup strategy.</p>
+        <span class="tags">Mac</span>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- Pagination -->
+  <div class="pagination fade-in">
+    <a href="#">&lt;</a>
+    <a href="#">1</a>
+    <a class="active" href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">…</a>
+    <a href="#">8</a>
+    <a href="#">&gt;</a>
+  </div>
+
+
+  <!-- 🔹 FOOTER -->
+<footer class="footer">
+    <div class="footer-top">
+        <!-- Logo + About -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <img src="./assets/mainn.png" alt="IT Hub Logo">
+            </a>
+            <p>IT Troubleshooting & Networking Hub — helping professionals solve IT challenges with ease.</p>
+            
+            <!-- Social Icons -->
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-medium"></i></a>
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="footer-container">
+            <!-- Company -->
+            <div class="footer-col">
+                <h4>About IT Hub</h4>
+                <ul>
+                    <li><a href="about.html">Who We Are</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="#">Why Choose Us</a></li>
+                    <li><a href="#">Our Experts</a></li>
+                    <li><a href="newsroom.html">Newsroom</a></li>
+                    <li><a href="partners.html">Technology Partners</a></li>
+                    <li><a href="policies.html">Policies</a></li>
+                    <li><a href="#">Tech Protect</a></li>
+                </ul>
+            </div>
+
+            <!-- Solutions -->
+            <div class="footer-col">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="ai_tools.html">AI Utilities</a></li>
+                    <li><a href="learnbase.html">Learning Hub</a></li>
+                    <li><a href="#">Free Downloads</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="products.html">All Solutions</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="conf.html">TechConf</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="store.html">IT Store</a></li>
+                    <li><a href="videos.html">Video Library</a></li>
+                    <li><a href="resources.html">All Resources</a></li>
+                </ul>
+            </div>
+
+            <!-- Knowledge -->
+            <div class="footer-col">
+                <h4>Knowledge Center</h4>
+                <ul>
+                    <li><a href="#">Network Basics</a></li>
+                    <li><a href="#">Firewall Essentials</a></li>
+                    <li><a href="#">OS Configuration</a></li>
+                    <li><a href="#">Cybersecurity Tips</a></li>
+                    <li><a href="#">Tech Trends 2025</a></li>
+                    <li><a href="articles.html">All Articles</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="support.html">Tech Support</a></li>
+                    <li><a href="community.html">Community Forum</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        <p>© 2025 IT Troubleshooting & Networking Hub. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="policies.html">Terms & Policies</a>
+            <a href="#">Cookies Settings</a>
+        </div>
+    </div>
+</footer>
+
+        <script src="js/blogs.js"></script>
+        <script src="js/animations.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/auth.js"></script>
+
+</body>
+</html>

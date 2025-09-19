@@ -1,0 +1,46 @@
+animations:
+
+html {
+    --ease-in: cubic-bezier(0.49,0.025,0.65,0.65);
+    --ease-out: cubic-bezier(0.28,0.44,0.49,1);
+    --ease-in-out: cubic-bezier(0.49,0.025,0.49,1);
+    --bounce: cubic-bezier(0.6,0,0.1,1.4);
+    --ease-in-soft: cubic-bezier(0.49,0.025,0.685,1);
+    --ease-out-soft: cubic-bezier(0.28,0,0.49,1);
+    --ease-in-out-soft: cubic-bezier(0.72,0,0.28,1);
+    --ease-in-out-hard: cubic-bezier(0.77,0,0.175,1);
+    --ease-garret: cubic-bezier(0.5,0,0,1);
+    --background-color: #eeeaea;
+}
+
+
+<HTML>
+Font Family: AktivGrotesk, Helvetica, Arial, sans-serif
+Font Size: 16px
+Font Color: rgb(22, 22, 29)
+Font Style: normal
+Font Weight: 400
+<HEAD>
+Font Family: AktivGrotesk, Helvetica, Arial, sans-serif
+Font Size: 16px
+Font Color: rgb(22, 22, 29)
+Font Style: normal
+Font Weight: 400
+<META>
+Font Family: AktivGrotesk, Helvetica, Arial, sans-serif
+Font Size: 16px
+Font Color: rgb(22, 22, 29)
+Font Style: normal
+Font Weight: 400
+<LINK>
+Font Family: AktivGrotesk, Helvetica, Arial, sans-serif
+Font Size: 16px
+Font Color: rgb(22, 22, 29)
+Font Style: normal
+Font Weight: 400
+<TITLE>
+Font Family: AktivGrotesk, Helvetica, Arial, sans-serif
+Font Size: 16px
+Font Color: rgb(22, 22, 29)
+Font Style: normal
+Font Weight: 400
